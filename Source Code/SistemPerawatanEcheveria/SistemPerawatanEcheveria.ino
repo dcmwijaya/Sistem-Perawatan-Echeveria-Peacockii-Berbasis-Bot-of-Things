@@ -42,7 +42,7 @@ const float GAMMA = 0.7; const float RL10 = 50;
 int kontrolair, analogLDR, analogFC28, kelembapan_udara, kelembapan_tanah; 
 float volt, resistance, suhu_udara, cahaya;
 String statusUdara, statusTanah, statusSinar, info_suhuudara, info_kelembapanudara, info_kelembapantanah, info_intensitascahaya, sendMsg, msg1, msg2; 
-bool viewTombol; bool relayON = LOW; bool relayOFF = HIGH;
+bool viewTombol; bool relayON = HIGH; bool relayOFF = LOW;
 long durasi = 0; long jeda = 1000;
 
 BLYNK_WRITE(V6) { //kontrol air untuk menyiram tanaman echeveria
