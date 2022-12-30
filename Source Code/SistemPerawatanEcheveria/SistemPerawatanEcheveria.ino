@@ -23,8 +23,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 #define RPOMPA2_PIN 4
 #define DHT_TYPE DHT22
 DHT dht(DHT_PIN, DHT_TYPE);
-#define WIFI_SSID "Wokwi-GUEST"
-#define WIFI_PASSWORD ""
+#define WIFI_SSID "ISI DENGAN NAMA ROUTER ANDA"
+#define WIFI_PASSWORD "ISI DENGAN PASSWORD ROUTER ANDA"
 #define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
 #define InlineMenu2 "InlineMonitoringKelembapanUdara"
@@ -41,20 +41,21 @@ int soilmeasurement = 0;
 const float GAMMA = 0.7; const float RL10 = 50;
 int kontrolair, analogLDR, analogFC28, kelembapan_udara, kelembapan_tanah; 
 float volt, resistance, suhu_udara, cahaya;
-String statusUdara, statusTanah, statusSinar, info_suhuudara, info_kelembapanudara, info_kelembapantanah, info_intensitascahaya, sendMsg, msg1, msg2; bool viewTombol;
+String statusUdara, statusTanah, statusSinar, info_suhuudara, info_kelembapanudara, info_kelembapantanah, info_intensitascahaya, sendMsg, msg1, msg2; 
+bool viewTombol; bool relayON = LOW; bool relayOFF = HIGH;
 long durasi = 0; long jeda = 1000;
 
 BLYNK_WRITE(V6) { //kontrol air untuk menyiram tanaman echeveria
   kontrolair = param.asInt();
   digitalWrite(RPOMPA2_PIN, kontrolair);
   if (kontrolair == 1) {
-    digitalWrite(RPOMPA2_PIN, HIGH);
+    digitalWrite(RPOMPA2_PIN, relayON);
     Blynk.virtualWrite(V5, 1);
     Serial.println("Status kontrol air : On");
     Serial.println("<------------------------------->\n");
   } 
   if (kontrolair == 0){
-    digitalWrite(RPOMPA2_PIN, LOW);
+    digitalWrite(RPOMPA2_PIN, relayOFF);
     Blynk.virtualWrite(V5, 0);
     Serial.println("Status kontrol air : Off");
     Serial.println("<------------------------------->\n");
@@ -130,7 +131,7 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
         info_intensitascahaya = "Intensitas Cahaya: Rendah"; //Gelap
         statusUdara = "Status Kualitas Udara: Bahaya";
         statusSinar = "Status Kualitas Sinar: Aman";
-        digitalWrite(RPOMPA1_PIN, LOW);
+        digitalWrite(RPOMPA1_PIN, relayOFF);
         Blynk.virtualWrite(V4, 0);
       }
     }
@@ -143,7 +144,7 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
         info_intensitascahaya = "Intensitas Cahaya: Normal"; //Remang-remang
         statusUdara = "Status Kualitas Udara: Aman";
         statusSinar = "Status Kualitas Sinar: Aman";
-        digitalWrite(RPOMPA1_PIN, LOW);
+        digitalWrite(RPOMPA1_PIN, relayOFF);
         Blynk.virtualWrite(V4, 0);
       }
     }
@@ -155,26 +156,26 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
       info_intensitascahaya = "Intensitas Cahaya: Tinggi";   //Cerah
       statusUdara = "Status Kualitas Udara: Bahaya";
       statusSinar = "Status Kualitas Sinar: Bahaya";
-      digitalWrite(RPOMPA1_PIN, HIGH);
+      digitalWrite(RPOMPA1_PIN, relayON);
       Blynk.virtualWrite(V4, 1);
     }
   } 
   if (kelembapan_tanah >= 70 && kelembapan_tanah < 100){
     info_kelembapantanah = "Kelembapan Tanah: Tinggi";      //Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";
-    digitalWrite(RPOMPA1_PIN, LOW);
+    digitalWrite(RPOMPA1_PIN, relayOFF);
     Blynk.virtualWrite(V4, 0);
   }
   if (kelembapan_tanah >= 20 && kelembapan_tanah < 70) { 
     info_kelembapantanah = "Kelembapan Tanah: Normal";      //Lembap
     statusTanah = "Status Kualitas Tanah: Aman";
-    digitalWrite(RPOMPA1_PIN, LOW);
+    digitalWrite(RPOMPA1_PIN, relayOFF);
     Blynk.virtualWrite(V4, 0);
   }
   if (kelembapan_tanah >= 0 && kelembapan_tanah < 20) {
     info_kelembapantanah = "Kelembapan Tanah: Rendah";     //Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";
-    digitalWrite(RPOMPA1_PIN, HIGH);
+    digitalWrite(RPOMPA1_PIN, relayON);
     Blynk.virtualWrite(V4, 1);
   }
 }
@@ -254,7 +255,7 @@ void botTelegram() {
           msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil controlling pompa air pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🚰 CONTROLLING WATER PUMP \n--------------------------------------------------------------\n";
           msg2 = "📲 Controlling water pump: ON\n--------------------------------------------------------------"; 
           sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
-          digitalWrite(RPOMPA2_PIN, HIGH);
+          digitalWrite(RPOMPA2_PIN, relayON);
         }
         else if(msg.callbackQueryData.equals(OFF)){ //Memberikan perintah untuk menyalakan pompa 2
           Blynk.virtualWrite(V5, 0);
@@ -264,7 +265,7 @@ void botTelegram() {
           msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil controlling pompa air pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🚰 CONTROLLING WATER PUMP \n--------------------------------------------------------------\n";
           msg2 = "📲 Controlling water pump: OFF\n--------------------------------------------------------------"; 
           sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
-          digitalWrite(RPOMPA2_PIN, LOW);
+          digitalWrite(RPOMPA2_PIN, relayOFF);
         }
       }
       else{ //Control Error jika perintah tidak sesuai
@@ -305,8 +306,8 @@ void setup() { //Fungsi yang dijalankan sekali
   pinMode(DHT_PIN, INPUT);
   pinMode(RPOMPA1_PIN, OUTPUT);
   pinMode(RPOMPA2_PIN, OUTPUT);
-  digitalWrite(RPOMPA1_PIN, LOW);
-  digitalWrite(RPOMPA2_PIN, LOW);
+  digitalWrite(RPOMPA1_PIN, relayOFF);
+  digitalWrite(RPOMPA2_PIN, relayOFF);
   LCDinit();
   timer.setInterval(1000L, sendData);
 }
