@@ -1,8 +1,8 @@
 //Deklarasi Library/Konstanta/Dsb
 #define BLYNK_PRINT Serial
-#define BLYNK_TEMPLATE_ID "TMPLV3XY2rl8"
-#define BLYNK_DEVICE_NAME "Echeveria"
-#define BLYNK_AUTH_TOKEN "yX9Ep64CmR0ZfOQSA7PD7tJNzUZDzKzS"
+#define BLYNK_TEMPLATE_ID " "
+#define BLYNK_DEVICE_NAME " "
+#define BLYNK_AUTH_TOKEN " "
 #if defined(ESP8266)
 #include <ESP8266WiFi.h>
 #elif defined(ESP32)
@@ -25,9 +25,9 @@
 FC28Sensor fc28;
 DHT dht(DHT_PIN, DHT_TYPE);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-#define WIFI_SSID "Wokwi-GUEST"
-#define WIFI_PASSWORD ""
-#define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
+#define WIFI_SSID " "
+#define WIFI_PASSWORD " "
+#define BOTtoken " "
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
 #define InlineMenu2 "InlineMonitoringKelembapanUdara"
 #define InlineMenu3 "InlineMonitoringKelembapanTanah"
@@ -159,19 +159,19 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
       Blynk.virtualWrite(V4, 1);
     }
   } 
-  if (kelembapan_tanah >= 70 && kelembapan_tanah < 100){
+  if (kelembapan_tanah >= 14.5 && kelembapan_tanah < 100){
     info_kelembapantanah = "Kelembapan Tanah: Tinggi";      //Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayOFF);
     Blynk.virtualWrite(V4, 0);
   }
-  if (kelembapan_tanah >= 20 && kelembapan_tanah < 70) { 
+  if (kelembapan_tanah >= 11.8 && kelembapan_tanah < 14.5) { 
     info_kelembapantanah = "Kelembapan Tanah: Normal";      //Lembap
     statusTanah = "Status Kualitas Tanah: Aman";
     digitalWrite(RPOMPA1_PIN, relayOFF);
     Blynk.virtualWrite(V4, 0);
   }
-  if (kelembapan_tanah >= 0 && kelembapan_tanah < 20) {
+  if (kelembapan_tanah >= 0 && kelembapan_tanah < 11.8) {
     info_kelembapantanah = "Kelembapan Tanah: Rendah";     //Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayON);
