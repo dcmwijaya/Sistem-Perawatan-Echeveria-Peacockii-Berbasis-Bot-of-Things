@@ -150,7 +150,7 @@ void BacaSensor(){ //Pembacaan data pada sensor
 void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
   if (suhu_udara >= 0 && suhu_udara < 16) {
     if (kelembapan_udara > 90 && kelembapan_udara <=100) {
-      if (cahaya >= 0 && cahaya < 50) {  
+      if (cahaya >= 500) {  
         info_suhuudara = "Suhu Udara: Rendah";               //Dingin
         info_kelembapanudara = "Kelembapan Udara: Tinggi";   //Basah
         info_intensitascahaya = "Intensitas Cahaya: Rendah"; //Gelap
@@ -163,7 +163,7 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
   }
   if (suhu_udara >= 16 && suhu_udara <= 34) {
     if (kelembapan_udara >= 30 && kelembapan_udara <= 90) {
-      if (cahaya >= 50 && cahaya < 50000) {  
+      if (cahaya >= 200 && cahaya < 500) {  
         info_suhuudara = "Suhu Udara: Normal";               //Remang-remang
         info_kelembapanudara = "Kelembapan Udara: Normal";   //Lembap
         info_intensitascahaya = "Intensitas Cahaya: Normal"; //Remang-remang
@@ -176,7 +176,7 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
   }
   if (suhu_udara > 34 && suhu_udara <= 100) {
     if (kelembapan_udara >= 0 && kelembapan_udara < 30) {
-      if (cahaya >= 50000 && cahaya <= 100000) {
+      if (cahaya < 200) {
         info_suhuudara = "Suhu Udara: Tinggi";                 //Panas
         info_kelembapanudara = "Kelembapan Udara: Rendah";     //Kering
         info_intensitascahaya = "Intensitas Cahaya: Tinggi";   //Cerah
