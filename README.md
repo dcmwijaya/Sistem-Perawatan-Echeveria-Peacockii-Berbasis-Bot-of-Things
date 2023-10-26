@@ -7,30 +7,17 @@
 ![Arduino](https://img.shields.io/badge/Tools-Arduino%20IDE-light.svg?style=flat&logo=arduino&logoColor=white&color=bcbcbc)
 
 # Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things
-Final Project IoT Master Class Indobot 2022
+<strong>Final Project IoT Master Class Indobot 2022</strong><br>
+This project is closely related to agricultural technology, where this tool is used to perform automatic watering and to monitor changes in conditions that exist in the environment around Echeveria Peacockii plants in real time from a distance anytime and anywhere. This tool is equipped with a Bot of Things (BoT) based interface that aims to facilitate users in caring for these ornamental plants. Echeveria Peacockii is a type of plant that has a kinship with cacti, but the body of this plant is not found in the presence of thorns, so it is very attractive among ornamental plant lovers.
 <br><br><br><br>
 <img src="https://user-images.githubusercontent.com/54527592/227462836-61d1ad75-8faf-4171-838e-3f9f1ac0e261.png">
 <br><br>
 
-## LISENSI
-Copyright (c) 2023 - Devan C. M. Wijaya, S.Kom.
+## LICENSE
+MIT License - Copyright (c) 2023 - Devan C. M. Wijaya, S.Kom
 
-Izin dengan ini diberikan tanpa biaya kepada siapa pun yang mendapatkan salinan perangkat lunak ini dan file dokumentasi terkait perangkat lunak untuk ditangani tanpa adanya batasan, termasuk tanpa batasan hak untuk menggunakan, menyalin, memodifikasi, menggabungkan, menerbitkan, mendistribusikan, mensublisensikan, dan/atau menjual salinan Perangkat Lunak, dan untuk mengizinkan orang yang menerima Perangkat Lunak tersebut diperlengkapi untuk itu dengan syarat-syarat sebagai berikut:
+Permission is hereby granted without charge to any person obtaining a copy of this software and the software-related documentation files to deal in them without restriction, including without limitation the right to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons receiving the Software to be furnished therewith on the following terms:
 
-1. Pemberitahuan hak cipta di atas dan pemberitahuan izin ini harus disertakan semua salinannya atau bagian substansial dari Perangkat Lunak.
+The above copyright notice and this permission notice must accompany all copies or substantial portions of the Software.
 
-2. Jika kreasi produk ini dirasa bermanfaat bagi anda mohon dukungannya dengan cara menekan tombol "Star", dan jika anda ingin mengembangkan produk ini lebih lanjut, maka silahkan anda dapat menekan tombol "Fork". Mohon dapatnya hargai PENULIS ATAU PEMEGANG HAK CIPTA dengan tidak melakukan re-upload.
-
-3. PENULIS ATAU PEMEGANG HAK CIPTA DISINI MEMILIKI HAK KEPEMILIKAN PENUH ATAS KREASI PRODUK YANG DIBUAT, KECUALI YANG TERTERA DI DAFTAR PUSTAKA DAN ATAU KARYA PIHAK LAIN YANG DILUAR KREASI PRODUK INI. APABILA DITEMUI KERUSAKAN, KERUGIAN, ATAU LAINNYA YANG DITIMBULKAN DARI PENGGUNAAN PERANGKAT LUNAK INI, MAKA PENULIS ATAU PEMEGANG HAK CIPTA TIDAK BERHAK BERTANGGUNGJAWAB, SEBAB PERANGKAT LUNAK INI TELAH DISEDIAKAN SEBAGAIMANA ADANYA, TANPA ADA JAMINAN APAPUN BAIK TERSURAT MAUPUN TERSIRAT, DAN TANPA ADANYA PAKSAKAN SEKALI PUN.
-
-<br/>
-Atas perhatian dan kerjasamanya, saya selaku PENULIS/PEMEGANG HAK CIPTA disini mengucapkan TERIMA KASIH.
-<br/>
-<br/>
-
-Salam Hormat,
-<br/>
-<br/>
-<br/>
-<br/>
-Devan C. M. Wijaya, S.Kom.
+IN ANY EVENT, THE AUTHOR OR COPYRIGHT HOLDER HEREIN RETAINS FULL OWNERSHIP RIGHTS. THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, THEREFORE IF ANY DAMAGE, LOSS, OR OTHERWISE ARISES FROM THE USE OR OTHER DEALINGS IN THE SOFTWARE, THE AUTHOR OR COPYRIGHT HOLDER SHALL NOT BE LIABLE, AS THE USE OF THE SOFTWARE IS NOT COMPELLED AT ALL, SO THE RISK IS YOUR OWN.
