@@ -61,6 +61,8 @@ https://dl.espressif.com/dl/package_esp32_index.json
 <br>
 
 ## Software Design
+<img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/0c4d7e63-b115-4bd0-a6d5-c1ef4d36d60b"><br><br>
+<img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/e4e2fbf9-6341-408b-b8de-4c2fcf95a9ce">
 
 
 <br>
@@ -78,7 +80,7 @@ https://dl.espressif.com/dl/package_esp32_index.json
 <br>
 
 ## Preview: Product
-![IMG20221230182747](https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/88b94f07-953e-4cdb-84f8-a4849ff031e8)
+<img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/88b94f07-953e-4cdb-84f8-a4849ff031e8">
 
 <br>
 
