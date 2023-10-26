@@ -55,6 +55,16 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 <br>
 
+## Hardware Design
+
+
+<br>
+
+## Software Design
+
+
+<br>
+
 ## Running
 1. Download this Repository.
 2. Make sure you have the necessary electronic components.
@@ -67,8 +77,16 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 <br>
 
-<img src="https://user-images.githubusercontent.com/54527592/227462836-61d1ad75-8faf-4171-838e-3f9f1ac0e261.png">
+## Preview: Product
+![IMG20221230182747](https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/88b94f07-953e-4cdb-84f8-a4849ff031e8)
 
+<br>
+
+## Preview: Telegram Bot Interface
+<img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/d57ba0a1-895b-4d49-99b0-22931c8f99bb" width=300 height=600>&emsp;&emsp;&emsp;
+<img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/37cef7d6-f2b2-4e94-8ed6-d696780e13a5" width=300 height=600>&emsp;&emsp;&emsp;
+<img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/ce29156a-5f1b-4231-a1d9-4ba03e28bea5" width=300 height=600>
+   
 <br>
 
 Notes: This project requires internet and electricity supply to run the application.
