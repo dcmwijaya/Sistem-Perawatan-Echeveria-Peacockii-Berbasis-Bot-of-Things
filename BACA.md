@@ -15,8 +15,8 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 ## Fitur / Kerangka Kerja / Peralatan
 | Media | Deskripsi |
 | --- | --- |
-| Broker IoT | Blynk & ThingsBoard |
-| MCU | DOIT ESP32 DEVKIT V1 |
+| Platform IoT | Blynk & ThingsBoard |
+| Papan Pengembangan | DOIT ESP32 DEVKIT V1 |
 | Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Telegram | API Bot Telegram |
 | Aktuator | Submersible pump |
