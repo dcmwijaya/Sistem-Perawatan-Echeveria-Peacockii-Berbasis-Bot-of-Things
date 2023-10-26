@@ -16,7 +16,7 @@ This project is closely related to agricultural technology, where this tool is u
 | Media | Description |
 | --- | --- |
 | IoT Broker | Blynk & ThingsBoard |
-| MCU | DOIT ESP32 DEVKIT V1 |
+| Board Development | DOIT ESP32 DEVKIT V1 |
 | Arduino Library | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Telegram | Telegram Bot API |
 | Actuators | Submersible pump |
