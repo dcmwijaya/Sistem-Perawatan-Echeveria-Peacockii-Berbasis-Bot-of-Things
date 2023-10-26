@@ -10,7 +10,8 @@
 <strong>Final Project IoT Master Class Indobot 2022</strong><br>
 This project is closely related to agricultural technology, where this tool is used to perform automatic watering and to monitor changes in conditions that exist in the environment around Echeveria Peacockii plants in real time from a distance anytime and anywhere. This tool is equipped with a Bot of Things (BoT) based interface that aims to facilitate users in caring for these ornamental plants. Echeveria Peacockii is a type of plant that has a kinship with cacti, but the body of this plant is not found in the presence of thorns, so it is very attractive among ornamental plant lovers.
 
-<br><br>
+<br>
+
 ## Features / Framework / Tools
 | Media | Description |
 | --- | --- |
@@ -72,7 +73,7 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 Notes: This project requires internet and electricity supply to run the application.
 
-<br><br><br>
+<br><br>
 
 ## LICENSE
 MIT License - Copyright (c) 2023 - Devan C. M. Wijaya, S.Kom
