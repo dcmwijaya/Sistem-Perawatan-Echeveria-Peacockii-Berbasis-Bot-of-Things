@@ -9,9 +9,70 @@
 # Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things
 <strong>Final Project IoT Master Class Indobot 2022</strong><br>
 This project is closely related to agricultural technology, where this tool is used to perform automatic watering and to monitor changes in conditions that exist in the environment around Echeveria Peacockii plants in real time from a distance anytime and anywhere. This tool is equipped with a Bot of Things (BoT) based interface that aims to facilitate users in caring for these ornamental plants. Echeveria Peacockii is a type of plant that has a kinship with cacti, but the body of this plant is not found in the presence of thorns, so it is very attractive among ornamental plant lovers.
-<br><br><br><br>
-<img src="https://user-images.githubusercontent.com/54527592/227462836-61d1ad75-8faf-4171-838e-3f9f1ac0e261.png">
+
 <br><br>
+## Features / Framework / Tools
+| Media | Description |
+| --- | --- |
+| IoT Broker | Blynk & ThingsBoard |
+| MCU | DOIT ESP32 DEVKIT V1 |
+| Arduino Library | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
+| Telegram | Telegram Bot API |
+| Actuators | Submersible pump |
+| Sensor | FC-28 (Resistive Soil Moisture), LDR (Light Dependent Resistor), DHT22 (Air Temperature & Humidity) |
+| Display | LCD I2C |
+| Switch | Electrical relay 2 channel |
+| Other Components | ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, & Casing box |
+
+<br>
+
+## Download & Install
+Download Arduino IDE :
+```bash
+https://www.arduino.cc/en/software
+```
+
+<br>
+
+## Settings
+1. Open the Arduino IDE first, then enter the Boards Manager Url by copying the following link:
+```bash
+https://dl.espressif.com/dl/package_esp32_index.json
+```
+2. Board Setup in Arduino IDE
+   <ul>
+      <li>Method: click Boards Manager -> ESP32 Arduino -> DOIT ESP32 DEVKIT V1.</li>
+   </ul>
+3. Port Setup in Arduino IDE
+   <ul>
+      <li>Method: click Port -> Choose according to your device port (you can see in device manager).</li>
+   </ul>
+4. Install Library in Arduino IDE
+   <ul>
+      <li>Method: click Tools -> Manage Libraries -> Install Library according to project needs.</li>
+   </ul>
+
+<br>
+
+## Running
+1. Download this Repository.
+2. Make sure you have the necessary electronic components.
+3. Make sure your components have been designed according to the diagram.
+4. Make sure the components are well connected (Adjust Board and Port settings).
+5. It is recommended to create a Broker account along with this service.
+6. Make sure to change the arduino program code in the "Router" section according to the device you are using.
+7. If you do not apply points 2 and 3 for the purposes of project development, it is fine, but please note that some things need to be changed in order to function properly.
+8. Done, good luck.
+
+<br>
+
+<img src="https://user-images.githubusercontent.com/54527592/227462836-61d1ad75-8faf-4171-838e-3f9f1ac0e261.png">
+
+<br>
+
+Notes: This project requires internet and electricity supply to run the application.
+
+<br><br><br>
 
 ## LICENSE
 MIT License - Copyright (c) 2023 - Devan C. M. Wijaya, S.Kom
