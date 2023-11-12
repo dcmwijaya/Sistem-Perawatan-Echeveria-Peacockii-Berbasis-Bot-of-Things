@@ -10,7 +10,7 @@
 <strong>Tugas Akhir IoT Master Class Indobot 2022</strong><br>
 Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini digunakan untuk melakukan penyiraman secara otomatis dan memantau perubahan kondisi yang ada di lingkungan sekitar tanaman Echeveria Peacockii secara real time dari jarak jauh kapanpun dan dimanapun. Alat ini dilengkapi dengan antarmuka berbasis Bot of Things (BoT) yang bertujuan untuk memudahkan pengguna dalam merawat tanaman hias tersebut. Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kaktus, namun pada tubuh tanaman ini tidak dijumpai adanya duri, sehingga sangat diminati oleh para pecinta tanaman hias.
 
-<br>
+<br><br>
 
 ## Fitur / Kerangka Kerja / Peralatan
 | Media | Deskripsi |
@@ -25,14 +25,14 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | Saklar | Electrical relay 2 channel |
 | Komponen Lainnya | ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, & Casing box |
 
-<br>
+<br><br>
 
 ## Unduh & Instal Arduino IDE
 ```bash
 https://www.arduino.cc/en/software
 ```
 
-<br>
+<br><br>
 
 ## Pengaturan
 1. Buka Arduino IDE terlebih dahulu, lalu masuk ke Boards Manager Url dengan cara menyalin tautan berikut:
@@ -57,7 +57,7 @@ https://www.arduino.cc/en/software
       <li>Cara: klik Tools -> Manage Libraries -> Install Library sesuai dengan kebutuhan proyek.</li>
    </ul>
 
-<br>
+<br><br>
 
 ## Persyaratan Proyek
 <table>
@@ -98,7 +98,7 @@ https://www.arduino.cc/en/software
     
 8. Selesai, semoga berhasil.
 
-<br>
+<br><br>
 
 ## Sorotan
 <table>
@@ -134,12 +134,12 @@ https://www.arduino.cc/en/software
 
 Catatan: Proyek ini membutuhkan internet dan pasokan listrik untuk menjalankan aplikasi.
 
-<br>
+<br><br>
 
 ## Penafian
 Aplikasi ini dibuat dengan menyertakan sumber-sumber dari pihak ketiga. Pihak ketiga di sini adalah penyedia layanan, yang layanannya berupa pustaka, kerangka kerja, dan lain-lain. Saya ucapkan terima kasih banyak atas layanannya. Telah terbukti sangat membantu dan dapat diimplementasikan.
 
-<br>
+<br><br>
 
 ## LISENSI
 LISENSI MIT - Hak Cipta (c) 2023 - Devan C. M. Wijaya, S.Kom
