@@ -90,7 +90,7 @@ https://www.arduino.cc/en/software
     
 7. Jika Anda tidak menerapkan poin 2 dan 3 untuk keperluan pengembangan proyek itu tidak masalah, tetapi harap dicatat bahwa beberapa hal perlu diubah agar dapat berfungsi dengan baik.
     
-8. Selesai, semoga berhasil.
+8. Selamat menikmati [Selesai].
 
 <br><br>
 
