@@ -126,7 +126,7 @@ https://www.arduino.cc/en/software
 
 <br>
 
-Catatan: Proyek ini membutuhkan internet dan pasokan listrik untuk menjalankan aplikasi.
+<strong>Catatan:</strong> Proyek ini membutuhkan internet dan pasokan listrik untuk menjalankan aplikasi.
 
 <br><br>
 
