@@ -35,27 +35,21 @@ https://www.arduino.cc/en/software
 <br><br>
 
 ## Pengaturan
-1. Buka Arduino IDE terlebih dahulu, lalu masuk ke Boards Manager Url dengan cara menyalin tautan berikut:
+1. Buka ``` Arduino IDE ``` terlebih dahulu, lalu masuk ke ``` Boards Manager Url ``` dengan cara menyalin tautan berikut:
    
    ```bash
    https://dl.espressif.com/dl/package_esp32_index.json
    ```
 <br>
 
-2. Pengaturan Board di Arduino IDE
-   <ul>
-      <li>Cara: klik Boards Manager -> ESP32 Arduino -> DOIT ESP32 DEVKIT V1.</li>
-   </ul>
-   <br>
-3. Pengaturan Port di Arduino IDE
-   <ul>
-      <li>Cara: klik Port -> Pilih sesuai dengan port perangkat Anda (Anda dapat melihatnya di Device Manager).</li>
-   </ul>
-   <br>
-4. Instal pustaka di Arduino IDE
-   <ul>
-      <li>Cara: klik Tools -> Manage Libraries -> Install Library sesuai dengan kebutuhan proyek.</li>
-   </ul>
+2. ``` Pengaturan Board ``` di Arduino IDE<br><br>
+   • Cara: klik ``` Boards Manager ``` -> ``` ESP32 Arduino ``` -> ``` DOIT ESP32 DEVKIT V1 ```.
+   <br><br><br>
+3. ``` Pengaturan Port ``` di Arduino IDE<br><br>
+   • Cara: klik ``` Port ``` -> Pilih sesuai dengan port perangkat Anda ``` (Anda dapat melihatnya di Device Manager) ```.
+   <br><br><br>
+4. ``` Instal pustaka ``` di Arduino IDE<br><br>
+   • Cara: klik ``` Tools ``` -> ``` Manage Libraries ``` -> ``` Install Library ``` sesuai dengan kebutuhan proyek.
 
 <br><br>
 
