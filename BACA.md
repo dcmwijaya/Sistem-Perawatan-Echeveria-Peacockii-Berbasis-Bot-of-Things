@@ -35,19 +35,24 @@ https://www.arduino.cc/en/software
 
 <br>
 
-## Settings
+## Pengaturan
 1. Buka Arduino IDE terlebih dahulu, lalu masuk ke Boards Manager Url dengan cara menyalin tautan berikut:
-```bash
-https://dl.espressif.com/dl/package_esp32_index.json
-```
+   
+   ```bash
+   https://dl.espressif.com/dl/package_esp32_index.json
+   ```
+<br>
+
 2. Pengaturan Board di Arduino IDE
    <ul>
       <li>Cara: klik Boards Manager -> ESP32 Arduino -> DOIT ESP32 DEVKIT V1.</li>
    </ul>
+   <br>
 3. Pengaturan Port di Arduino IDE
    <ul>
       <li>Cara: klik Port -> Pilih sesuai dengan port perangkat Anda (Anda dapat melihatnya di Device Manager).</li>
    </ul>
+   <br>
 4. Instal pustaka di Arduino IDE
    <ul>
       <li>Cara: klik Tools -> Manage Libraries -> Install Library sesuai dengan kebutuhan proyek.</li>
@@ -79,12 +84,19 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 ## Memulai
 1. Unduh Repositori ini.
+   
 2. Pastikan Anda memiliki komponen elektronik yang diperlukan.
+   
 3. Pastikan komponen Anda telah dirancang sesuai dengan diagram.
+   
 4. Pastikan komponen terhubung dengan baik ``` (Sesuaikan pengaturan Board dan Port) ```.
+   
 5. Disarankan untuk ``` membuat akun Platform IoT ``` sekaligus dengan layanannya.
+    
 6. Pastikan untuk mengubah kode program arduino di bagian ``` Router ``` sesuai dengan perangkat yang Anda gunakan.
+    
 7. Jika Anda tidak menerapkan poin 2 dan 3 untuk keperluan pengembangan proyek itu tidak masalah, tetapi harap dicatat bahwa beberapa hal perlu diubah agar dapat berfungsi dengan baik.
+    
 8. Selesai, semoga berhasil.
 
 <br>
