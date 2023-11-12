@@ -27,8 +27,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
 <br>
 
-## Unduh & Instal
-Unduh Arduino IDE :
+## Unduh & Instal Arduino IDE
 ```bash
 https://www.arduino.cc/en/software
 ```
