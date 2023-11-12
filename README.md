@@ -81,9 +81,9 @@ https://dl.espressif.com/dl/package_esp32_index.json
 1. Download this Repository.
 2. Make sure you have the necessary electronic components.
 3. Make sure your components have been designed according to the diagram.
-4. Make sure the components are well connected (Adjust Board and Port settings).
-5. It is recommended to create a Broker account along with this service.
-6. Make sure to change the arduino program code in the "Router" section according to the device you are using.
+4. Make sure the components are well connected ``` (Adjust Board and Port settings) ```.
+5. It is recommended to ``` create a IoT Platform account ``` along with this service.
+6. Make sure to change the arduino program code in the ``` Router ``` section according to the device you are using.
 7. If you do not apply points 2 and 3 for the purposes of project development, it is fine, but please note that some things need to be changed in order to function properly.
 8. Done, good luck.
 
@@ -124,6 +124,11 @@ https://dl.espressif.com/dl/package_esp32_index.json
 Notes: This project requires internet and electricity supply to run the application.
 
 <br><br>
+
+## Disclaimer
+This application has been created by including third-party sources. Third parties here are service providers, whose services are in the form of libraries, frameworks, and others. I thank you very much for the service. It has proven to be very helpful and implementable.
+
+<br>
 
 ## LICENSE
 MIT License - Copyright (c) 2023 - Devan C. M. Wijaya, S.Kom
