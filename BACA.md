@@ -76,21 +76,25 @@ https://www.arduino.cc/en/software
 <br><br>
 
 ## Memulai
-1. Unduh Repositori ini.
+1. Pastikan anda memiliki komponen elektronik yang diperlukan.
    
-2. Pastikan Anda memiliki komponen elektronik yang diperlukan.
+2. Pastikan komponen anda telah dirancang sesuai dengan diagram.
    
-3. Pastikan komponen Anda telah dirancang sesuai dengan diagram.
+3. Pastikan komponen terhubung dengan baik ``` (Sesuaikan pengaturan Board dan Port) ```.
    
-4. Pastikan komponen terhubung dengan baik ``` (Sesuaikan pengaturan Board dan Port) ```.
-   
-5. Disarankan untuk ``` membuat akun Platform IoT ``` sekaligus dengan layanannya.
+4. Disarankan untuk ``` membuat akun Platform IoT ``` sekaligus dengan layanannya.
     
-6. Pastikan untuk mengubah kode program arduino di bagian ``` Router ``` sesuai dengan perangkat yang Anda gunakan.
+5. Pastikan untuk mengubah kode program arduino di bagian ``` Router ``` sesuai dengan perangkat yang anda gunakan.
     
-7. Jika Anda tidak menerapkan poin 2 dan 3 untuk keperluan pengembangan proyek itu tidak masalah, tetapi harap dicatat bahwa beberapa hal perlu diubah agar dapat berfungsi dengan baik.
-    
-8. Selamat menikmati [Selesai].
+6. Jika anda tidak menerapkan poin 1 dan 2 untuk keperluan pengembangan proyek itu tidak masalah, tetapi harap dicatat bahwa beberapa hal perlu diubah agar dapat berfungsi dengan baik.
+
+7. Pastikan perangkat terhubung ke internet.
+
+8. Pastikan semua Things telah dibuat.
+
+9. Unduh dan ekstrak repositori ini.
+   
+10. Selamat menikmati [Selesai].
 
 <br><br>
 
@@ -123,10 +127,6 @@ https://www.arduino.cc/en/software
 <td><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/48380dd7-cb7c-4c7d-ae1c-e637bf9adacf" alt="thingsboard"></td>
 </tr>
 </table>
-
-<br>
-
-<strong>Catatan:</strong> Proyek ini membutuhkan internet dan pasokan listrik untuk menjalankan aplikasi.
 
 <br><br>
 
