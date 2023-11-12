@@ -27,8 +27,7 @@ This project is closely related to agricultural technology, where this tool is u
 
 <br>
 
-## Download & Install
-Download Arduino IDE :
+## Download & Install Arduino IDE
 ```bash
 https://www.arduino.cc/en/software
 ```
