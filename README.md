@@ -128,9 +128,6 @@ https://www.arduino.cc/en/software
 </tr>
 </table>
 
-<br>
-<strong>More information:</strong> <a href="https://ejournal.upnvj.ac.id/informatik/article/view/3436"><u>Click Here</u></a>
-
 <br><br>
 
 ## Disclaimer
