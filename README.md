@@ -90,7 +90,7 @@ https://www.arduino.cc/en/software
     
 7. If you do not apply points 2 and 3 for the purposes of project development, it is fine, but please note that some things need to be changed in order to function properly.
     
-8. Done, good luck.
+8. Please enjoy [Done].
 
 <br><br>
 
