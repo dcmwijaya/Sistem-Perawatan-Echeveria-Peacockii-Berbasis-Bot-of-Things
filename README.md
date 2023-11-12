@@ -123,7 +123,7 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 Notes: This project requires internet and electricity supply to run the application.
 
-<br><br>
+<br>
 
 ## Disclaimer
 This application has been created by including third-party sources. Third parties here are service providers, whose services are in the form of libraries, frameworks, and others. I thank you very much for the service. It has proven to be very helpful and implementable.
