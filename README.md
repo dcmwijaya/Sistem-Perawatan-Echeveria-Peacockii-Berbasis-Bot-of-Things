@@ -77,7 +77,7 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 <br><br>
 
-## Running
+## Get Started
 1. Download this Repository.
 2. Make sure you have the necessary electronic components.
 3. Make sure your components have been designed according to the diagram.
