@@ -213,7 +213,7 @@ Dalam proses penulisan...
 6. Salin ``` API token bot telegram anda ``` -> lalu tempelkan pada bagian ``` #define BOTtoken "YOUR_API_BOT_TOKEN" ```. Contohnya yaitu :
 
    ```
-   #define BOTtoken "1264610746:AAF3HuLDWCPKIGcinRY5Uf-qTpsWWw_jN0K"
+   #define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
    ```
 
 <br><br>
