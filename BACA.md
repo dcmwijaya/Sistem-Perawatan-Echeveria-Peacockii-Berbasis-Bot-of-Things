@@ -107,7 +107,7 @@ Dalam proses penulisan...
 <br><br>
 
 ## Pengaturan Bot Telegram
-1. Buka <a src="https://t.me/botfather">@BotFather</a>.
+1. Buka <a href="https://t.me/botfather">@BotFather</a>.
 
 2. Ketik ``` /newbot ```.
 
