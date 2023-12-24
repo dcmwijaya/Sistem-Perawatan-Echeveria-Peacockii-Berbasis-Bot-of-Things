@@ -107,7 +107,21 @@ In the process of writing...
 <br><br>
 
 ## Telegram Bot Setup
-In the process of writing...
+1. Open <a src="https://t.me/botfather">@BotFather</a>.
+
+2. Type ``` /newbot ```.
+
+3. Type the desired bot name, for example: ``` echeveria_bot ```.
+
+4. Type the desired bot username, for example: ``` echeveria_bot ```.
+
+5. Also do it for bot image settings, bot descriptions, and so on according to your needs.
+
+6. Copy ``` your telegram bot API token ``` -> then paste it into the ``` #define BOTtoken "YOUR_API_BOT_TOKEN" ``` section. For example :
+
+   ```
+   #define BOTtoken "1264610746:AAF3HuLDWCPKIGcinRY5Uf-qTpsWWw_jN0K"
+   ```
 
 <br><br>
 
