@@ -4,7 +4,7 @@
 ![Project](https://img.shields.io/badge/Project-Bot%20of%20Things-light.svg?style=flat&logo=arduino&logoColor=white&color=%23F7DF1E)
 
 # Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things
-<strong>Tugas Akhir IoT Master Class Indobot 2022</strong><br>
+<strong>Tugas Akhir IoT Master Class Indobot 2022</strong><br><br>
 Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini digunakan untuk melakukan penyiraman secara otomatis dan memantau perubahan kondisi yang ada di lingkungan sekitar tanaman Echeveria Peacockii secara real time dari jarak jauh kapanpun dan dimanapun. Alat ini dilengkapi dengan antarmuka berbasis Bot of Things (BoT) yang bertujuan untuk memudahkan pengguna dalam merawat tanaman hias tersebut. Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kaktus, namun pada tubuh tanaman ini tidak dijumpai adanya duri, sehingga sangat diminati oleh para pecinta tanaman hias.
 
 <br><br>
