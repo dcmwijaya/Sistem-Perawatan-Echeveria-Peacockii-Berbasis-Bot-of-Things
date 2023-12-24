@@ -199,7 +199,33 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    • Buka situs resmi ThingsBoard berikut: <a href="https://thingsboard.cloud/">thingsboard.cloud</a>.<br><br>
    • Masuk dengan akun google.<br><br>
    
-2. Dalam proses penulisan...<br><br>
+2. Buat device profile baru :<br><br>
+   • Masuk ke menu ``` Profiles ``` -> lalu pilih ``` Device profiles ```.
+
+   •  Klik ``` + (Add device profile) ```.
+
+   •  Device profile details: ``` Name ``` -> ``` MQTT ```.
+
+   •  Transport configuration: ``` Transport type ``` -> ``` MQTT ```. Lalu isilah data MQTT seperti yang ditunjukkan di bawah ini :<br>
+      - Telemetry topic filter: ``` v1/devices/me/telemetry/fpiotdevan ```.
+      - Attributes publish & subscribe topic filter: ``` v1/devices/me/attributes/fpiotdevan ```.
+      - MQTT device payload : ``` JSON ```.
+
+   •  Klik ``` Add ``` untuk menambahkan.
+   
+3. Buat device baru :<br><br>
+   • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
+
+   • Klik ``` + (Add entity group) ```.
+
+   • Beri nama ``` smart_farming ``` -> klik ``` Add ``` untuk menambahkan.
+
+   • Ubah aksesnya menjadi ``` Public ``` agar dapat digunakan.
+
+   • Di dalam ``` smart_farming: Devices ``` -> buatlah 1 device dengan ketentuan sebagai berikut :<br>
+      - ``` Name ``` -> ``` echeveria ```.
+      - ``` Label ``` -> ``` echeveria ```.
+      - ``` Device profile ``` -> sementara ``` default ```.
 
 <br><br>
 
