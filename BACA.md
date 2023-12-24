@@ -236,9 +236,9 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
    • Klik ``` + (Add dashboard) ```.
 
-   • Beri nama ``` Echeveria Dashboard ``` -> klik ``` Add ``` untuk menambahkan.
+   • Lalu beri nama ``` Echeveria Dashboard ``` -> klik ``` Add ``` untuk menambahkan.
 
-   • Ubah title dari yang sebelumnya adalah ``` Echeveria Dashboard ``` menjadi ``` Sistem Perawatan Echeveria ```.
+   • Ubah ``` title ``` menjadi ``` Sistem Perawatan Echeveria ```.
 
    • Pilih ``` widget yang diinginkan ``` -> ``` setting ``` widget.<br><br>
    
