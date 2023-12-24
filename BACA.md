@@ -102,7 +102,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    • Klik ``` Start Free ``` untuk mendaftar.<br><br>
    • Masukkan email.<br><br>
    • Buka email untuk konfirmasi.<br><br>
-   • Login menggunakan akun yang sudah dibuat.<br><br>
+   • Masuk menggunakan akun yang sudah dibuat.<br><br>
    
 2. Buat template baru :<br><br>
    • Klik ``` Developer Zone ``` -> lalu pilih opsi ``` My Templates ```.<br><br>
@@ -195,7 +195,9 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan ThingsBoard
-Dalam proses penulisan...
+1. Memulai blynk :<br><br>
+   • Buka situs resmi ThingsBoard berikut: <a href="https://thingsboard.cloud/">thingsboard.cloud</a>.<br><br>
+   • Masuk dengan akun google.<br><br>
 
 <br><br>
 
