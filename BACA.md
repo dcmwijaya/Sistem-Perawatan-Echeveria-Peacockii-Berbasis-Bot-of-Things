@@ -12,10 +12,14 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 ## Fitur / Kerangka Kerja / Peralatan
 | Media | Deskripsi |
 | --- | --- |
-| Platform IoT | Blynk & ThingsBoard |
 | Papan Pengembangan | DOIT ESP32 DEVKIT V1 |
-| Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
+| Editor Kode | Arduino IDE |
+| Driver | USB-Serial CP210X |
+| Platform IoT | Blynk & ThingsBoard |
+| Protokol IoT | MQTT & TCP/IP |
+| Arsitektur | 3 Lapisan |
 | Telegram | API Bot Telegram |
+| Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Aktuator | Submersible pump |
 | Sensor | FC-28 (Kelembaban Tanah Resistif), LDR (Cahaya), DHT22 (Suhu & Kelembaban Udara) |
 | Layar | LCD I2C |
@@ -24,11 +28,20 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
 <br><br>
 
-## Unduh & Instal Arduino IDE
-```bash
-https://www.arduino.cc/en/software
-```
+## Unduh & Instal
+1. Arduino IDE
 
+   ```
+   https://www.arduino.cc/en/software
+   ```
+<br>
+
+2. USB-Serial CP210X
+
+   ```
+   https://bit.ly/CP210X_Driver
+   ```
+   
 <br><br>
 
 ## Pengaturan
