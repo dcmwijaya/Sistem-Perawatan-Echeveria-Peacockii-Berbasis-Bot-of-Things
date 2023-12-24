@@ -107,7 +107,7 @@ In the process of writing...
 <br><br>
 
 ## Telegram Bot Setup
-1. Open <a src="https://t.me/botfather">@BotFather</a>.
+1. Open <a href="https://t.me/botfather">@BotFather</a>.
 
 2. Type ``` /newbot ```.
 
