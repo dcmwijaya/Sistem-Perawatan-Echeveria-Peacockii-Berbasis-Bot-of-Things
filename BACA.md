@@ -254,6 +254,8 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
    ```
 
+   • Jika koneksi ke ThingsBoard diketahui tidak berhasil, maka ada bagian yang salah. Silakan anda cek lagi pada bagian software, firmware, hingga hardware.
+
 <br><br>
 
 ## Pengaturan Bot Telegram
