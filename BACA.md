@@ -242,7 +242,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
    • Ubah ``` title ``` menjadi ``` Sistem Perawatan Echeveria ```.
 
-   • Pilih ``` widget yang diinginkan ``` -> ``` setting ``` widget.<br><br>
+   • Pilih ``` widget yang diinginkan ``` -> pengaturan pada widget.<br><br>
    
 5. Konfigurasi firmware :<br><br>
    • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
