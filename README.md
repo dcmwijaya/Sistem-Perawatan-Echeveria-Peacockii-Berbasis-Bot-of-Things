@@ -98,11 +98,11 @@ This project is closely related to agricultural technology, where this tool is u
 
 ## Blynk Setup
 1. Getting started with blynk :<br><br>
-   • Go to the official Blynk website below: <a href="https://blynk.io">blynk.io</a>.<br><br>
+   • Go to the official Blynk website: <a href="https://blynk.io">blynk.io</a>.<br><br>
    • Click ``` Start Free ``` untuk mendaftar.<br><br>
    • Enter an email.<br><br>
    • Open email for confirmation.<br><br>
-   • Login using the account that has been created.<br><br>
+   • Log in using the account that has been created.<br><br>
    
 2. Create a new template :<br><br>
    • Click ``` Developer Zone ``` -> then select ``` My Templates ``` option.<br><br>
@@ -197,7 +197,66 @@ This project is closely related to agricultural technology, where this tool is u
 <br><br>
 
 ## ThingsBoard Setup
-In the process of writing...
+1. Getting started with ThingsBoard :<br><br>
+   • Go to the official ThingsBoard website: <a href="https://thingsboard.cloud/">thingsboard.cloud</a>.<br><br>
+   • Log in with google account.<br><br>
+   
+2. Create a new device profile :<br><br>
+   • Go to ``` Profiles ``` menu -> then select ``` Device profiles ```.
+
+   •  Click ``` + (Add device profile) ```.
+
+   •  Device profile details: ``` Name ``` -> ``` MQTT ```.
+
+   •  Transport configuration: ``` Transport type ``` -> ``` MQTT ```. Then fill in the MQTT data as shown below :<br>
+      - Telemetry topic filter: ``` v1/devices/me/telemetry/fpiotdevan ```. This should be the same as the one in the firmware code.
+      - Attributes publish & subscribe topic filter: ``` v1/devices/me/attributes/fpiotdevan ```. This should be the same as the one in the firmware code.
+      - MQTT device payload : ``` JSON ```.
+
+   •  Click ``` Add ``` to add.<br><br>
+   
+3. Create a new device :<br><br>
+   • Go to ``` Entities ``` menu -> then select ``` Devices ``` -> ``` Groups ```.
+
+   • Change the device access groups ``` All ``` to ``` Public ``` so that it can be used widely.
+
+   • Open device groups ``` All ```.
+
+   • Click ``` + (Add device) ```.
+
+   • Make 1 device with the following conditions :<br>
+      - ``` Name ``` -> ``` EcheveriaIoT ```.
+      - ``` Label ``` -> ``` EcheveriaIoT ```.
+      - ``` Device profile ``` -> ``` default ```.<br><br>
+   
+4. Create a dashboard :<br><br>
+   • Go to ``` Dashboards ``` menu -> ``` Groups ``` -> ``` All ```.
+
+   • Change the dashboard access groups ``` All ``` to ``` Public ``` so that it can be used widely.
+
+   • Open dashboard groups ``` All ```.
+
+   • Click ``` + (Add dashboard) ```.
+
+   • Then name it ``` Echeveria Dashboard ``` -> click ``` Add ``` to add.
+
+   • Change ``` title ``` to ``` Sistem Perawatan Echeveria ```.
+
+   • Select ``` desired widget ``` -> settings on widgets.<br><br>
+   
+5. Firmware configuration :<br><br>
+   • Go to ``` Entities ``` menu -> then select ``` Devices ``` -> ``` Groups ```.
+
+   • Click ``` EcheveriaIoT ``` -> copy the ``` Device ID ``` and ``` Token ``` mentioned.
+
+   • Then paste in the firmware code, for example like this :
+
+   ```
+   #define DEVICE_ID_TB "26001630-a274-11ee-9db5-1fb69bbe078f"
+   #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
+   ```
+
+   • If it fails to connect to ThingsBoard, then the approximate problem is in the software / firmware / hardware section. Please check again.
 
 <br><br>
 
