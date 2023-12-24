@@ -148,7 +148,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
       
    • Klik ``` Create ```.
    
-   • Klik ``` Save (pojok kanan atas) ```.<br><br>
+   • Klik ``` Save ```.<br><br>
    
 4. Buat device baru :<br><br>
    • Masuk ke menu ``` Devices ```.
@@ -159,7 +159,31 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
       - ``` TEMPLATE ``` -> ``` Smart Farming ```.
       - ``` DEVICE NAME ``` -> ``` Smart Farming ```.
         
-   • Klik ``` Create ```.
+   • Klik ``` Create ```.<br><br>
+   
+5. Kelola dashboard :<br><br>
+   • Klik ``` simbol titik 3 ``` -> kemudian pilih ``` Edit Dashboard ```.
+
+   • Pilih ``` widget yang diinginkan ``` lalu ``` drag ``` ke area dashboard.
+
+   • Klik ``` setting ``` pada widget yang ditambahkan.
+
+   • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ```.
+
+   • Klik ``` Save And Apply ```.<br><br>
+   
+6. Konfigurasi firmware :<br><br>
+   • Masuk ke menu  ``` Devices ``` -> pilih ``` Smart Farming ``` -> klik ``` Device Info ```.
+
+   • Salin ``` ID Template ```, ``` Nama Template ```, dan ``` AuthToken ``` tersebut.
+
+   • Kemudian tempelkan pada bagian paling atas kode firmware, contohnya seperti ini :
+
+   ```
+   #define BLYNK_TEMPLATE_ID "TMPL6ZSHxYC-z"
+   #define BLYNK_TEMPLATE_NAME "Smart Farming"
+   #define BLYNK_AUTH_TOKEN "fw1oXlpe-YfYh7JXQHu4QTS3EqlnM-iw"
+   ```
    
 <br><br>
 
