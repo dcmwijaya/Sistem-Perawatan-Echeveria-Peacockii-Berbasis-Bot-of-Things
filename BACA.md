@@ -242,7 +242,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
    • Pilih ``` widget yang diinginkan ``` -> ``` setting ``` widget.<br><br>
    
-6. Konfigurasi firmware :<br><br>
+5. Konfigurasi firmware :<br><br>
    • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
 
    • Klik ``` EcheveriaIoT ``` -> salin ``` ID Device ``` dan ``` Token ``` tersebut.
