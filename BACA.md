@@ -206,7 +206,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
    •  Device profile details: ``` Name ``` -> ``` MQTT ```.
 
-   •  Transport configuration: ``` Transport type ``` -> ``` MQTT ```. Lalu isilah data MQTT seperti yang ditunjukkan di bawah ini :<br>
+   •  Transport configuration: ``` Transport type ``` -> ``` MQTT ```. Lalu isilah data MQTT seperti yang terlihat di bawah ini :<br>
       - Telemetry topic filter: ``` v1/devices/me/telemetry/fpiotdevan ```.
       - Attributes publish & subscribe topic filter: ``` v1/devices/me/attributes/fpiotdevan ```.
       - MQTT device payload : ``` JSON ```.
