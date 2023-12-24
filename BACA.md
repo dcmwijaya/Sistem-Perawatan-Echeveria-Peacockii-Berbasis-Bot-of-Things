@@ -211,7 +211,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
       - Attributes publish & subscribe topic filter: ``` v1/devices/me/attributes/fpiotdevan ```.
       - MQTT device payload : ``` JSON ```.
 
-   •  Klik ``` Add ``` untuk menambahkan.
+   •  Klik ``` Add ``` untuk menambahkan.<br><br>
    
 3. Buat device baru :<br><br>
    • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
