@@ -216,9 +216,9 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 3. Buat device baru :<br><br>
    • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
 
-   • Ubah akses device ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
+   • Ubah akses device groups ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
 
-   • Buka device ``` All ```.
+   • Buka device groups ``` All ```.
 
    • Klik ``` + (Add device) ```.
 
@@ -228,15 +228,21 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
       - ``` Device profile ``` -> ``` default ```.<br><br>
    
 4. Buat dashboard :<br><br>
-   • Masuk ke menu ``` Dashboards ```.
+   • Masuk ke menu ``` Dashboards ``` -> ``` Groups ``` -> ``` All ```.
 
-   • Klik ``` + (Add entity group) ```.
+   • Ubah akses dashboard groups ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
 
-   • Beri nama ``` Sistem Perawatan Echeveria ``` -> klik ``` Add ``` untuk menambahkan.
+   • Buka dashboard groups ``` All ```.
+
+   • Klik ``` + (Add dashboard) ```.
+
+   • Beri nama ``` Echeveria Dashboard ``` -> klik ``` Add ``` untuk menambahkan.
+
+   • Ubah title dari yang sebelumnya adalah ``` Echeveria Dashboard ``` menjadi ``` Sistem Perawatan Echeveria ```.
 
    • Pilih ``` widget yang diinginkan ``` -> ``` setting ``` widget.<br><br>
    
-5. Konfigurasi firmware :<br><br>
+6. Konfigurasi firmware :<br><br>
    • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
 
    • Klik ``` EcheveriaIoT ``` -> salin ``` ID Device ``` dan ``` Token ``` tersebut.
