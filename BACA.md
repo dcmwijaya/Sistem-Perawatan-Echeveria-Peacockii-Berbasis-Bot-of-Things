@@ -97,15 +97,57 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan Blynk
-1. Buka situs resmi Blynk: https://blynk.io.
-2. Klik ``` Start Free ``` untuk mendaftar.
-3. Masukkan email.
-4. Buka email untuk konfirmasi.
-5. Login menggunakan akun yang sudah dibuat.
-6. Klik Menu ``` Templates ```.
-7. Klik ``` Add New Templates ``` untuk membuat Template Baru.
-8. Isikan ``` Nama Template ```, ``` Hardware ``` adalah ESP32, ``` Connection ``` yaitu WiFi, ``` masukkan deskripsi ``` opsional.
-9. Klik ``` Done ```.
+1. Memulai blynk :<br><br>
+   • Buka situs resmi Blynk berikut: <a href="https://blynk.io">blynk.io</a>.<br><br>
+   • Klik ``` Start Free ``` untuk mendaftar.<br><br>
+   • Masukkan email.<br><br>
+   • Buka email untuk konfirmasi.<br><br>
+   • Login menggunakan akun yang sudah dibuat.<br><br>
+   
+2. Buat template baru :<br><br>
+   • Klik ``` Developer Zone ``` -> lalu pilih opsi ``` My Templates ```.<br><br>
+   • Kemudian klik ``` + New Templates ``` untuk membuat Template Baru.<br><br>
+   • Bagian ``` NAME ``` diisi dengan ``` Smart Farming ```, ``` HARDWARE ``` pilih ``` ESP32 ```, ``` CONNECTION TYPE ``` pilih ``` WiFi ```, ``` TEMPLATE DESCRIPTION ``` bersifat opsional.<br><br>
+   • Klik ``` Done ```.<br><br>
+   
+3. Buat datastreams :<br><br>
+   • Masuk ke Menu ``` Datastreams ``` -> klik ``` + New Datastreams ``` -> pilih ``` Virtual Pin ```.<br><br>
+   
+   • Masukkan data pertama :<br>
+      - ``` NAME ``` -> ``` suhu_udara ```.<br>
+      - ``` PIN ``` -> ``` V0 ```.<br>
+      - ``` DATA TYPE ``` -> ``` Double ```.<br>
+      - ``` UNITS ``` -> ``` Celcius, °C ```.<br>
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.<br>
+      - ``` DECIMALS ``` -> ``` #.# ```.<br>
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+         
+   • Masukkan data kedua :<br>
+      - ``` NAME ``` -> ``` kelembapan_udara ```.<br>
+      - ``` PIN ``` -> ``` V1 ```.<br>
+      - ``` DATA TYPE ``` -> ``` Integer ```.<br>
+      - ``` UNITS ``` -> ``` Percentage, % ```.<br>
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.<br>
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+        
+   • Masukkan data ketiga :<br>
+      - ``` NAME ``` -> ``` kelembapan_tanah ```.<br>
+      - ``` PIN ``` -> ``` V2 ```.<br>
+      - ``` DATA TYPE ``` -> ``` Integer ```.<br>
+      - ``` UNITS ``` -> ``` Percentage, % ```.<br>
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.<br>
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+   
+   • Masukkan data keempat :<br>
+      - ``` NAME ``` -> ``` cahaya ```.<br>
+      - ``` PIN ``` -> ``` V3 ```.<br>
+      - ``` DATA TYPE ``` -> ``` Integer ```.<br>
+      - ``` UNITS ``` -> ``` Lux, lx ```.<br>
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100000 ```.<br>
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      
+   • Klik ``` Create ```.<br><br>
+   • Klik ``` Save (pojok kanan atas) ```.<br><br>
 
 <br><br>
 
