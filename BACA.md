@@ -111,44 +111,56 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    • Klik ``` Done ```.<br><br>
    
 3. Buat datastreams :<br><br>
-   • Masuk ke Menu ``` Datastreams ``` -> klik ``` + New Datastreams ``` -> pilih ``` Virtual Pin ```.<br><br>
+   • Masuk ke Menu ``` Datastreams ``` -> klik ``` + New Datastreams ``` -> pilih ``` Virtual Pin ```.
    
    • Masukkan data pertama :<br>
-      - ``` NAME ``` -> ``` suhu_udara ```.<br>
-      - ``` PIN ``` -> ``` V0 ```.<br>
-      - ``` DATA TYPE ``` -> ``` Double ```.<br>
-      - ``` UNITS ``` -> ``` Celcius, °C ```.<br>
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.<br>
-      - ``` DECIMALS ``` -> ``` #.# ```.<br>
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` suhu_udara ```.
+      - ``` PIN ``` -> ``` V0 ```.
+      - ``` DATA TYPE ``` -> ``` Double ```.
+      - ``` UNITS ``` -> ``` Celcius, °C ```.
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
+      - ``` DECIMALS ``` -> ``` #.# ```.
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
          
    • Masukkan data kedua :<br>
-      - ``` NAME ``` -> ``` kelembapan_udara ```.<br>
-      - ``` PIN ``` -> ``` V1 ```.<br>
-      - ``` DATA TYPE ``` -> ``` Integer ```.<br>
-      - ``` UNITS ``` -> ``` Percentage, % ```.<br>
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.<br>
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` kelembapan_udara ```.
+      - ``` PIN ``` -> ``` V1 ```.
+      - ``` DATA TYPE ``` -> ``` Integer ```.
+      - ``` UNITS ``` -> ``` Percentage, % ```.
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
         
    • Masukkan data ketiga :<br>
-      - ``` NAME ``` -> ``` kelembapan_tanah ```.<br>
-      - ``` PIN ``` -> ``` V2 ```.<br>
-      - ``` DATA TYPE ``` -> ``` Integer ```.<br>
-      - ``` UNITS ``` -> ``` Percentage, % ```.<br>
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.<br>
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` kelembapan_tanah ```.
+      - ``` PIN ``` -> ``` V2 ```.
+      - ``` DATA TYPE ``` -> ``` Integer ```.
+      - ``` UNITS ``` -> ``` Percentage, % ```.
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
    
    • Masukkan data keempat :<br>
-      - ``` NAME ``` -> ``` cahaya ```.<br>
-      - ``` PIN ``` -> ``` V3 ```.<br>
-      - ``` DATA TYPE ``` -> ``` Integer ```.<br>
-      - ``` UNITS ``` -> ``` Lux, lx ```.<br>
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100000 ```.<br>
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` cahaya ```.
+      - ``` PIN ``` -> ``` V3 ```.
+      - ``` DATA TYPE ``` -> ``` Integer ```.
+      - ``` UNITS ``` -> ``` Lux, lx ```.
+      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100000 ```.
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
       
-   • Klik ``` Create ```.<br><br>
+   • Klik ``` Create ```.
+   
    • Klik ``` Save (pojok kanan atas) ```.<br><br>
-
+   
+4. Buat device baru :<br><br>
+   • Masuk ke menu ``` Devices ```.
+   
+   • Klik ``` + New Devices ``` untuk menambahkan devices baru.
+   
+   • Pilih ``` From Templates ``` :<br>
+      - ``` TEMPLATE ``` -> ``` Smart Farming ```.
+      - ``` DEVICE NAME ``` -> ``` Smart Farming ```.
+        
+   • Klik ``` Create ```.
+   
 <br><br>
 
 ## Pengaturan ThingsBoard
