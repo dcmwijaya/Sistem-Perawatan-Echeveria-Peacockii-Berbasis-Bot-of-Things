@@ -220,7 +220,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
    • Buka device ``` All ```.
 
-   • Klik ``` + (Add entity group) ```.
+   • Klik ``` + (Add device) ```.
 
    • Buatlah 1 device dengan ketentuan sebagai berikut :<br>
       - ``` Name ``` -> ``` EcheveriaIoT ```.
