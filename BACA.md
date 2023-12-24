@@ -17,7 +17,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | Driver | USB-Serial CP210X |
 | Platform IoT | Blynk & ThingsBoard |
 | Protokol IoT | MQTT & TCP/IP |
-| Arsitektur | 3 Lapisan |
+| Arsitektur IoT | 4 Lapisan |
 | Telegram | API Bot Telegram |
 | Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Aktuator | Submersible pump |
