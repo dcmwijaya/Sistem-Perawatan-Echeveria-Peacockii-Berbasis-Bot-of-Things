@@ -21,12 +21,12 @@
 FC28Sensor fc28;
 DHT dht(DHT_PIN, DHT_TYPE);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-#define WIFI_SSID " "
-#define WIFI_PASSWORD " "
+#define WIFI_SSID "YOUR_WIFI_NAME"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 #define MQTT_SERVER "thingsboard.cloud"
-#define DEVICE_ID_TB " "
-#define ACCESS_TOKEN_TB " "
-#define BOTtoken " "
+#define DEVICE_ID_TB "YOUR_DEVICE_ID_THINGSBOARD"
+#define ACCESS_TOKEN_TB "YOUR_ACCESS_TOKEN_THINGSBOARD"
+#define BOTtoken "YOUR_API_BOT_TOKEN"
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
 #define InlineMenu2 "InlineMonitoringKelembapanUdara"
 #define InlineMenu3 "InlineMonitoringKelembapanTanah"
