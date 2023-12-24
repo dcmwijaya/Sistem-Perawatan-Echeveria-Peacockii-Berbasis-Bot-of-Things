@@ -96,6 +96,21 @@ This project is closely related to agricultural technology, where this tool is u
 
 <br><br>
 
+## Blynk Setup
+In the process of writing...
+
+<br><br>
+
+## ThingsBoard Setup
+In the process of writing...
+
+<br><br>
+
+## Telegram Bot Setup
+In the process of writing...
+
+<br><br>
+
 ## Get Started
 1. Download and extract this repository.
     
