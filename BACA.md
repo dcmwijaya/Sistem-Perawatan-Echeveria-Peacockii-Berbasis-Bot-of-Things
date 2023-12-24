@@ -97,7 +97,15 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan Blynk
-Dalam proses penulisan...
+1. Buka situs resmi Blynk: https://blynk.io.
+2. Klik ``` Start Free ``` untuk mendaftar.
+3. Masukkan email.
+4. Buka email untuk konfirmasi.
+5. Login menggunakan akun yang sudah dibuat.
+6. Klik Menu ``` Templates ```.
+7. Klik ``` Add New Templates ``` untuk membuat Template Baru.
+8. Isikan ``` Nama Template ```, ``` Hardware ``` adalah ESP32, ``` Connection ``` yaitu WiFi, ``` masukkan deskripsi ``` opsional.
+9. Klik ``` Done ```.
 
 <br><br>
 
