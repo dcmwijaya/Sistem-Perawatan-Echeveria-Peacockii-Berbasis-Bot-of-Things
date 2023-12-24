@@ -1,8 +1,8 @@
 //Deklarasi Library/Konstanta/Dsb
 #define BLYNK_PRINT Serial
-#define BLYNK_TEMPLATE_ID " "
-#define BLYNK_DEVICE_NAME " "
-#define BLYNK_AUTH_TOKEN " "
+#define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
+#define BLYNK_DEVICE_NAME "YOUR_BLYNK_DEVICE_NAME"
+#define BLYNK_AUTH_TOKEN "YOUR_BLYNK_AUTH_TOKEN"
 #if defined(ESP8266)
 #include <ESP8266WiFi.h>
 #elif defined(ESP32)
@@ -25,9 +25,9 @@
 FC28Sensor fc28;
 DHT dht(DHT_PIN, DHT_TYPE);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-#define WIFI_SSID " "
-#define WIFI_PASSWORD " "
-#define BOTtoken " "
+#define WIFI_SSID "YOUR_WIFI_NAME"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
+#define BOTtoken "YOUR_API_BOT_TOKEN"
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
 #define InlineMenu2 "InlineMonitoringKelembapanUdara"
 #define InlineMenu3 "InlineMonitoringKelembapanTanah"
