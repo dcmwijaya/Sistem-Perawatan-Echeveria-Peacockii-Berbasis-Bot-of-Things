@@ -195,9 +195,11 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan ThingsBoard
-1. Memulai blynk :<br><br>
+1. Memulai ThingsBoard :<br><br>
    • Buka situs resmi ThingsBoard berikut: <a href="https://thingsboard.cloud/">thingsboard.cloud</a>.<br><br>
    • Masuk dengan akun google.<br><br>
+   
+2. Dalam proses penulisan...<br><br>
 
 <br><br>
 
