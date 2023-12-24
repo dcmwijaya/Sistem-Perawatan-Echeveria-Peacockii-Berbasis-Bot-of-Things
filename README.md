@@ -97,23 +97,23 @@ This project is closely related to agricultural technology, where this tool is u
 <br><br>
 
 ## Blynk Setup
-1. Getting started with blynk:<br><br>
+1. Getting started with blynk :<br><br>
    • Go to the official Blynk website below: <a href="https://blynk.io">blynk.io</a>.<br><br>
    • Click ``` Start Free ``` untuk mendaftar.<br><br>
    • Enter an email.<br><br>
    • Open email for confirmation.<br><br>
    • Login using the account that has been created.<br><br>
    
-2. Create a new template:<br><br>
+2. Create a new template :<br><br>
    • Click ``` Developer Zone ``` -> then select ``` My Templates ``` option.<br><br>
    • Then click ``` + New Templates ``` to create a New Template.<br><br>
    • The ``` NAME ``` section is filled with ``` Smart Farming ```, ``` HARDWARE ``` select ``` ESP32 ```, ``` CONNECTION TYPE ``` select ``` WiFi ```, ``` TEMPLATE DESCRIPTION ``` is optional.<br><br>
    • Click ``` Done ```.<br><br>
    
-3. Create datastreams:<br><br>
+3. Create datastreams :<br><br>
    • Enter ``` Datastreams ``` menu -> click ``` + New Datastreams ``` -> select ``` Virtual Pin ```.
    
-   • Input the first data:<br>
+   • Input the first data :<br>
       - ``` NAME ``` -> ``` suhu_udara ```.
       - ``` PIN ``` -> ``` V0 ```.
       - ``` DATA TYPE ``` -> ``` Double ```.
@@ -122,7 +122,7 @@ This project is closely related to agricultural technology, where this tool is u
       - ``` DECIMALS ``` -> ``` #.# ```.
       - ``` DEFAULT VALUE ``` -> ``` 0 ```.
          
-   • Input the second data:<br>
+   • Input the second data :<br>
       - ``` NAME ``` -> ``` kelembapan_udara ```.
       - ``` PIN ``` -> ``` V1 ```.
       - ``` DATA TYPE ``` -> ``` Integer ```.
@@ -130,7 +130,7 @@ This project is closely related to agricultural technology, where this tool is u
       - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
       - ``` DEFAULT VALUE ``` -> ``` 0 ```.
         
-   • Input the third data:<br>
+   • Input the third data :<br>
       - ``` NAME ``` -> ``` kelembapan_tanah ```.
       - ``` PIN ``` -> ``` V2 ```.
       - ``` DATA TYPE ``` -> ``` Integer ```.
@@ -138,7 +138,7 @@ This project is closely related to agricultural technology, where this tool is u
       - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
       - ``` DEFAULT VALUE ``` -> ``` 0 ```.
    
-   • Input the fourth data:<br>
+   • Input the fourth data :<br>
       - ``` NAME ``` -> ``` cahaya ```.
       - ``` PIN ``` -> ``` V3 ```.
       - ``` DATA TYPE ``` -> ``` Integer ```.
@@ -150,7 +150,7 @@ This project is closely related to agricultural technology, where this tool is u
    
    • Click ``` Save ```.<br><br>
    
-4. Create a new device:<br><br>
+4. Create a new device :<br><br>
    • Enter ``` Devices ``` menu.
    
    • Click ``` + New Devices ``` to add new devices.
@@ -161,7 +161,7 @@ This project is closely related to agricultural technology, where this tool is u
         
    • Click ``` Create ```.<br><br>
    
-5. Manage dashboard on the Blynk site:<br><br>
+5. Manage dashboard on the Blynk site :<br><br>
    • Click ``` 3 dot symbol ``` -> then select ``` Edit Dashboard ```.
 
    • Select ``` the desired widget ``` then ``` drag ``` into the dashboard area.
@@ -172,14 +172,14 @@ This project is closely related to agricultural technology, where this tool is u
 
    • Click ``` Save And Apply ```.<br><br>
 
-6. Manage dashboards on the Blynk mobile app:<br><br>
+6. Manage dashboards on the Blynk mobile app :<br><br>
    • Open your smart phone -> then in the ``` Google Play Store ```, find the application called ``` Blynk IoT ``` -> then ``` install ```.
 
    • Open the application -> then do the configuration as on the Blynk site earlier.
 
    • For the rest, you can search for tutorials on ``` Google ``` to enrich your knowledge.<br><br>
    
-7. Firmware configuration:<br><br>
+7. Firmware configuration :<br><br>
    • Go to ``` Devices ``` menu -> select ``` Smart Farming ``` -> click ``` Device Info ```.
 
    • Copy ``` Template ID ```, ``` Template Name ```, and ``` AuthToken ```.
