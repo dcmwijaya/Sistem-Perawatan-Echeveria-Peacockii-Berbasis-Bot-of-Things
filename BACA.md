@@ -97,7 +97,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan Blynk
-1. Memulai blynk:<br><br>
+1. Memulai blynk :<br><br>
    • Buka situs resmi Blynk berikut: <a href="https://blynk.io">blynk.io</a>.<br><br>
    • Klik ``` Start Free ``` untuk mendaftar.<br><br>
    • Masukkan email.<br><br>
