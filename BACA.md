@@ -173,9 +173,11 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    • Klik ``` Save And Apply ```.<br><br>
 
 6. Kelola dashboard pada Blynk mobile apps :<br><br>
-   • Buka ponsel pintar anda, lalu cari aplikasi ``` Blynk IoT ``` di ``` Google Play Store ```.
+   • Buka ponsel pintar anda -> lalu di ``` Google Play Store ```, cari aplikasi yang bernama ``` Blynk IoT ``` -> kemudian ``` instal ```.
 
-   • Kurang lebih caranya hampir sama dengan yang ada di situs Blynk tadi. Untuk tutorialnya anda dapat mencarinya di google.<br><br>
+   • Buka aplikasi tersebut -> lalu lakukan konfigurasi seperti yang ada di situs Blynk tadi.
+
+   • Selebihnya anda dapat mencari tutorial di ``` Google ``` untuk memperkaya wawasan anda.<br><br>
    
 7. Konfigurasi firmware :<br><br>
    • Masuk ke menu  ``` Devices ``` -> pilih ``` Smart Farming ``` -> klik ``` Device Info ```.
