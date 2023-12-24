@@ -12,10 +12,14 @@ This project is closely related to agricultural technology, where this tool is u
 ## Features / Framework / Tools
 | Media | Description |
 | --- | --- |
-| IoT Platform | Blynk & ThingsBoard |
 | Board Development | DOIT ESP32 DEVKIT V1 |
-| Arduino Library | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
+| Code Editor | Arduino IDE |
+| Driver | USB-Serial CP210X |
+| IoT Platform | Blynk & ThingsBoard |
+| IoT Protocol | MQTT & TCP/IP |
+| Architecture | 3 Layer |
 | Telegram | Telegram Bot API |
+| Arduino Library | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Actuators | Submersible pump |
 | Sensor | FC-28 (Resistive Soil Moisture), LDR (Light Dependent Resistor), DHT22 (Air Temperature & Humidity) |
 | Display | LCD I2C |
@@ -24,11 +28,20 @@ This project is closely related to agricultural technology, where this tool is u
 
 <br><br>
 
-## Download & Install Arduino IDE
-```bash
-https://www.arduino.cc/en/software
-```
+## Download & Install
+1. Arduino IDE
 
+   ```
+   https://www.arduino.cc/en/software
+   ```
+<br>
+
+2. USB-Serial CP210X
+
+   ```
+   https://bit.ly/CP210X_Driver
+   ```
+   
 <br><br>
 
 ## Settings
