@@ -191,6 +191,8 @@ This project is closely related to agricultural technology, where this tool is u
    #define BLYNK_TEMPLATE_NAME "Smart Farming"
    #define BLYNK_AUTH_TOKEN "fw1oXlpe-YfYh7JXQHu4QTS3EqlnM-iw"
    ```
+
+   • If it fails to connect to Blynk, then the approximate problem is in the software / firmware / hardware section. Please check again.
    
 <br><br>
 
@@ -215,6 +217,8 @@ In the process of writing...
    ```
    #define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
    ```
+   
+7. If it fails to connect to the Telegram Bot, then the problem may be in the firmware. Please check again.
 
 <br><br>
 
