@@ -111,7 +111,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    • Klik ``` Done ```.<br><br>
    
 3. Buat datastreams :<br><br>
-   • Masuk ke Menu ``` Datastreams ``` -> klik ``` + New Datastreams ``` -> pilih ``` Virtual Pin ```.
+   • Masuk ke menu ``` Datastreams ``` -> klik ``` + New Datastreams ``` -> pilih ``` Virtual Pin ```.
    
    • Masukkan data pertama :<br>
       - ``` NAME ``` -> ``` suhu_udara ```.
@@ -161,7 +161,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
         
    • Klik ``` Create ```.<br><br>
    
-5. Kelola dashboard :<br><br>
+5. Kelola dashboard pada situs Blynk :<br><br>
    • Klik ``` simbol titik 3 ``` -> kemudian pilih ``` Edit Dashboard ```.
 
    • Pilih ``` widget yang diinginkan ``` lalu ``` drag ``` ke area dashboard.
@@ -171,8 +171,13 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ```.
 
    • Klik ``` Save And Apply ```.<br><br>
+
+6. Kelola dashboard pada Blynk mobile apps :<br><br>
+   • Buka ponsel pintar anda, lalu cari aplikasi ``` Blynk IoT ``` di ``` Google Play Store ```.
+
+   • Kurang lebih caranya hampir sama dengan yang ada di situs Blynk tadi. Untuk tutorialnya anda dapat mencarinya di google.<br><br>
    
-6. Konfigurasi firmware :<br><br>
+7. Konfigurasi firmware :<br><br>
    • Masuk ke menu  ``` Devices ``` -> pilih ``` Smart Farming ``` -> klik ``` Device Info ```.
 
    • Salin ``` ID Template ```, ``` Nama Template ```, dan ``` AuthToken ``` tersebut.
