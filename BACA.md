@@ -98,14 +98,17 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
 ## Pengaturan Blynk
 Dalam proses penulisan...
+
 <br><br>
 
 ## Pengaturan ThingsBoard
 Dalam proses penulisan...
+
 <br><br>
 
 ## Pengaturan Bot Telegram
 Dalam proses penulisan...
+
 <br><br>
 
 ## Memulai
