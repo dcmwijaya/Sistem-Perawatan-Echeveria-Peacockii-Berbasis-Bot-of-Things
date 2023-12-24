@@ -192,7 +192,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    #define BLYNK_AUTH_TOKEN "fw1oXlpe-YfYh7JXQHu4QTS3EqlnM-iw"
    ```
 
-   • Jika gagal terkoneksi ke Blynk, maka perkiraan masalahnya ada di bagian software / firmware / hardware. Silakan periksa kembali.
+   • Jika gagal terkoneksi ke Blynk, maka perkiraan masalahnya ada di bagian software / firmware / hardware. Silakan periksa lagi.
    
 <br><br>
 
@@ -256,7 +256,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
    ```
 
-   • Jika gagal terkoneksi ke ThingsBoard, maka perkiraan masalahnya ada di bagian software / firmware / hardware. Silakan periksa kembali.
+   • Jika gagal terkoneksi ke ThingsBoard, maka perkiraan masalahnya ada di bagian software / firmware / hardware. Silakan periksa lagi.
 
 <br><br>
 
@@ -277,7 +277,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    #define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
    ```
    
-7. Jika gagal terkoneksi ke Bot Telegram, maka perkiraan masalahnya ada di bagian firmware. Silakan periksa kembali.
+7. Jika gagal terkoneksi ke Bot Telegram, maka perkiraan masalahnya ada di bagian firmware. Silakan periksa lagi.
 
 <br><br>
 
