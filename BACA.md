@@ -207,8 +207,8 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    •  Device profile details: ``` Name ``` -> ``` MQTT ```.
 
    •  Transport configuration: ``` Transport type ``` -> ``` MQTT ```. Lalu isilah data MQTT seperti yang terlihat di bawah ini :<br>
-      - Telemetry topic filter: ``` v1/devices/me/telemetry/fpiotdevan ```.
-      - Attributes publish & subscribe topic filter: ``` v1/devices/me/attributes/fpiotdevan ```.
+      - Telemetry topic filter: ``` v1/devices/me/telemetry/fpiotdevan ```. Ini nanti harus sama dengan yang ada di kode firmware.
+      - Attributes publish & subscribe topic filter: ``` v1/devices/me/attributes/fpiotdevan ```. Ini nanti harus sama dengan yang ada di kode firmware.
       - MQTT device payload : ``` JSON ```.
 
    •  Klik ``` Add ``` untuk menambahkan.<br><br>
@@ -216,16 +216,37 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 3. Buat device baru :<br><br>
    • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
 
+   • Ubah akses device ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
+
+   • Buka device ``` All ```.
+
    • Klik ``` + (Add entity group) ```.
 
-   • Beri nama ``` smart_farming ``` -> klik ``` Add ``` untuk menambahkan.
+   • Buatlah 1 device dengan ketentuan sebagai berikut :<br>
+      - ``` Name ``` -> ``` EcheveriaIoT ```.
+      - ``` Label ``` -> ``` EcheveriaIoT ```.
+      - ``` Device profile ``` -> ``` default ```.<br><br>
+   
+4. Buat dashboard :<br><br>
+   • Masuk ke menu ``` Dashboards ```.
 
-   • Ubah aksesnya menjadi ``` Public ``` agar dapat digunakan.
+   • Klik ``` + (Add entity group) ```.
 
-   • Di dalam ``` smart_farming: Devices ``` -> buatlah 1 device dengan ketentuan sebagai berikut :<br>
-      - ``` Name ``` -> ``` echeveria ```.
-      - ``` Label ``` -> ``` echeveria ```.
-      - ``` Device profile ``` -> sementara ``` default ```.
+   • Beri nama ``` Sistem Perawatan Echeveria ``` -> klik ``` Add ``` untuk menambahkan.
+
+   • Pilih ``` widget yang diinginkan ``` -> ``` setting ``` widget.<br><br>
+   
+5. Konfigurasi firmware :<br><br>
+   • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
+
+   • Klik ``` EcheveriaIoT ``` -> salin ``` ID Device ``` dan ``` Token ``` tersebut.
+
+   • Kemudian tempelkan pada kode firmware, contohnya seperti ini :
+
+   ```
+   #define DEVICE_ID_TB "26001630-a274-11ee-9db5-1fb69bbe078f"
+   #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
+   ```
 
 <br><br>
 
