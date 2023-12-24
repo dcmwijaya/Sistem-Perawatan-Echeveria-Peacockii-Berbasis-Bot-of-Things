@@ -269,6 +269,11 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
 <br><br>
 
+## Demonstrasi Aplikasi
+Via Telegram: <a href="https://t.me/echeveria_bot">@echeveria_bot</a>
+
+<br><br>
+
 ## Penafian
 Aplikasi ini dibuat dengan menyertakan sumber-sumber dari pihak ketiga. Pihak ketiga di sini adalah penyedia layanan, yang layanannya berupa pustaka, kerangka kerja, dan lain-lain. Saya ucapkan terima kasih banyak atas layanannya. Telah terbukti sangat membantu dan dapat diimplementasikan.
 
