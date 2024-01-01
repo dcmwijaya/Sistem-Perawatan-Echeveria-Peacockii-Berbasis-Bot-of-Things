@@ -24,7 +24,7 @@ This project is closely related to agricultural technology, where this tool is u
 | Sensor | FC-28 (Resistive Soil Moisture), LDR (Light Dependent Resistor), DHT22 (Air Temperature & Humidity) |
 | Display | LCD I2C |
 | Switch | Electrical relay 2 channel |
-| Other Components | ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, & Casing box |
+| Other Components | Micro usb cable, ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, Casing box, ETC |
 
 <br><br>
 
