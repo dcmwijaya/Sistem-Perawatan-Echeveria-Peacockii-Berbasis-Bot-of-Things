@@ -20,11 +20,11 @@ This project is closely related to agricultural technology, where this tool is u
 | IoT Architecture | 4 Layer |
 | Telegram | Telegram Bot API |
 | Arduino Library | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
-| Actuators | Submersible pump |
-| Sensor | FC-28 (Resistive Soil Moisture), LDR (Light Dependent Resistor), DHT22 (Air Temperature & Humidity) |
-| Display | LCD I2C |
-| Switch | Electrical relay 2 channel |
-| Other Components | Micro usb cable, ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, Casing box, ETC |
+| Actuators | Submersible pump (x2) |
+| Sensor | FC-28: Resistive Soil Moisture (x1), LDR: Light Dependent Resistor (x1), DHT22: Air Temperature & Humidity (x1) |
+| Display | LCD I2C (x1) |
+| Switch | Electrical relay 2 channel (x1) |
+| Other Components | Micro usb cable (x1), ESP32 Expansion Board (x1), Breadboard/Projectboard (x1), Adaptor DC (x1), Resistor, Casing box (x1), ETC |
 
 <br><br>
 
