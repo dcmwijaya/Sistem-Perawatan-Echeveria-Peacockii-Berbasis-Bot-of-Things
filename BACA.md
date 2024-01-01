@@ -24,7 +24,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | Sensor | FC-28 (Kelembaban Tanah Resistif), LDR (Cahaya), DHT22 (Suhu & Kelembaban Udara) |
 | Layar | LCD I2C |
 | Saklar | Electrical relay 2 channel |
-| Komponen Lainnya | ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, & Casing box |
+| Komponen Lainnya | Kabel micro usb, ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, Casing box, DLL |
 
 <br><br>
 
