@@ -20,11 +20,11 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | Arsitektur IoT | 4 Lapisan |
 | Telegram | API Bot Telegram |
 | Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
-| Aktuator | Submersible pump |
-| Sensor | FC-28 (Kelembaban Tanah Resistif), LDR (Cahaya), DHT22 (Suhu & Kelembaban Udara) |
-| Layar | LCD I2C |
-| Saklar | Electrical relay 2 channel |
-| Komponen Lainnya | Kabel micro usb, ESP32 Expansion Board, Breadboard/Projectboard, Adaptor DC, Resistor, Casing box, DLL |
+| Aktuator | Submersible pump (x2) |
+| Sensor | FC-28: Kelembaban Tanah Resistif (x1), LDR: Cahaya (x1), DHT22: Suhu & Kelembaban Udara (x1) |
+| Layar | LCD I2C (x1) |
+| Saklar | Electrical relay 2 channel (x1) |
+| Komponen Lainnya | Kabel micro usb (x1), ESP32 Expansion Board (x1), Breadboard/Projectboard (x1), Adaptor DC (x1), Resistor, Casing box (x1), DLL |
 
 <br><br>
 
