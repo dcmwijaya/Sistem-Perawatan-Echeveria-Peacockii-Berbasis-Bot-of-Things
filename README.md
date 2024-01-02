@@ -19,6 +19,7 @@ This project is closely related to agricultural technology, where this tool is u
 | IoT Protocol | MQTT & TCP/IP |
 | IoT Architecture | 4 Layer |
 | Telegram | Telegram Bot API |
+| Programming Language | C/C++ |
 | Arduino Library | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Actuators | Submersible pump (x2) |
 | Sensor | FC-28: Resistive Soil Moisture (x1), LDR: Light Dependent Resistor (x1), DHT22: Air Temperature & Humidity (x1) |
