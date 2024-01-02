@@ -19,6 +19,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | Protokol IoT | MQTT & TCP/IP |
 | Arsitektur IoT | 4 Lapisan |
 | Telegram | API Bot Telegram |
+| Bahasa Pemrograman | C/C++ |
 | Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Aktuator | Submersible pump (x2) |
 | Sensor | FC-28: Kelembaban Tanah Resistif (x1), LDR: Cahaya (x1), DHT22: Suhu & Kelembaban Udara (x1) |
