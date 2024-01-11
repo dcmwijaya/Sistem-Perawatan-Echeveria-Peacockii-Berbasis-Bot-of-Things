@@ -9,7 +9,7 @@ This project is closely related to agricultural technology, where this tool is u
 
 <br><br>
 
-## Features / Framework / Tools
+## Project Requirements
 | Media | Description |
 | --- | --- |
 | Board Development | DOIT ESP32 DEVKIT V1 |
@@ -45,7 +45,7 @@ This project is closely related to agricultural technology, where this tool is u
    
 <br><br>
 
-## Project Requirements
+## Project Designs
 <table>
 <tr>
 <th colspan="2">Hardware Design</th>
@@ -283,19 +283,15 @@ This project is closely related to agricultural technology, where this tool is u
 <br><br>
 
 ## Get Started
-1. Download and extract this repository.
+1. Download and extract this repository.<br><br>
     
-2. Make sure you have the necessary electronic components.
+2. Make sure you have the necessary electronic components.<br><br>
    
-3. Make sure your components are designed according to the diagram.
+3. Make sure your components are designed according to the diagram.<br><br>
       
-4. Create an account for the IoT Platform and its services.
-    
-5. If you don't apply points 2 and 3 for project development purposes, that's fine, but be aware that some things need to be changed according to your needs for the system to work properly.
-
-6. Make sure all things have been created. 
+4. Configure your device according to the settings above.<br><br>
  
-7. Please enjoy [Done].
+5. Please enjoy [Done].
 
 <br><br>
 
