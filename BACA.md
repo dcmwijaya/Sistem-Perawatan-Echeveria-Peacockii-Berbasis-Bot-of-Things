@@ -9,7 +9,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
 <br><br>
 
-## Fitur / Kerangka Kerja / Peralatan
+## Kebutuhan Proyek
 | Media | Deskripsi |
 | --- | --- |
 | Papan Pengembangan | DOIT ESP32 DEVKIT V1 |
@@ -45,7 +45,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
    
 <br><br>
 
-## Persyaratan Proyek
+## Rancangan Proyek
 <table>
 <tr>
 <th colspan="2">Desain Perangkat Keras</th>
@@ -283,19 +283,15 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Memulai
-1. Unduh dan ekstrak repositori ini.
+1. Unduh dan ekstrak repositori ini.<br><br>
    
-2. Pastikan anda memiliki komponen elektronik yang diperlukan.
+2. Pastikan anda memiliki komponen elektronik yang diperlukan.<br><br>
    
-3. Pastikan komponen anda telah dirancang sesuai dengan diagram.
+3. Pastikan komponen anda telah dirancang sesuai dengan diagram.<br><br>
    
-4. Membuat akun untuk Platform IoT beserta layanannya.
-    
-5. Jika Anda tidak menerapkan poin 2 dan 3 untuk tujuan pengembangan proyek, tidak masalah, tetapi perlu diketahui bahwa beberapa hal perlu diubah sesuai dengan kebutuhan Anda agar sistem dapat bekerja dengan baik.
+4. Konfigurasikan perangkat anda menurut pengaturan di atas.<br><br>
 
-6. Pastikan semua Things telah dibuat.
-
-7. Selamat menikmati [Selesai].
+5. Selamat menikmati [Selesai].
 
 <br><br>
 
