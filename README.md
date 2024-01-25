@@ -24,8 +24,7 @@ This project is closely related to agricultural technology, where this tool is u
 | Actuators | Submersible pump (x2) |
 | Sensor | FC-28: Resistive Soil Moisture (x1), LDR: Light Dependent Resistor (x1), DHT22: Air Temperature & Humidity (x1) |
 | Display | LCD I2C (x1) |
-| Switch | Electrical relay 2 channel (x1) |
-| Other Components | Micro usb cable (x1), ESP32 Expansion Board (x1), Breadboard/Projectboard (x1), Adaptor DC (x1), Resistor, Casing box (x1), ETC |
+| Other Components | Micro USB cable - USB type A (x1), ESP32 Expansion Board (x1), Breadboard (x1), Electrical relay 2 channel (x1), Adaptor DC (x1), Resistor, Casing box (x1), Bolts plus (1 set), and Nuts (1 set) |
 
 <br><br>
 
