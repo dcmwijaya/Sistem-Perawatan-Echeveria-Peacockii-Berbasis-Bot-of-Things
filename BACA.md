@@ -24,8 +24,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | Aktuator | Submersible pump (x2) |
 | Sensor | FC-28: Kelembaban Tanah Resistif (x1), LDR: Cahaya (x1), DHT22: Suhu & Kelembaban Udara (x1) |
 | Layar | LCD I2C (x1) |
-| Saklar | Electrical relay 2 channel (x1) |
-| Komponen Lainnya | Kabel micro usb (x1), ESP32 Expansion Board (x1), Breadboard/Projectboard (x1), Adaptor DC (x1), Resistor, Casing box (x1), DLL |
+| Komponen Lainnya | Kabel Mikro USB - USB tipe A (x1), ESP32 Expansion Board (x1), Breadboard (x1), Electrical relay 2 channel (x1), Adaptor DC (x1), Resistor, Kotak casing (x1), Baut plus (1 set), dan Mur (1 set) |
 
 <br><br>
 
