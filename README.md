@@ -12,7 +12,7 @@ This project is closely related to agricultural technology, where this tool is u
 ## Project Requirements
 | Media | Description |
 | --- | --- |
-| Board Development | DOIT ESP32 DEVKIT V1 |
+| Development Board | DOIT ESP32 DEVKIT V1 |
 | Code Editor | Arduino IDE |
 | Driver | USB-Serial CP210X |
 | IoT Platform | Blynk & ThingsBoard |
