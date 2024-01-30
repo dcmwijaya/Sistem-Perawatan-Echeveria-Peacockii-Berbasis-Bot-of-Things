@@ -10,7 +10,7 @@ This project is closely related to agricultural technology, where this tool is u
 <br><br>
 
 ## Project Requirements
-| Media | Description |
+| Part | Description |
 | --- | --- |
 | Development Board | DOIT ESP32 DEVKIT V1 |
 | Code Editor | Arduino IDE |
