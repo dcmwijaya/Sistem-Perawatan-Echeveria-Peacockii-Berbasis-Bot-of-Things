@@ -94,7 +94,7 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
 9. Jika tidak ada kesalahan dalam kode program, silakan klik: ``` Upload ```.<br><br>
     
-10. Ketika anda mendapati tulisan ``` Uploading ``` pertama kali di ``` Arduino IDE ```, maka anda harus segera menekan tombol ``` BOOT ``` pada board yang digunakan, hal ini bertujuan agar program berhasil diupload. Kemudian jika ternyata masih ada masalah, maka coba cek bagian ``` driver ``` / ``` port ``` / anda juga dapat mencoba menyetel ulang program dengan cara menekan tombol ``` EN ``` pada board yang digunakan.
+10. Saat pesan ``` Uploading... ``` tampil di layar, maka anda harus menekan tombol ``` BOOT ``` yang ada pada ``` Board ESP32 ``` sesegera mungkin, lalu tahan tombol hingga pesan berubah menjadi ``` Done Uploading ```. Hal ini perlu dilakukan agar program yang telah dibuat berhasil diupload. Kemudian jika ternyata masih ada masalah, maka coba cek bagian ``` driver ``` / ``` port ``` / yang lainnya. Anda juga dapat mencoba menyetel ulang program dengan cara menekan tombol ``` EN ``` jika memang diperlukan.
 
 <br><br>
 
