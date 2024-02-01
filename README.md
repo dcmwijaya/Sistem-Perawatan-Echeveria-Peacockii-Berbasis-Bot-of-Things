@@ -93,8 +93,20 @@ This project is closely related to agricultural technology, where this tool is u
 8. Before uploading the program please click: ``` Verify ```.<br><br>
 
 9. If there is no error in the program code, then please click: ``` Upload ```.<br><br>
+    
+10. Some things you need to do when using the ``` ESP32 board ``` :
 
-10. When you find the writing ``` Uploading ``` the first time in the ``` Arduino IDE ```, then you must immediately press the ``` RESET ``` button on the board used, this aims to successfully upload the program. Then if there are still problems, then try checking the ``` driver ``` / ``` port ``` section / you can also try resetting the program by pressing the ``` EN ``` button on the board used.
+    • ``` Arduino IDE ``` information: ``` Uploading... ``` -> immediately press and hold the ``` BOOT ``` button.
+
+    • ``` Arduino IDE ``` information: ``` Percentage (%) ``` -> release the ``` BOOT ``` button.
+
+    • Wait for the message to appear: ``` Done Uploading ``` -> ``` Program operated ```.
+
+    • If the ``` ESP32 board ``` cannot accept the program upload, then press the ``` EN (RST) button ``` and then ``` Restart ```.
+
+    • Do not press the ``` BOOT ``` and ``` EN ``` buttons at the same time as it will enter the ``` firmware upload ``` mode.<br><br>
+
+11. If there is still a problem when uploading the program, then try to check the ``` driver ``` / ``` port ``` / ``` others ``` section.
 
 <br><br>
 
