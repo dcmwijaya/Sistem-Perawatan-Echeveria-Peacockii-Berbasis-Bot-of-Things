@@ -92,7 +92,9 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 
 8. Sebelum mengunggah program, silakan klik: ``` Verify ```.<br><br>
 
-9. Jika tidak ada kesalahan dalam kode program, silakan klik: ``` Upload ```.
+9. Jika tidak ada kesalahan dalam kode program, silakan klik: ``` Upload ```.<br><br>
+    
+10. Ketika anda mendapati tulisan ``` Uploading ``` pertama kali di ``` Arduino IDE ```, maka anda harus segera menekan tombol ``` BOOT ``` pada board yang digunakan, hal ini bertujuan agar program berhasil diupload. Kemudian jika ternyata masih ada masalah, maka coba cek bagian ``` driver ``` / ``` port ``` / anda juga dapat mencoba menyetel ulang program dengan cara menekan tombol ``` EN ``` pada board yang digunakan.
 
 <br><br>
 
