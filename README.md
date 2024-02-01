@@ -100,9 +100,9 @@ This project is closely related to agricultural technology, where this tool is u
 
     • ``` Arduino IDE ``` information: ``` Percentage (%) ``` -> release the ``` BOOT ``` button.
 
-    • Wait for the message to appear: ``` Done Uploading ``` -> ``` Program operated ```.
+    • Wait until the message appears: ```Done Uploading ``` -> ```The program is directly operated ```.
 
-    • If the ``` ESP32 board ``` cannot accept the program upload, then press the ``` EN (RST) ``` button and then ``` Restart ```.
+    • If the ``` ESP32 board ``` cannot accept the program upload, then press the ``` EN (RST) button ``` and then ``` Restart ```.
 
     • Do not press the ``` BOOT ``` and ``` EN ``` buttons at the same time as it will enter the ``` firmware upload ``` mode.<br><br>
 
