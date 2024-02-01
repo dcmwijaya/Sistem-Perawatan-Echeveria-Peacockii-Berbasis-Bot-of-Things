@@ -92,7 +92,9 @@ This project is closely related to agricultural technology, where this tool is u
 
 8. Before uploading the program please click: ``` Verify ```.<br><br>
 
-9. If there is no error in the program code, then please click: ``` Upload ```.
+9. If there is no error in the program code, then please click: ``` Upload ```.<br><br>
+
+10. When you find the writing ``` Uploading ``` the first time in the ``` Arduino IDE ```, then you must immediately press the ``` RESET ``` button on the board used, this aims to successfully upload the program. Then if there are still problems, then try checking the ``` driver ``` / ``` port ``` section / you can also try resetting the program by pressing the ``` EN ``` button on the board used.
 
 <br><br>
 
