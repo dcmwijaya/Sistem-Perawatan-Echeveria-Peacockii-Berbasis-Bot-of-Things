@@ -14,11 +14,11 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | --- | --- |
 | Papan Pengembangan | DOIT ESP32 DEVKIT V1 |
 | Editor Kode | Arduino IDE |
+| Dukungan Aplikasi | Bot Telegram |
 | Driver | USB-Serial CP210X |
 | Platform IoT | Blynk & ThingsBoard |
 | Protokol IoT | MQTT & TCP/IP |
 | Arsitektur IoT | 4 Lapisan |
-| Telegram | API Bot Telegram |
 | Bahasa Pemrograman | C/C++ |
 | Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
 | Aktuator | Submersible pump (x2) |
