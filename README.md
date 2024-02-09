@@ -98,7 +98,7 @@ This project is closely related to agricultural technology, where this tool is u
 
     • ``` Arduino IDE ``` information: ``` Uploading... ``` -> immediately press and hold the ``` BOOT ``` button.
 
-    • ``` Arduino IDE ``` information: ``` Percentage (%) ``` -> release the ``` BOOT ``` button.
+    • ``` Arduino IDE ``` information: ``` Writing at .... (%) ``` -> release the ``` BOOT ``` button.
 
     • Wait until the message appears: ```Done Uploading ``` -> ```The program is directly operated ```.
 
