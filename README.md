@@ -86,7 +86,7 @@ This project is closely related to agricultural technology, where this tool is u
 
    <table><tr><td width="810">
          
-      Click ``` File ``` -> ``` Preferences ``` -> enter the ``` Boards Manager Url ``` by copying the following link:
+      Click ``` File ``` -> ``` Preferences ``` -> enter the ``` Boards Manager Url ``` by copying the following link :
       
       ```
       https://dl.espressif.com/dl/package_esp32_index.json
