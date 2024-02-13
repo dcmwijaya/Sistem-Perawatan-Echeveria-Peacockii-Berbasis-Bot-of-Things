@@ -311,66 +311,102 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan ThingsBoard
-1. Memulai ThingsBoard :<br><br>
-   • Buka situs resmi ThingsBoard berikut: <a href="https://thingsboard.cloud/">thingsboard.cloud</a>.<br><br>
-   • Masuk dengan akun google.<br><br>
+1. Memulai ThingsBoard :
+
+   <table><tr><td width="810">
+      
+      • Buka situs resmi ThingsBoard berikut: <a href="https://thingsboard.cloud/">thingsboard.cloud</a>.
+      
+      • Masuk dengan akun google.
+
+   </td></tr></table><br>
    
-2. Buat device profile baru :<br><br>
+2. Buat device profile baru :
+
+   <table><tr><td width="810">
+      
    • Masuk ke menu ``` Profiles ``` -> lalu pilih ``` Device profiles ```.
 
    •  Klik ``` + (Add device profile) ```.
 
    •  Device profile details: ``` Name ``` -> ``` MQTT ```.
 
-   •  Transport configuration: ``` Transport type ``` -> ``` MQTT ```. Lalu isilah data MQTT seperti yang terlihat di bawah ini :<br>
+   •  Transport configuration: ``` Transport type ``` -> ``` MQTT ```. Lalu isilah data MQTT seperti yang terlihat di bawah ini :
+
+      <table><tr><td width="810">
+      
       - Telemetry topic filter: ``` v1/devices/me/telemetry/fpiotdevan ```. Ini nanti harus sama dengan yang ada di kode firmware.
+        
       - Attributes publish & subscribe topic filter: ``` v1/devices/me/attributes/fpiotdevan ```. Ini nanti harus sama dengan yang ada di kode firmware.
+        
       - MQTT device payload : ``` JSON ```.
 
-   •  Klik ``` Add ``` untuk menambahkan.<br><br>
+      </td></tr></table>
+
+   •  Klik ``` Add ``` untuk menambahkan.
+
+   </td></tr></table><br>
    
-3. Buat device baru :<br><br>
-   • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
+3. Buat device baru :
 
-   • Ubah akses device groups ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
-
-   • Buka device groups ``` All ```.
-
-   • Klik ``` + (Add device) ```.
-
-   • Buatlah 1 device dengan ketentuan sebagai berikut :<br>
-      - ``` Name ``` -> ``` EcheveriaIoT ```.
-      - ``` Label ``` -> ``` EcheveriaIoT ```.
-      - ``` Device profile ``` -> ``` default ```.<br><br>
+   <table><tr><td width="810">
+      
+      • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
    
-4. Buat dashboard :<br><br>
-   • Masuk ke menu ``` Dashboards ``` -> ``` Groups ``` -> ``` All ```.
-
-   • Ubah akses dashboard groups ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
-
-   • Buka dashboard groups ``` All ```.
-
-   • Klik ``` + (Add dashboard) ```.
-
-   • Lalu beri nama ``` Echeveria Dashboard ``` -> klik ``` Add ``` untuk menambahkan.
-
-   • Ubah ``` title ``` menjadi ``` Sistem Perawatan Echeveria ```.
-
-   • Pilih ``` widget yang diinginkan ``` -> pengaturan pada widget.<br><br>
+      • Ubah akses device groups ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
    
-5. Konfigurasi firmware :<br><br>
-   • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
+      • Buka device groups ``` All ```.
+   
+      • Klik ``` + (Add device) ```.
+   
+      • Buatlah 1 device dengan ketentuan sebagai berikut :
 
-   • Klik ``` EcheveriaIoT ``` -> salin ``` ID Device ``` dan ``` Token ``` tersebut.
+      <table><tr><td width="810">
+      
+      - ``` Name ``` -> ``` EcheveriaIoT ```
+      - ``` Label ``` -> ``` EcheveriaIoT ```
+      - ``` Device profile ``` -> ``` default ```
+   
+      </td></tr></table>
 
-   • Kemudian tempelkan pada kode firmware, contohnya seperti ini :
+   </td></tr></table><br>
+   
+5. Buat dashboard :
 
-   ```
-   #define DEVICE_ID_TB "26001630-a274-11ee-9db5-1fb69bbe078f"
-   #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
-   ```
+   <table><tr><td width="810">
+      
+      • Masuk ke menu ``` Dashboards ``` -> ``` Groups ``` -> ``` All ```.
+   
+      • Ubah akses dashboard groups ``` All ``` menjadi ``` Public ``` agar dapat digunakan secara luas.
+   
+      • Buka dashboard groups ``` All ```.
+   
+      • Klik ``` + (Add dashboard) ```.
+   
+      • Lalu beri nama ``` Echeveria Dashboard ``` -> klik ``` Add ``` untuk menambahkan.
+   
+      • Ubah ``` title ``` menjadi ``` Sistem Perawatan Echeveria ```.
+   
+      • Pilih ``` widget yang diinginkan ``` -> pengaturan pada widget.
 
-   • Jika gagal terkoneksi ke ThingsBoard, maka perkiraan masalahnya ada di bagian software / firmware / hardware. Silakan periksa lagi.
+   </td></tr></table><br>
+   
+6. Konfigurasi firmware :
+
+   <table><tr><td width="810">
+      
+      • Masuk ke menu ``` Entities ``` -> lalu pilih ``` Devices ``` -> ``` Groups ```.
+   
+      • Klik ``` EcheveriaIoT ``` -> salin ``` ID Device ``` dan ``` Token ``` tersebut.
+   
+      • Kemudian tempelkan pada kode firmware, contohnya seperti ini :
+   
+      ```
+      #define DEVICE_ID_TB "26001630-a274-11ee-9db5-1fb69bbe078f"
+      #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
+      ```
+
+   </td></tr></table>
 
 <br><br>
 
