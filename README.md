@@ -347,7 +347,7 @@ This project is closely related to agricultural technology, where this tool is u
 
    </td></tr></table><br>
    
-4. Create a new device :
+3. Create a new device :
 
    <table><tr><td width="810">
       
@@ -371,7 +371,7 @@ This project is closely related to agricultural technology, where this tool is u
       
    </td></tr></table><br>
    
-5. Create a dashboard :
+4. Create a dashboard :
 
    <table><tr><td width="810">
       
@@ -391,7 +391,7 @@ This project is closely related to agricultural technology, where this tool is u
 
    </td></tr></table><br>
    
-6. Firmware configuration :
+5. Firmware configuration :
 
    <table><tr><td width="810">
       
