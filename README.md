@@ -326,15 +326,15 @@ This project is closely related to agricultural technology, where this tool is u
 <br><br>
 
 ## Telegram Bot Setup
-1. Open <a href="https://t.me/botfather">@BotFather</a>.
+1. Open <a href="https://t.me/botfather">@BotFather</a>.<br><br>
 
-2. Type ``` /newbot ```.
+2. Type ``` /newbot ```.<br><br>
 
-3. Type the desired bot name, for example: ``` echeveria_bot ```.
+3. Type the desired bot name, for example: ``` echeveria_bot ```.<br><br>
 
-4. Type the desired bot username, for example: ``` echeveria_bot ```.
+4. Type the desired bot username, for example: ``` echeveria_bot ```.<br><br>
 
-5. Also do it for bot image settings, bot descriptions, and so on according to your needs.
+5. Also do it for bot image settings, bot descriptions, and so on according to your needs.<br><br>
 
 6. Copy ``` your telegram bot API token ``` -> then paste it into the ``` #define BOTtoken "YOUR_API_BOT_TOKEN" ``` section.
 
