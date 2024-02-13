@@ -255,8 +255,8 @@ This project is closely related to agricultural technology, where this tool is u
       
       • Select ``` From Templates ``` :
       
-      - ``` TEMPLATE ``` -> ``` Smart Farming ```.
-      - ``` DEVICE NAME ``` -> ``` Smart Farming ```.<br><br>
+      - ``` TEMPLATE ``` -> ``` Smart Farming ```
+      - ``` DEVICE NAME ``` -> ``` Smart Farming ```<br><br>
            
       • Click ``` Create ```.
 
