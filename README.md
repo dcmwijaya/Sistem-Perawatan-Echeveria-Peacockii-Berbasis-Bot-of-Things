@@ -336,13 +336,17 @@ This project is closely related to agricultural technology, where this tool is u
 
 5. Also do it for bot image settings, bot descriptions, and so on according to your needs.
 
-6. Copy ``` your telegram bot API token ``` -> then paste it into the ``` #define BOTtoken "YOUR_API_BOT_TOKEN" ``` section. For example :
+6. Copy ``` your telegram bot API token ``` -> then paste it into the ``` #define BOTtoken "YOUR_API_BOT_TOKEN" ``` section.
 
+   <table><tr><td width="810">
+
+   For example :
+   
    ```
    #define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
    ```
-   
-7. If it fails to connect to the Telegram Bot, then the problem may be in the firmware. Please check again.
+
+   </td></tr></table>
 
 <br><br>
 
