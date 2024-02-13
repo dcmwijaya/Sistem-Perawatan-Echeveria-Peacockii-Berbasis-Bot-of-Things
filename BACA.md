@@ -16,31 +16,38 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 | Editor Kode | Arduino IDE |
 | Dukungan Aplikasi | Bot Telegram |
 | Driver | USB-Serial CP210X |
-| Platform IoT | Blynk & ThingsBoard |
-| Protokol IoT | MQTT & TCP/IP |
+| Platform IoT | • Blynk<br>• ThingsBoard |
+| Protokol IoT | • MQTT<br>• TCP/IP<br>• MTProto |
 | Arsitektur IoT | 4 Lapisan |
 | Bahasa Pemrograman | C/C++ |
-| Pustaka Arduino | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
+| Pustaka Arduino | • WiFi<br>• WiFiClient<br>• PubSubClient<br>• BlynkSimpleEsp32<br>• ArduinoJson<br>• Wire<br>• ESP32_FC28<br>• CTBot<br>• DHT<br>• LiquidCrystal_I2C |
 | Aktuator | Submersible pump (x2) |
-| Sensor | FC-28: Kelembaban Tanah Resistif (x1), LDR: Cahaya (x1), DHT22: Suhu & Kelembaban Udara (x1) |
+| Sensor | • FC-28: Kelembaban Tanah Resistif (x1)<br>• LDR: Cahaya (x1)<br>• DHT22: Suhu & Kelembaban Udara (x1) |
 | Layar | LCD I2C (x1) |
-| Komponen Lainnya | Kabel Mikro USB - USB tipe A (x1), Kabel jumper (1 set), Papan ekspansi ESP32 (x1), Breadboard (x1), Electrical relay 2 channel (x1), Adaptor DC 5V (x1), Resistor, Kotak casing (x1), Baut plus (1 set), dan Mur (1 set) |
+| Komponen Lainnya | • Kabel Mikro USB - USB tipe A (x1)<br>• Kabel jumper (1 set)<br>• Papan ekspansi ESP32 (x1)<br>• Breadboard (x1)<br>• Electrical relay 2 channel (x1)<br>• Adaptor DC 5V (x1)<br>• Resistor<br>• Kotak casing (x1)<br>• Baut plus (1 set)<br>• Mur (1 set) |
 
 <br><br>
 
 ## Unduh & Instal
 1. Arduino IDE
 
+   <table><tr><td width="810">
+
    ```
    https://www.arduino.cc/en/software
    ```
-<br>
+
+   </td></tr></table><br>
 
 2. USB-Serial CP210X
+
+   <table><tr><td width="810">
 
    ```
    https://bit.ly/CP210X_Driver
    ```
+
+   </td></tr></table>
    
 <br><br>
 
