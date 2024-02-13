@@ -162,102 +162,147 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan Blynk
-1. Memulai blynk :<br><br>
-   • Buka situs resmi Blynk berikut: <a href="https://blynk.io">blynk.io</a>.<br><br>
-   • Klik ``` Start Free ``` untuk mendaftar.<br><br>
-   • Masukkan email.<br><br>
-   • Buka email untuk konfirmasi.<br><br>
-   • Masuk menggunakan akun yang sudah dibuat.<br><br>
+1. Memulai blynk :
+
+   <table><tr><td width="810">
+      
+      • Buka situs resmi Blynk berikut: <a href="https://blynk.io">blynk.io</a>.
+      
+      • Klik ``` Start Free ``` untuk mendaftar.
+      
+      • Masukkan email.
+      
+      • Buka email untuk konfirmasi.
+      
+      • Masuk menggunakan akun yang sudah dibuat.
+
+   </td></tr></table><br>   
    
-2. Buat template baru :<br><br>
-   • Klik ``` Developer Zone ``` -> lalu pilih opsi ``` My Templates ```.<br><br>
-   • Kemudian klik ``` + New Templates ``` untuk membuat Template Baru.<br><br>
-   • Bagian ``` NAME ``` diisi dengan ``` Smart Farming ```, ``` HARDWARE ``` pilih ``` ESP32 ```, ``` CONNECTION TYPE ``` pilih ``` WiFi ```, ``` TEMPLATE DESCRIPTION ``` bersifat opsional.<br><br>
-   • Klik ``` Done ```.<br><br>
+2. Buat template baru :
+
+   <table><tr><td width="810">
+      
+      • Klik ``` Developer Zone ``` -> lalu pilih opsi ``` My Templates ```.
    
-3. Buat datastreams :<br><br>
-   • Masuk ke menu ``` Datastreams ``` -> klik ``` + New Datastreams ``` -> pilih ``` Virtual Pin ```.
+      • Kemudian klik ``` + New Templates ``` untuk membuat Template Baru.
    
-   • Masukkan data pertama :<br>
+      • Bagian ``` NAME ``` diisi dengan ``` Smart Farming ```, ``` HARDWARE ``` pilih ``` ESP32 ```, ``` CONNECTION TYPE ``` pilih ``` WiFi ```, ``` TEMPLATE DESCRIPTION ``` bersifat opsional.
+   
+      • Klik ``` Done ```.
+
+   </td></tr></table><br>
+   
+3. Buat datastreams :
+
+   <table><tr><td width="810">
+      
+      • Masuk ke menu ``` Datastreams ``` -> klik ``` + New Datastreams ``` -> pilih ``` Virtual Pin ```.
+      
+      • Masukkan data pertama :
+   
       - ``` NAME ``` -> ``` suhu_udara ```.
       - ``` PIN ``` -> ``` V0 ```.
       - ``` DATA TYPE ``` -> ``` Double ```.
       - ``` UNITS ``` -> ``` Celcius, °C ```.
       - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
       - ``` DECIMALS ``` -> ``` #.# ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
-         
-   • Masukkan data kedua :<br>
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+            
+      • Masukkan data kedua :
+   
       - ``` NAME ``` -> ``` kelembapan_udara ```.
       - ``` PIN ``` -> ``` V1 ```.
       - ``` DATA TYPE ``` -> ``` Integer ```.
       - ``` UNITS ``` -> ``` Percentage, % ```.
       - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
-        
-   • Masukkan data ketiga :<br>
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+           
+      • Masukkan data ketiga :
+   
       - ``` NAME ``` -> ``` kelembapan_tanah ```.
       - ``` PIN ``` -> ``` V2 ```.
       - ``` DATA TYPE ``` -> ``` Integer ```.
       - ``` UNITS ``` -> ``` Percentage, % ```.
       - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      
+      • Masukkan data keempat :
    
-   • Masukkan data keempat :<br>
       - ``` NAME ``` -> ``` cahaya ```.
       - ``` PIN ``` -> ``` V3 ```.
       - ``` DATA TYPE ``` -> ``` Integer ```.
       - ``` UNITS ``` -> ``` Lux, lx ```.
       - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100000 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+         
+      • Klik ``` Create ```.
       
-   • Klik ``` Create ```.
+      • Klik ``` Save ```.
+
+   </td></tr></table><br>
    
-   • Klik ``` Save ```.<br><br>
+4. Buat device baru :
+
+   <table><tr><td width="810">
+      
+      • Masuk ke menu ``` Devices ```.
+      
+      • Klik ``` + New Devices ``` untuk menambahkan devices baru.
+      
+      • Pilih ``` From Templates ``` :
    
-4. Buat device baru :<br><br>
-   • Masuk ke menu ``` Devices ```.
-   
-   • Klik ``` + New Devices ``` untuk menambahkan devices baru.
-   
-   • Pilih ``` From Templates ``` :<br>
       - ``` TEMPLATE ``` -> ``` Smart Farming ```.
-      - ``` DEVICE NAME ``` -> ``` Smart Farming ```.
-        
-   • Klik ``` Create ```.<br><br>
+      - ``` DEVICE NAME ``` -> ``` Smart Farming ```.<br><br>
+           
+      • Klik ``` Create ```.
+
+   </td></tr></table><br>
    
-5. Kelola dashboard pada situs Blynk :<br><br>
-   • Klik ``` simbol titik 3 ``` -> kemudian pilih ``` Edit Dashboard ```.
+5. Kelola dashboard pada situs Blynk :
 
-   • Pilih ``` widget yang diinginkan ``` lalu ``` drag ``` ke area dashboard.
-
-   • Klik ``` setting ``` pada widget yang ditambahkan.
-
-   • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ```.
-
-   • Klik ``` Save And Apply ```.<br><br>
-
-6. Kelola dashboard pada Blynk mobile apps :<br><br>
-   • Buka ponsel pintar anda -> lalu di ``` Google Play Store ```, cari aplikasi yang bernama ``` Blynk IoT ``` -> kemudian ``` instal ```.
-
-   • Buka aplikasi tersebut -> lalu lakukan konfigurasi seperti yang ada di situs Blynk tadi.
-
-   • Selebihnya anda dapat mencari tutorial di ``` Google ``` untuk memperkaya wawasan anda.<br><br>
+   <table><tr><td width="810">
+      
+      • Klik ``` simbol titik 3 ``` -> kemudian pilih ``` Edit Dashboard ```.
    
-7. Konfigurasi firmware :<br><br>
-   • Masuk ke menu  ``` Devices ``` -> pilih ``` Smart Farming ``` -> klik ``` Device Info ```.
+      • Pilih ``` widget yang diinginkan ``` lalu ``` drag ``` ke area dashboard.
+   
+      • Klik ``` setting ``` pada widget yang ditambahkan.
+   
+      • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ```.
+   
+      • Klik ``` Save And Apply ```.
 
-   • Salin ``` ID Template ```, ``` Nama Template ```, dan ``` AuthToken ``` tersebut.
+   </td></tr></table><br>
 
-   • Kemudian tempelkan pada bagian paling atas kode firmware, contohnya seperti ini :
+6. Kelola dashboard pada Blynk mobile apps :
 
-   ```
-   #define BLYNK_TEMPLATE_ID "TMPL6ZSHxYC-z"
-   #define BLYNK_TEMPLATE_NAME "Smart Farming"
-   #define BLYNK_AUTH_TOKEN "fw1oXlpe-YfYh7JXQHu4QTS3EqlnM-iw"
-   ```
+   <table><tr><td width="810">
+      
+      • Buka ponsel pintar anda -> lalu di ``` Google Play Store ```, cari aplikasi yang bernama ``` Blynk IoT ``` -> kemudian ``` instal ```.
+   
+      • Buka aplikasi tersebut -> lalu lakukan konfigurasi seperti yang ada di situs Blynk tadi.
+   
+      • Selebihnya anda dapat mencari tutorial di ``` Google ``` untuk memperkaya wawasan anda.
 
-   • Jika gagal terkoneksi ke Blynk, maka perkiraan masalahnya ada di bagian software / firmware / hardware. Silakan periksa lagi.
+   </td></tr></table><br>
+   
+7. Konfigurasi firmware :
+
+   <table><tr><td width="810">
+      
+      • Masuk ke menu  ``` Devices ``` -> pilih ``` Smart Farming ``` -> klik ``` Device Info ```.
+   
+      • Salin ``` ID Template ```, ``` Nama Template ```, dan ``` AuthToken ``` tersebut.
+   
+      • Kemudian tempelkan pada bagian paling atas kode firmware, contohnya seperti ini :
+   
+      ```
+      #define BLYNK_TEMPLATE_ID "TMPL6ZSHxYC-z"
+      #define BLYNK_TEMPLATE_NAME "Smart Farming"
+      #define BLYNK_AUTH_TOKEN "fw1oXlpe-YfYh7JXQHu4QTS3EqlnM-iw"
+      ```
+
+   </td></tr></table>
    
 <br><br>
 
