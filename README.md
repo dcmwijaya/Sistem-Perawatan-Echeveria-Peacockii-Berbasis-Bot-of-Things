@@ -17,7 +17,7 @@ This project is closely related to agricultural technology, where this tool is u
 | Application Support | Telegram Bot |
 | Driver | USB-Serial CP210X |
 | IoT Platform | • Blynk<br>• ThingsBoard |
-| Communications Protocol | • I2C<br>• MQTT<br>• TCP/IP<br>• MTProto |
+| Communications Protocol | • Inter Integrated Circuit (I2C)<br>• Message Queuing Telemetry Transport (MQTT)<br>• Transmission Control Protocol/Internet Protocol (TCP/IP)<br>• MTProto |
 | IoT Architecture | 4 Layer |
 | Programming Language | C/C++ |
 | Arduino Library | • WiFi<br>• WiFiClient<br>• PubSubClient<br>• BlynkSimpleEsp32<br>• ArduinoJson<br>• Wire<br>• ESP32_FC28<br>• CTBot<br>• DHT<br>• LiquidCrystal_I2C |
