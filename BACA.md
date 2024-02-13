@@ -326,15 +326,15 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
 <br><br>
 
 ## Pengaturan Bot Telegram
-1. Buka <a href="https://t.me/botfather">@BotFather</a>.
+1. Buka <a href="https://t.me/botfather">@BotFather</a>.<br><br>
 
-2. Ketik ``` /newbot ```.
+2. Ketik ``` /newbot ```.<br><br>
 
-3. Ketik nama bot yang diinginkan, contoh: ``` echeveria_bot ```.
+3. Ketik nama bot yang diinginkan, contoh: ``` echeveria_bot ```.<br><br>
 
-4. Ketik nama pengguna bot yang diinginkan, contoh: ``` echeveria_bot ```.
+4. Ketik nama pengguna bot yang diinginkan, contoh: ``` echeveria_bot ```.<br><br>
 
-5. Lakukan juga untuk pengaturan gambar bot, deskripsi bot, dan lain sebagainya menyesuaikan dengan kebutuhan anda.
+5. Lakukan juga untuk pengaturan gambar bot, deskripsi bot, dan lain sebagainya menyesuaikan dengan kebutuhan anda.<br><br>
 
 6. Salin ``` API token bot telegram anda ``` -> lalu tempelkan pada bagian ``` #define BOTtoken "YOUR_API_BOT_TOKEN" ```. 
 
