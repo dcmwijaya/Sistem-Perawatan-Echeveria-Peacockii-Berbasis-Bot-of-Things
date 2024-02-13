@@ -16,31 +16,38 @@ This project is closely related to agricultural technology, where this tool is u
 | Code Editor | Arduino IDE |
 | Application Support | Telegram Bot |
 | Driver | USB-Serial CP210X |
-| IoT Platform | Blynk & ThingsBoard |
-| IoT Protocol | MQTT & TCP/IP |
+| IoT Platform | • Blynk<br>• ThingsBoard |
+| IoT Protocol | • MQTT<br>• TCP/IP<br>• MTProto |
 | IoT Architecture | 4 Layer |
 | Programming Language | C/C++ |
-| Arduino Library | WiFi, WiFiClient, PubSubClient, BlynkSimpleEsp32, ArduinoJson, Wire, ESP32_FC28, CTBot, DHT, & LiquidCrystal I2C |
+| Arduino Library | • WiFi<br>• WiFiClient<br>• PubSubClient<br>• BlynkSimpleEsp32<br>• ArduinoJson<br>• Wire<br>• ESP32_FC28<br>• CTBot<br>• DHT<br>• LiquidCrystal_I2C |
 | Actuators | Submersible pump (x2) |
-| Sensor | FC-28: Resistive Soil Moisture (x1), LDR: Light Dependent Resistor (x1), DHT22: Air Temperature & Humidity (x1) |
+| Sensor | • FC-28: Resistive Soil Moisture (x1)<br>• LDR: Light Dependent Resistor (x1)<br>• DHT22: Air Temperature & Humidity (x1) |
 | Display | LCD I2C (x1) |
-| Other Components | Micro USB cable - USB type A (x1), Jumper cable (1 set), ESP32 expansion board (x1), Breadboard (x1), Electrical relay 2 channel (x1), Adaptor DC 5V (x1), Resistor, Casing box (x1), Bolts plus (1 set), and Nuts (1 set) |
+| Other Components | • Micro USB cable - USB type A (x1)<br>• Jumper cable (1 set)<br>• ESP32 expansion board (x1)<br>• Breadboard (x1)<br>• Electrical relay 2 channel (x1)<br>• Adaptor DC 5V (x1)<br>• Resistor<br>• Casing box (x1)<br>• Bolts plus (1 set)<br>• Nuts (1 set) |
 
 <br><br>
 
 ## Download & Install
 1. Arduino IDE
 
+   <table><tr><td width="810">
+
    ```
    https://www.arduino.cc/en/software
    ```
-<br>
+
+   </td></tr></table><br>
 
 2. USB-Serial CP210X
+
+   <table><tr><td width="810">
 
    ```
    https://bit.ly/CP210X_Driver
    ```
+
+   </td></tr></table>
    
 <br><br>
 
