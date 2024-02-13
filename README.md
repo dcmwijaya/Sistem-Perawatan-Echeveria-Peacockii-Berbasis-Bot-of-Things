@@ -200,40 +200,44 @@ This project is closely related to agricultural technology, where this tool is u
       
       • Input the first data :
       
-      - ``` NAME ``` -> ``` suhu_udara ```.
-      - ``` PIN ``` -> ``` V0 ```.
-      - ``` DATA TYPE ``` -> ``` Double ```.
-      - ``` UNITS ``` -> ``` Celcius, °C ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DECIMALS ``` -> ``` #.# ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` suhu_udara ```
+      - ``` PIN ``` -> ``` V0 ```
+      - ``` DATA TYPE ``` -> ``` Double ```
+      - ``` UNITS ``` -> ``` Celcius, °C ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100 ```
+      - ``` DECIMALS ``` -> ``` #.# ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
             
       • Input the second data :
    
-      - ``` NAME ``` -> ``` kelembapan_udara ```.
-      - ``` PIN ``` -> ``` V1 ```.
-      - ``` DATA TYPE ``` -> ``` Integer ```.
-      - ``` UNITS ``` -> ``` Percentage, % ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` kelembapan_udara ```
+      - ``` PIN ``` -> ``` V1 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` Percentage, % ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
            
       • Input the third data :
    
-      - ``` NAME ``` -> ``` kelembapan_tanah ```.
-      - ``` PIN ``` -> ``` V2 ```.
-      - ``` DATA TYPE ``` -> ``` Integer ```.
-      - ``` UNITS ``` -> ``` Percentage, % ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` kelembapan_tanah ```
+      - ``` PIN ``` -> ``` V2 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` Percentage, % ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
       
       • Input the fourth data :
    
-      - ``` NAME ``` -> ``` cahaya ```.
-      - ``` PIN ``` -> ``` V3 ```.
-      - ``` DATA TYPE ``` -> ``` Integer ```.
-      - ``` UNITS ``` -> ``` Lux, lx ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100000 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` cahaya ```
+      - ``` PIN ``` -> ``` V3 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` Lux, lx ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100000 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
          
       • Click ``` Create ```.
       
