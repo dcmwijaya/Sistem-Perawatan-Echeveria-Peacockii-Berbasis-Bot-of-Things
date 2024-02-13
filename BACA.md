@@ -200,40 +200,44 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
       
       • Masukkan data pertama :
    
-      - ``` NAME ``` -> ``` suhu_udara ```.
-      - ``` PIN ``` -> ``` V0 ```.
-      - ``` DATA TYPE ``` -> ``` Double ```.
-      - ``` UNITS ``` -> ``` Celcius, °C ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DECIMALS ``` -> ``` #.# ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` suhu_udara ```
+      - ``` PIN ``` -> ``` V0 ```
+      - ``` DATA TYPE ``` -> ``` Double ```
+      - ``` UNITS ``` -> ``` Celcius, °C ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100 ```
+      - ``` DECIMALS ``` -> ``` #.# ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
             
       • Masukkan data kedua :
    
-      - ``` NAME ``` -> ``` kelembapan_udara ```.
-      - ``` PIN ``` -> ``` V1 ```.
-      - ``` DATA TYPE ``` -> ``` Integer ```.
-      - ``` UNITS ``` -> ``` Percentage, % ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` kelembapan_udara ```
+      - ``` PIN ``` -> ``` V1 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` Percentage, % ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
            
       • Masukkan data ketiga :
    
-      - ``` NAME ``` -> ``` kelembapan_tanah ```.
-      - ``` PIN ``` -> ``` V2 ```.
-      - ``` DATA TYPE ``` -> ``` Integer ```.
-      - ``` UNITS ``` -> ``` Percentage, % ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` kelembapan_tanah ```
+      - ``` PIN ``` -> ``` V2 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` Percentage, % ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
       
       • Masukkan data keempat :
    
-      - ``` NAME ``` -> ``` cahaya ```.
-      - ``` PIN ``` -> ``` V3 ```.
-      - ``` DATA TYPE ``` -> ``` Integer ```.
-      - ``` UNITS ``` -> ``` Lux, lx ```.
-      - ``` MIN ``` -> ``` 0 ```, ``` MAX ``` -> ``` 100000 ```.
-      - ``` DEFAULT VALUE ``` -> ``` 0 ```.<br><br>
+      - ``` NAME ``` -> ``` cahaya ```
+      - ``` PIN ``` -> ``` V3 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` Lux, lx ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 100000 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
          
       • Klik ``` Create ```.
       
@@ -251,8 +255,8 @@ Proyek ini sangat erat kaitannya dengan teknologi pertanian, dimana alat ini dig
       
       • Pilih ``` From Templates ``` :
    
-      - ``` TEMPLATE ``` -> ``` Smart Farming ```.
-      - ``` DEVICE NAME ``` -> ``` Smart Farming ```.<br><br>
+      - ``` TEMPLATE ``` -> ``` Smart Farming ```
+      - ``` DEVICE NAME ``` -> ``` Smart Farming ```<br><br>
            
       • Klik ``` Create ```.
 
