@@ -4,12 +4,12 @@
 #define BLYNK_DEVICE_NAME "YOUR_BLYNK_DEVICE_NAME"
 #define BLYNK_AUTH_TOKEN "YOUR_BLYNK_AUTH_TOKEN"
 #include <WiFi.h>
+#include <Wire.h>
 #include <BlynkSimpleEsp32.h>
-#include <DHT.h>
 #include <CTBot.h>
 #include <ArduinoJson.h>
-#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <DHT.h>
 #include <FC28.h>
 #define LDR_PIN 35
 #define FC28_PIN 34
