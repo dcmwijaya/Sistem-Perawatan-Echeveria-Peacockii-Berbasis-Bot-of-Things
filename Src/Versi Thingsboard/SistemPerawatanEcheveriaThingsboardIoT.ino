@@ -1,9 +1,5 @@
 //Deklarasi Library/Konstanta/Dsb
-#if defined(ESP8266)
 #include <ESP8266WiFi.h>
-#elif defined(ESP32)
-#include <WiFi.h>
-#endif
 #include <ThingsBoard.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
@@ -11,7 +7,7 @@
 #include <CTBot.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-#include <ESP32_FC28.h>
+#include <ESP_FC28.h>
 #define LDR_PIN 35
 #define FC28_PIN 34
 #define DHT_PIN 13
