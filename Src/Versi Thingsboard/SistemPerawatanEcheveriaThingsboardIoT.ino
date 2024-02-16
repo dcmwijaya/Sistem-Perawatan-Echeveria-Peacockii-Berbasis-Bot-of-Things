@@ -1,12 +1,12 @@
 //Deklarasi Library/Konstanta/Dsb
 #include <WiFi.h>
+#include <Wire.h>
 #include <ThingsBoard.h>
 #include <PubSubClient.h>
-#include <ArduinoJson.h>
-#include <DHT.h>
 #include <CTBot.h>
-#include <Wire.h>
+#include <ArduinoJson.h>
 #include <LiquidCrystal_I2C.h>
+#include <DHT.h>
 #include <FC28.h>
 #define LDR_PIN 35
 #define FC28_PIN 34
