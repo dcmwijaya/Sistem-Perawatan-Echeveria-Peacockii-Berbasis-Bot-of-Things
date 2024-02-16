@@ -10,7 +10,7 @@
 #include <ArduinoJson.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-#include <ESP32_FC28.h>
+#include <FC28.h>
 #define LDR_PIN 35
 #define FC28_PIN 34
 #define DHT_PIN 13
