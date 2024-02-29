@@ -5,7 +5,7 @@
 
 # Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things
 <strong>Tugas Akhir IoT Master Class Indobot 2022</strong><br><br>
-Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kaktus, namun pada tubuh tanaman ini tidak dijumpai adanya duri, sehingga sangat diminati oleh para pecinta tanaman hias. Perawatan Echeveria Peacockii hingga saat ini masih dilakukan secara konvensional, sehingga hal ini tidak efektif baik dari sisi waktu maupun tenaga. Oleh karena itu, proyek ini dibuat untuk mendapatkan sistem yang mampu melakukan penyiraman secara otomatis sekaligus memantau perubahan kondisi yang ada di lingkungan sekitar tanaman Echeveria Peacockii secara real time. Proyek ini telah dilaksanakan dan memakan waktu kurang lebih 1 bulan. Antarmuka sistem menggunakan Bot Telegram. Hasil penelitian menunjukkan bahwa sistem yang dibuat dapat berfungsi dengan baik.
+Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kaktus, namun pada tubuh tanaman ini tidak dijumpai adanya duri, sehingga sangat diminati oleh para pecinta tanaman hias. Perawatan Echeveria Peacockii hingga saat ini masih dilakukan secara konvensional, sehingga hal ini dianggap tidak efektif baik dari sisi waktu maupun tenaga. Oleh karena itu, proyek ini dibuat untuk mendapatkan sistem yang mampu melakukan penyiraman secara otomatis sekaligus memantau perubahan kondisi yang ada di lingkungan sekitar tanaman Echeveria Peacockii secara real time. Proyek ini telah dilaksanakan dan memakan waktu kurang lebih 1 bulan. Antarmuka sistem menggunakan Bot Telegram. Hasil penelitian menunjukkan bahwa sistem yang dibuat dapat berfungsi dengan baik.
 
 <br><br>
 
