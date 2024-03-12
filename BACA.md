@@ -300,7 +300,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
    
       • Kemudian tempelkan pada bagian paling atas kode firmware, contohnya seperti ini :
    
-      ```
+      ```ino
       #define BLYNK_TEMPLATE_ID "TMPL6ZSHxYC-z"
       #define BLYNK_TEMPLATE_NAME "Smart Farming"
       #define BLYNK_AUTH_TOKEN "fw1oXlpe-YfYh7JXQHu4QTS3EqlnM-iw"
@@ -401,7 +401,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
    
       • Kemudian tempelkan pada kode firmware, contohnya seperti ini :
    
-      ```
+      ```ino
       #define DEVICE_ID_TB "26001630-a274-11ee-9db5-1fb69bbe078f"
       #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
       ```
@@ -427,7 +427,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
       
    Contohnya :
 
-   ```
+   ```ino
    #define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
    ```
          
