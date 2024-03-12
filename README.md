@@ -300,7 +300,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
    
       • Then paste it at the very top of the firmware code, for example like this :
    
-      ```
+      ```ino
       #define BLYNK_TEMPLATE_ID "TMPL6ZSHxYC-z"
       #define BLYNK_TEMPLATE_NAME "Smart Farming"
       #define BLYNK_AUTH_TOKEN "fw1oXlpe-YfYh7JXQHu4QTS3EqlnM-iw"
@@ -401,7 +401,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
    
       • Then paste in the firmware code, for example like this :
    
-      ```
+      ```ino
       #define DEVICE_ID_TB "26001630-a274-11ee-9db5-1fb69bbe078f"
       #define ACCESS_TOKEN_TB "tovosJJOLHzwc42DSfvM"
       ```
@@ -427,7 +427,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
 
    For example :
    
-   ```
+   ```ino
    #define BOTtoken "5911801402:AAFEEuBYHPmDxlYQxfPpTCZkRpn5d8hV_3E"
    ```
 
