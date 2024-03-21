@@ -183,19 +183,19 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
       }
     }
   } 
-  if (kelembapan_tanah >= 14.5 && kelembapan_tanah < 100){
+  if (kelembapan_tanah >= 60){
     info_kelembapantanah = "Kelembapan Tanah: Tinggi";      //Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayOFF);
     DataJSON["Pompa 1"] = "0"; //nilai OFF = 0
   }
-  if (kelembapan_tanah >= 11.8 && kelembapan_tanah < 14.5) { 
+  if (kelembapan_tanah > 40 && kelembapan_tanah < 60) { 
     info_kelembapantanah = "Kelembapan Tanah: Normal";      //Lembap
     statusTanah = "Status Kualitas Tanah: Aman";
     digitalWrite(RPOMPA1_PIN, relayOFF);
     DataJSON["Pompa 1"] = "0"; //nilai OFF = 0
   }
-  if (kelembapan_tanah >= 0 && kelembapan_tanah < 11.8) {
+  if (kelembapan_tanah <= 40) {
     info_kelembapantanah = "Kelembapan Tanah: Rendah";     //Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayON);
