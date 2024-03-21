@@ -154,19 +154,19 @@ void TresholdSensorState(){ //batasan suhu, kelembapan, dan intensitas cahaya
       Blynk.virtualWrite(V4, 1);
     }
   } 
-  if (kelembapan_tanah >= 14.5 && kelembapan_tanah < 100){
+  if (kelembapan_tanah >= 60) {
     info_kelembapantanah = "Kelembapan Tanah: Tinggi";      //Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayOFF);
     Blynk.virtualWrite(V4, 0);
   }
-  if (kelembapan_tanah >= 11.8 && kelembapan_tanah < 14.5) { 
+  if (kelembapan_tanah > 40 && kelembapan_tanah < 60) { 
     info_kelembapantanah = "Kelembapan Tanah: Normal";      //Lembap
     statusTanah = "Status Kualitas Tanah: Aman";
     digitalWrite(RPOMPA1_PIN, relayOFF);
     Blynk.virtualWrite(V4, 0);
   }
-  if (kelembapan_tanah >= 0 && kelembapan_tanah < 11.8) {
+  if (kelembapan_tanah <= 40) {
     info_kelembapantanah = "Kelembapan Tanah: Rendah";     //Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayON);
