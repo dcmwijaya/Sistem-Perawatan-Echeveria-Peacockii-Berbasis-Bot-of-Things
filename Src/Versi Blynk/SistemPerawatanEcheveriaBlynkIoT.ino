@@ -1,3 +1,5 @@
+#define BLYNK_PRINT Serial
+
 // Pustaka yang digunakan
 #include <WiFi.h>
 #include <Wire.h>
@@ -8,7 +10,6 @@
 #include <ESP_FC28.h>
 
 // Koneksi
-#define BLYNK_PRINT Serial
 #define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
 #define BLYNK_DEVICE_NAME "YOUR_BLYNK_DEVICE_NAME"
 #define BLYNK_AUTH_TOKEN "YOUR_BLYNK_AUTH_TOKEN"
