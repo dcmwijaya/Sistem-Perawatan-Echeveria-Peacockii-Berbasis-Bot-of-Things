@@ -234,17 +234,17 @@ void botTelegram() {
     if(msg.text.equalsIgnoreCase("/start")){ // Start Bot
       msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nSelamat datang di Layanan BOT ECHEVERIA.";
       msg2 = "\n\n🔐 Silahkan isi kode rahasia 👇👇\n.................................. *(13 Characters)";
-      sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
+      sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
     } 
     else if(msg.text.equalsIgnoreCase(KodeBot)){ // Menu Utama
       msg1 = "🔓 Kode yang anda masukkan benar";
       myBot.sendMessage(msg.sender.id, msg1);
       main_menu:
       msg2 = "\n--------------------------------------------------------------\n 📝 MENU UTAMA \n--------------------------------------------------------------\nSilahkan pilih menu dibawah ini 👇👇";
-      viewTombol = true; myBot.sendMessage(msg.sender.id, msg2, InlineKey);
+      viewTombol = true; myBot.sendMessage(msg.sender.id, msg2, InlineKey); // Mengirim pesan dan menampilkan tombol
     }
     else if(msg.messageType == CTBotMessageQuery){ // Respon Inline Button
-      if(msg.callbackQueryData.equals(InlineMenu1)){ // Menampilkan data monitoring suhu udara
+      if(msg.callbackQueryData.equals(InlineMenu1)){ // Menampilkan data monitoring suhu udara beserta statusnya
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Suhu Udara: " + String(suhu_udara, 2) + "°C");
         Serial.println(info_suhuudara);
@@ -252,9 +252,9 @@ void botTelegram() {
         Serial.println("<------------------------------->\n");
         msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring suhu udara pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌤️ MONITORING TEMPERATURE \n--------------------------------------------------------------\n";
         msg2 = "📲 Suhu udara tanaman: " + String(suhu_udara) + "°C\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
-        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
+        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
-      else if(msg.callbackQueryData.equals(InlineMenu2)){ // Menampilkan data monitoring kelembapan udara
+      else if(msg.callbackQueryData.equals(InlineMenu2)){ // Menampilkan data monitoring kelembapan udara beserta statusnya
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Kelembapan Udara: " + String(kelembapan_udara) + "%");
         Serial.println(info_kelembapanudara);
@@ -262,9 +262,9 @@ void botTelegram() {
         Serial.println("<------------------------------->\n");
         msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembapan udara pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌦️ MONITORING HUMIDITY \n--------------------------------------------------------------\n";
         msg2 = "📲 Kelembapan udara tanaman: " + String(kelembapan_udara) + "%\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
-        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
+        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
-      else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembapan tanah
+      else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembapan tanah beserta statusnya
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Kelembapan Tanah: " + String(kelembapan_tanah) + "%");
         Serial.println(info_kelembapantanah);
@@ -272,9 +272,9 @@ void botTelegram() {
         Serial.println("<------------------------------->\n");
         msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembapan tanah pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌱 MONITORING SOIL MOISTURE \n--------------------------------------------------------------\n";
         msg2 = "📲 Kelembapan tanah tanaman: " + String(kelembapan_tanah) + "%\n✍️ " + String(statusTanah) + "\n--------------------------------------------------------------"; 
-        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
+        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
-      else if(msg.callbackQueryData.equals(InlineMenu4)){ // Menampilkan data monitoring intensitas cahaya
+      else if(msg.callbackQueryData.equals(InlineMenu4)){ // Menampilkan data monitoring intensitas cahaya beserta statusnya
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Cahaya: " + String(cahaya) + "lx");
         Serial.println(info_intensitascahaya);
@@ -282,11 +282,11 @@ void botTelegram() {
         Serial.println("<------------------------------->\n");
         msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring cahaya pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n ☀️ MONITORING LIGHT INTENSITY \n--------------------------------------------------------------\n";
         msg2 = "📲 Cahaya tanaman: " + String(cahaya) + "lx\n✍️ " + String(statusSinar) + "\n--------------------------------------------------------------"; 
-        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
+        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
       else if(msg.callbackQueryData.equals(InlineMenu5)){ // Opsi controlling
         sendMsg = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nPilihlah opsi controlling berikut:\n";
-        myBot.sendMessage(msg.sender.id, sendMsg, InlineOption);
+        myBot.sendMessage(msg.sender.id, sendMsg, InlineOption); // Mengirim pesan dan menampilkan tombol
       }
       else if(msg.callbackQueryData.equals(ON)){ // Memberikan perintah untuk menyalakan pompa 2
         DataJSON["Pompa 2"] = "1"; // Nilai ON = 1
@@ -296,8 +296,8 @@ void botTelegram() {
         Serial.println("<------------------------------->");
         msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil controlling pompa air pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🚰 CONTROLLING WATER PUMP \n--------------------------------------------------------------\n";
         msg2 = "📲 Controlling water pump: ON\n--------------------------------------------------------------"; 
-        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
-        digitalWrite(RPOMPA2_PIN, relayON);
+        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
+        digitalWrite(RPOMPA2_PIN, relayON); // Pompa 2 menyala
       }
       else if(msg.callbackQueryData.equals(OFF)){ // Memberikan perintah untuk mematikan pompa 2
         DataJSON["Pompa 2"] = "0"; // Nilai OFF = 0
@@ -307,13 +307,13 @@ void botTelegram() {
         Serial.println("<------------------------------->");
         msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil controlling pompa air pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🚰 CONTROLLING WATER PUMP \n--------------------------------------------------------------\n";
         msg2 = "📲 Controlling water pump: OFF\n--------------------------------------------------------------"; 
-        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
-        digitalWrite(RPOMPA2_PIN, relayOFF);
+        sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
+        digitalWrite(RPOMPA2_PIN, relayOFF); // Pompa 2 mati
       }
     }
-    else{ // Jika perintah tidak sesuai maka kirimkan pesan :
+    else{ // Jika perintah tidak sesuai maka :
       sendMsg = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\n\n❌ Gagal mengakses, coba lagi";
-      myBot.sendMessage(msg.sender.id, sendMsg);
+      myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan gagal
     } 
   }
 }
