@@ -254,7 +254,6 @@ void botTelegram() {
       }
       else if(msg.callbackQueryData.equals(ON)){ // Memberikan perintah untuk menyalakan pompa 2
         Blynk.virtualWrite(V5, 1); // Nilai ON = 1
-        KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: On");
         Serial.println("<------------------------------->");
@@ -265,7 +264,6 @@ void botTelegram() {
       }
       else if(msg.callbackQueryData.equals(OFF)){ // Memberikan perintah untuk mematikan pompa 2
         Blynk.virtualWrite(V5, 0); // Nilai OFF = 0
-        KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: Off");
         Serial.println("<------------------------------->");
