@@ -79,7 +79,7 @@ void ConnectToWiFi() {
 // Method untuk menyambungkan ulang ke WiFi
 void reconnect() { 
   while (!client.connected()) { // Selama client tidak terhubung ke jaringan maka :
-    ConnectToWiFi();
+    ConnectToWiFi(); // Memanggil method ConnectToWiFi
     if (client.connect(DEVICE_ID_TB, ACCESS_TOKEN_TB, "")) { // Jika berhasil terhubung ke ThingsBoard maka cetak di serial monitor :
       Serial.println("Menyambungkan ke Node ThingsBoard ...[SUKSES]\n");
     } 
@@ -88,8 +88,8 @@ void reconnect() {
 
 // Method untuk menyambungkan ke Bot Telegram
 void connectBot() {
-  myBot.setTelegramToken(BOTtoken);
-  myBot.wifiConnect(WIFI_SSID, WIFI_PASSWORD); 
+  myBot.setTelegramToken(BOTtoken); // Atur bot token
+  myBot.wifiConnect(WIFI_SSID, WIFI_PASSWORD); // Atur konektivitas WiFi
   myBot.setMaxConnectionRetries(5);
   Serial.println("Menghubungkan ke: echeveria_bot..."); 
 
@@ -333,11 +333,11 @@ void setup() {
   Serial.begin(SERIAL_DEBUG_BAUD); // Baudrate untuk papan ESP
   ConnectToWiFi(); // Memanggil method ConnectToWiFi
   client.setServer(MQTT_SERVER, 1883); // Mengatur nama server dan port untuk keperluan client
+  connectBot(); // Memanggil method connectBot
   ButtonBot(); // Memanggil method ButtonBot
+  LCDinit(); // Memanggil method LCDinit
   fc28.begin(); // Memulai sensor fc-28
   dht.begin(); // Memulai sensor dht
-  LCDinit(); // Memanggil method LCDinit
-  connectBot(); // Memanggil method connectBot
   pinMode(LDR_PIN, INPUT); // LDR sebagai INPUT
   pinMode(RPOMPA1_PIN, OUTPUT); // Pompa 1 sebagai OUTPUT
   pinMode(RPOMPA2_PIN, OUTPUT); // Pompa 2 sebagai OUTPUT
