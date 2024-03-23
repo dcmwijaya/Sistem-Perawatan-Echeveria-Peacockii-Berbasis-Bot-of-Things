@@ -7,7 +7,7 @@
 #include <ArduinoJson.h>
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
-#include <FC28.h>
+#include <ESP_FC28.h>
 
 // Koneksi
 #define WIFI_SSID "YOUR_WIFI_NAME"
