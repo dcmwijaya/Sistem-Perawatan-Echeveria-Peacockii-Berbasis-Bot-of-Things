@@ -64,7 +64,7 @@ int kelembapan_tanah; String statusTanah, info_kelembapantanah; // FC-28
 void ConnectToWiFi() {
   WiFi.mode(WIFI_STA); // Membuat perangkat sebagai station
   status = WiFi.status(); // Status WiFi
-  if (status != WL_CONNECTED) { // Jika tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
+  if (status != WL_CONNECTED) { // Jika tidak berhasil terhubung ke jaringan maka :
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD); Serial.print("Menyambungkan ke jaringan"); // Memulai jaringan
     while (status != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
       Serial.print("."); delay(500);
@@ -124,7 +124,7 @@ void ButtonBot() {
   viewTombol = false;
 }
 
-// Method untuk mengirim data ke Thingsboard
+// Method untuk kirim data sensor ke Thingsboard melalui protokol MQTT
 void KirimTB(){
   serializeJson(DataJSON, Payload);
   client.publish("v1/devices/me/telemetry/fpiotdevan", Payload);
@@ -147,7 +147,7 @@ void BacaSensor(){
   resistance = 2000 * volt / (1 - volt / 5);
   cahaya = pow(RL10 * 1e3 * pow(10, GAMMA) / resistance, (1 / GAMMA));
   
-  // Kirim data ke Thingsboard menggunakan protokol MQTT
+  // Memasukan data sensor ke dalam array
   DataJSON["Suhu Udara"] = String(suhu_udara);
   DataJSON["Kelembapan Udara"] = String(kelembapan_udara);
   DataJSON["Kelembapan Tanah"] = String(kelembapan_tanah);
