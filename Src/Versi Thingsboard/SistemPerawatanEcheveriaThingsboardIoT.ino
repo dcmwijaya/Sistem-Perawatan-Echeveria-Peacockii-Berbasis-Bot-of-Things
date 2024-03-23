@@ -70,7 +70,7 @@ void ConnectToWiFi() {
     while (status != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
       Serial.print("."); delay(500);
     }
-    if (WiFi.status() == WL_CONNECTED) { // Jika berhasil terhubung ke jaringan maka cetak di serial monitor :
+    if (status == WL_CONNECTED) { // Jika berhasil terhubung ke jaringan maka cetak di serial monitor :
       Serial.println("\nTelah terhubung ke "+String(WIFI_SSID)+"\n\n");
     }
   }
@@ -83,7 +83,7 @@ void reconnect() {
     status = WiFi.status(); // Status WiFi
     if (status != WL_CONNECTED) { // Jika tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
       WiFi.begin(WIFI_SSID, WIFI_PASSWORD); Serial.print("Menyambungkan ke jaringan"); // Memulai jaringan
-      while (WiFi.status() != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
+      while (status != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
         Serial.print("."); delay(500);
       }
       if (status == WL_CONNECTED) { // Jika berhasil terhubung ke jaringan maka cetak di serial monitor :
