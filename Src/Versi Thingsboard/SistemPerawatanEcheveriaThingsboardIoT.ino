@@ -161,9 +161,9 @@ void BacaSensor(){
   DataJSON["Kelembapan Tanah"] = String(kelembapan_tanah);
   DataJSON["Intensitas Cahaya"] = String(cahaya);
   
-  TresholdSensorState(); //memanggil method ThresholdSensorState
-  PrintLCD(); //memanggil method PrintLCD
-  KirimTB(); //memanggil method KirimTB
+  TresholdSensorState(); // Memanggil method ThresholdSensorState
+  PrintLCD(); // Memanggil method PrintLCD
+  KirimTB(); // Memanggil method KirimTB
 }
 
 // Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
@@ -177,7 +177,7 @@ void TresholdSensorState(){
         statusUdara = "Status Kualitas Udara: Bahaya";
         statusSinar = "Status Kualitas Sinar: Aman";
         digitalWrite(RPOMPA1_PIN, relayOFF);
-        DataJSON["Pompa 1"] = "0"; //nilai OFF = 0
+        DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
       }
     }
   }
@@ -190,7 +190,7 @@ void TresholdSensorState(){
         statusUdara = "Status Kualitas Udara: Aman";
         statusSinar = "Status Kualitas Sinar: Aman";
         digitalWrite(RPOMPA1_PIN, relayOFF);
-        DataJSON["Pompa 1"] = "0"; //nilai OFF = 0
+        DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
       }
     }
   }
@@ -203,7 +203,7 @@ void TresholdSensorState(){
         statusUdara = "Status Kualitas Udara: Bahaya";
         statusSinar = "Status Kualitas Sinar: Bahaya";
         digitalWrite(RPOMPA1_PIN, relayON);
-        DataJSON["Pompa 1"] = "1"; //nilai ON = 1
+        DataJSON["Pompa 1"] = "1"; // Nilai ON = 1
       }
     }
   } 
@@ -211,41 +211,41 @@ void TresholdSensorState(){
     info_kelembapantanah = "Kelembapan Tanah: Tinggi";      // Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayOFF);
-    DataJSON["Pompa 1"] = "0"; //nilai OFF = 0
+    DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
   }
   if (kelembapan_tanah > 40 && kelembapan_tanah < 60) { 
     info_kelembapantanah = "Kelembapan Tanah: Normal";      // Lembap
     statusTanah = "Status Kualitas Tanah: Aman";
     digitalWrite(RPOMPA1_PIN, relayOFF);
-    DataJSON["Pompa 1"] = "0"; //nilai OFF = 0
+    DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
   }
   if (kelembapan_tanah <= 40) {
     info_kelembapantanah = "Kelembapan Tanah: Rendah";     // Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";
     digitalWrite(RPOMPA1_PIN, relayON);
-    DataJSON["Pompa 1"] = "1"; //nilai ON = 1
+    DataJSON["Pompa 1"] = "1"; // Nilai ON = 1
   }
 }
 
 // Method untuk mengatur bot telegram
 void botTelegram() {
-  TBMessage msg; //Constructor TBMessage
+  TBMessage msg; // Konstruktor TBMessage -> msg
   
   if(myBot.getNewMessage(msg)){  
-    if(msg.text.equalsIgnoreCase("/start")){ //Start Bot
+    if(msg.text.equalsIgnoreCase("/start")){ // Start Bot
       msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nSelamat datang di Layanan BOT ECHEVERIA.";
       msg2 = "\n\n🔐 Silahkan isi kode rahasia 👇👇\n.................................. *(13 Characters)";
       sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
     } 
-    else if(msg.text.equalsIgnoreCase(KodeBot)){ //Menu Utama
+    else if(msg.text.equalsIgnoreCase(KodeBot)){ // Menu Utama
       msg1 = "🔓 Kode yang anda masukkan benar";
       myBot.sendMessage(msg.sender.id, msg1);
       main_menu:
       msg2 = "\n--------------------------------------------------------------\n 📝 MENU UTAMA \n--------------------------------------------------------------\nSilahkan pilih menu dibawah ini 👇👇";
       viewTombol = true; myBot.sendMessage(msg.sender.id, msg2, InlineKey);
     }
-    else if(msg.messageType == CTBotMessageQuery){ //Respon Inline Button
-      if(msg.callbackQueryData.equals(InlineMenu1)){ //Menampilkan data monitoring suhu udara
+    else if(msg.messageType == CTBotMessageQuery){ // Respon Inline Button
+      if(msg.callbackQueryData.equals(InlineMenu1)){ // Menampilkan data monitoring suhu udara
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Suhu Udara: " + String(suhu_udara, 2) + "°C");
         Serial.println(info_suhuudara);
@@ -255,7 +255,7 @@ void botTelegram() {
         msg2 = "📲 Suhu udara tanaman: " + String(suhu_udara) + "°C\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
       }
-      else if(msg.callbackQueryData.equals(InlineMenu2)){ //Menampilkan data monitoring kelembapan udara
+      else if(msg.callbackQueryData.equals(InlineMenu2)){ // Menampilkan data monitoring kelembapan udara
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Kelembapan Udara: " + String(kelembapan_udara) + "%");
         Serial.println(info_kelembapanudara);
@@ -265,7 +265,7 @@ void botTelegram() {
         msg2 = "📲 Kelembapan udara tanaman: " + String(kelembapan_udara) + "%\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
       }
-      else if(msg.callbackQueryData.equals(InlineMenu3)){ //Menampilkan data monitoring kelembapan tanah
+      else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembapan tanah
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Kelembapan Tanah: " + String(kelembapan_tanah) + "%");
         Serial.println(info_kelembapantanah);
@@ -275,7 +275,7 @@ void botTelegram() {
         msg2 = "📲 Kelembapan tanah tanaman: " + String(kelembapan_tanah) + "%\n✍️ " + String(statusTanah) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
       }
-      else if(msg.callbackQueryData.equals(InlineMenu4)){ //Menampilkan data monitoring intensitas cahaya
+      else if(msg.callbackQueryData.equals(InlineMenu4)){ // Menampilkan data monitoring intensitas cahaya
         Serial.println("\n<------------------------------->");
         Serial.println("Deteksi Cahaya: " + String(cahaya) + "lx");
         Serial.println(info_intensitascahaya);
@@ -285,13 +285,13 @@ void botTelegram() {
         msg2 = "📲 Cahaya tanaman: " + String(cahaya) + "lx\n✍️ " + String(statusSinar) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
       }
-      else if(msg.callbackQueryData.equals(InlineMenu5)){ //Opsi controlling
+      else if(msg.callbackQueryData.equals(InlineMenu5)){ // Opsi controlling
         sendMsg = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nPilihlah opsi controlling berikut:\n";
         myBot.sendMessage(msg.sender.id, sendMsg, InlineOption);
       }
-      else if(msg.callbackQueryData.equals(ON)){ //Memberikan perintah untuk menyalakan pompa 2
-        DataJSON["Pompa 2"] = "1"; //nilai ON = 1
-        KirimTB(); //memanggil method KirimTB
+      else if(msg.callbackQueryData.equals(ON)){ // Memberikan perintah untuk menyalakan pompa 2
+        DataJSON["Pompa 2"] = "1"; // Nilai ON = 1
+        KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: On");
         Serial.println("<------------------------------->");
@@ -300,9 +300,9 @@ void botTelegram() {
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg);
         digitalWrite(RPOMPA2_PIN, relayON);
       }
-      else if(msg.callbackQueryData.equals(OFF)){ //Memberikan perintah untuk menyalakan pompa 2
-        DataJSON["Pompa 2"] = "0"; //nilai OFF = 0
-        KirimTB(); //memanggil method KirimTB
+      else if(msg.callbackQueryData.equals(OFF)){ // Memberikan perintah untuk mematikan pompa 2
+        DataJSON["Pompa 2"] = "0"; // Nilai OFF = 0
+        KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: Off");
         Serial.println("<------------------------------->");
@@ -312,7 +312,7 @@ void botTelegram() {
         digitalWrite(RPOMPA2_PIN, relayOFF);
       }
     }
-    else{ //Control Error jika perintah tidak sesuai
+    else{ // Jika perintah tidak sesuai maka kirimkan pesan :
       sendMsg = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\n\n❌ Gagal mengakses, coba lagi";
       myBot.sendMessage(msg.sender.id, sendMsg);
     } 
@@ -321,16 +321,13 @@ void botTelegram() {
 
 // Method untuk memulai LCD
 void LCDinit(){
-  lcd.init();
-  //start LCD
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Starting"); lcd.setCursor(1,1); lcd.print("Smart System..."); delay(2500);
-  //welcome LCD
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Welcome to"); lcd.setCursor(1,1); lcd.print("Echeveria BoT..."); delay(2500);
-  //loading
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Loading...."); delay(5000);
+  lcd.init(); // Memulai LCD
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Starting"); lcd.setCursor(1,1); lcd.print("Smart System..."); delay(2500); // Tampilan pertama
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Welcome to"); lcd.setCursor(1,1); lcd.print("Echeveria BoT..."); delay(2500); // Tampilan Kedua
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Loading...."); delay(5000); // Tampilan Ketiga
 }
 
-// Method untuk menampilkan data ke LCD
+// Method untuk menampilkan data sensor ke LCD
 void PrintLCD(){
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Suhu Udara:"); lcd.setCursor(1,1); lcd.print(""+String(suhu_udara)+" "+String((char)223)+"C"); delay(1000);
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Udara:"); lcd.setCursor(1,1); lcd.print(""+String(kelembapan_udara)+" %"); delay(1000);
@@ -340,32 +337,28 @@ void PrintLCD(){
 
 // Method yang dijalankan sekali
 void setup() {
-  //inisialisasi koneksi dan komponen
-  Serial.begin(SERIAL_DEBUG_BAUD);
-  ConnectToWiFi();
-  client.setServer(MQTT_SERVER, 1883);
-  ButtonBot();
+  Serial.begin(SERIAL_DEBUG_BAUD); // Baudrate untuk papan ESP
+  ConnectToWiFi(); // Memanggil method ConnectToWiFi
+  client.setServer(MQTT_SERVER, 1883); // Mengatur nama server dan port untuk keperluan client
+  ButtonBot(); // Memanggil method ButtonBot
   fc28.begin(); // Memulai sensor fc-28
   dht.begin(); // Memulai sensor dht
-  LCDinit();
-  connectBot();
-  
-  //Inisialisasi gpio
-  pinMode(LDR_PIN, INPUT);
-  pinMode(DHT_PIN, INPUT);
-  pinMode(RPOMPA1_PIN, OUTPUT);
-  pinMode(RPOMPA2_PIN, OUTPUT);
-  digitalWrite(RPOMPA1_PIN, relayOFF); //default relay1: OFF
-  digitalWrite(RPOMPA2_PIN, relayOFF); //default relay2: OFF
+  LCDinit(); // Memanggil method LCDinit
+  connectBot(); // Memanggil method connectBot
+  pinMode(LDR_PIN, INPUT); // LDR sebagai INPUT
+  pinMode(RPOMPA1_PIN, OUTPUT); // Pompa 1 sebagai OUTPUT
+  pinMode(RPOMPA2_PIN, OUTPUT); // Pompa 2 sebagai OUTPUT
+  digitalWrite(RPOMPA1_PIN, relayOFF); // Default relay1: OFF
+  digitalWrite(RPOMPA2_PIN, relayOFF); // Default relay2: OFF
 }
 
-
-void loop() { //Method yang dijalankan berulang kali
-  if (!client.connected()){ //mengecek koneksi
-    reconnect(); //memanggil method reconnect
+// Method yang dijalankan berulang kali
+void loop() { 
+  if (!client.connected()){ // Jika client tidak terhubung maka :
+    reconnect(); // Memanggil method reconnect
   }
-  BacaSensor(); //memanggil method BacaSensor
-  botTelegram(); //memanggil method botTelegram
-  client.loop(); //perulangan pada client
-  delay(500); //tunda 1 500ms
+  BacaSensor(); // Memanggil method BacaSensor
+  botTelegram(); // Memanggil method botTelegram
+  client.loop(); // Perulangan pada client
+  delay(1000); // Tunda waktu selama 1 detik
 }
