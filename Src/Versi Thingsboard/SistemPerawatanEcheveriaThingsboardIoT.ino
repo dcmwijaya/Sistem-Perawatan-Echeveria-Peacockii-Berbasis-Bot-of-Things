@@ -168,62 +168,61 @@ void BacaSensor(){
 
 // Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
 void TresholdSensorState(){
-  if (suhu_udara >= 0 && suhu_udara < 16) {
-    if (kelembapan_udara > 90 && kelembapan_udara <=100) {
-      if (cahaya >= 500) {  
-        info_suhuudara = "Suhu Udara: Rendah";               // Dingin
-        info_kelembapanudara = "Kelembapan Udara: Tinggi";   // Basah
-        info_intensitascahaya = "Intensitas Cahaya: Rendah"; // Gelap
-        statusUdara = "Status Kualitas Udara: Bahaya";
-        statusSinar = "Status Kualitas Sinar: Aman";
-        digitalWrite(RPOMPA1_PIN, relayOFF);
-        DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
-      }
-    }
-  }
-  if (suhu_udara >= 16 && suhu_udara <= 34) {
-    if (kelembapan_udara >= 30 && kelembapan_udara <= 90) {
-      if (cahaya >= 200 && cahaya < 500) {  
-        info_suhuudara = "Suhu Udara: Normal";               // Remang-remang
-        info_kelembapanudara = "Kelembapan Udara: Normal";   // Lembap
-        info_intensitascahaya = "Intensitas Cahaya: Normal"; // Remang-remang
-        statusUdara = "Status Kualitas Udara: Aman";
-        statusSinar = "Status Kualitas Sinar: Aman";
-        digitalWrite(RPOMPA1_PIN, relayOFF);
-        DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
-      }
-    }
-  }
-  if (suhu_udara > 34 && suhu_udara <= 100) {
-    if (kelembapan_udara >= 0 && kelembapan_udara < 30) {
-      if (cahaya < 200) {
-        info_suhuudara = "Suhu Udara: Tinggi";                 // Panas
-        info_kelembapanudara = "Kelembapan Udara: Rendah";     // Kering
-        info_intensitascahaya = "Intensitas Cahaya: Tinggi";   // Cerah
-        statusUdara = "Status Kualitas Udara: Bahaya";
-        statusSinar = "Status Kualitas Sinar: Bahaya";
-        digitalWrite(RPOMPA1_PIN, relayON);
-        DataJSON["Pompa 1"] = "1"; // Nilai ON = 1
-      }
-    }
-  } 
+  // Jika suhu udara rendah, kelembaban tinggi, dan intensitas cahaya rendah, maka :
+  if (suhu_udara >= 0 && suhu_udara < 16) { if (kelembapan_udara > 90 && kelembapan_udara <=100) { if (cahaya >= 500) {  
+    info_suhuudara = "Suhu Udara: Rendah";                   // Dingin
+    info_kelembapanudara = "Kelembapan Udara: Tinggi";       // Basah
+    info_intensitascahaya = "Intensitas Cahaya: Rendah";     // Gelap
+    statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
+    statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
+    DataJSON["Pompa 1"] = "0";                               // Nilai OFF = 0
+  } } }
+
+  // Jika suhu udara sedang, kelembaban sedang, dan intensitas cahaya sedang, maka :  
+  if (suhu_udara >= 16 && suhu_udara <= 34) { if (kelembapan_udara >= 30 && kelembapan_udara <= 90) { if (cahaya >= 200 && cahaya < 500) {  
+    info_suhuudara = "Suhu Udara: Normal";                   // Remang-remang
+    info_kelembapanudara = "Kelembapan Udara: Normal";       // Lembap
+    info_intensitascahaya = "Intensitas Cahaya: Normal";     // Remang-remang
+    statusUdara = "Status Kualitas Udara: Aman";             // Status Udara: Aman
+    statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
+    DataJSON["Pompa 1"] = "0";                               // Nilai OFF = 0
+  } } }
+
+  // Jika suhu udara tinggi, kelembaban rendah, dan intensitas cahaya tinggi, maka :
+  if (suhu_udara > 34 && suhu_udara <= 100) { if (kelembapan_udara >= 0 && kelembapan_udara < 30) { if (cahaya < 200) {
+    info_suhuudara = "Suhu Udara: Tinggi";                   // Panas
+    info_kelembapanudara = "Kelembapan Udara: Rendah";       // Kering
+    info_intensitascahaya = "Intensitas Cahaya: Tinggi";     // Cerah
+    statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
+    statusSinar = "Status Kualitas Sinar: Bahaya";           // Status Sinar: Bahaya
+    digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
+    DataJSON["Pompa 1"] = "1";                               // Nilai ON = 1
+  } } } 
+
+  // Jika kondisi tanah basah maka :
   if (kelembapan_tanah >= 60){
-    info_kelembapantanah = "Kelembapan Tanah: Tinggi";      // Basah
-    statusTanah = "Status Kualitas Tanah: Bahaya";
-    digitalWrite(RPOMPA1_PIN, relayOFF);
-    DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
+    info_kelembapantanah = "Kelembapan Tanah: Tinggi";       // Basah
+    statusTanah = "Status Kualitas Tanah: Bahaya";           // Status Tanah: Bahaya
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
+    DataJSON["Pompa 1"] = "0";                               // Nilai OFF = 0
   }
+
+  // Jika kondisi tanah lembab maka :
   if (kelembapan_tanah > 40 && kelembapan_tanah < 60) { 
-    info_kelembapantanah = "Kelembapan Tanah: Normal";      // Lembap
-    statusTanah = "Status Kualitas Tanah: Aman";
-    digitalWrite(RPOMPA1_PIN, relayOFF);
-    DataJSON["Pompa 1"] = "0"; // Nilai OFF = 0
+    info_kelembapantanah = "Kelembapan Tanah: Normal";       // Lembap
+    statusTanah = "Status Kualitas Tanah: Aman";             // Status Tanah: Aman
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
+    DataJSON["Pompa 1"] = "0";                               // Nilai OFF = 0
   }
+
+  // Jika kondisi tanah kering maka :
   if (kelembapan_tanah <= 40) {
-    info_kelembapantanah = "Kelembapan Tanah: Rendah";     // Kering
-    statusTanah = "Status Kualitas Tanah: Bahaya";
-    digitalWrite(RPOMPA1_PIN, relayON);
-    DataJSON["Pompa 1"] = "1"; // Nilai ON = 1
+    info_kelembapantanah = "Kelembapan Tanah: Rendah";      // Kering
+    statusTanah = "Status Kualitas Tanah: Bahaya";          // Status Tanah: Bahaya
+    digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
+    DataJSON["Pompa 1"] = "1";                              // Nilai ON = 1
   }
 }
 
