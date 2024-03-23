@@ -54,7 +54,6 @@ String sendMsg, msg1, msg2;
 #define ON "ON"
 #define OFF "OFF"
 bool relayON = HIGH; bool relayOFF = LOW;
-int kontrolair;
 
 // Variabel untuk keperluan sensor
 const float GAMMA = 0.7, RL10 = 50; int analogLDR; float volt, resistance, cahaya; String statusSinar, info_intensitascahaya; // LDR
