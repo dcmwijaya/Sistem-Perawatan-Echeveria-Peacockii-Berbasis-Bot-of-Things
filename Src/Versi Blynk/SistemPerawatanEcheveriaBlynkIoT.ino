@@ -2,9 +2,10 @@
 
 // Pustaka yang digunakan
 #include <WiFi.h>
-#include <Wire.h>
+#include <WiFiClient.h>
 #include <BlynkSimpleEsp32.h>
 #include <CTBot.h>
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
 #include <ESP_FC28.h>
