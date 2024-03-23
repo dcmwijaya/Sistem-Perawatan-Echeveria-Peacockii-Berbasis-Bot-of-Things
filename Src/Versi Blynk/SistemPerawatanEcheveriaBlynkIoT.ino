@@ -83,12 +83,12 @@ void connectBot() {
   myBot.setTelegramToken(BOTtoken); // Mengatur token bot telegram
   myBot.wifiConnect(WIFI_SSID, WIFI_PASSWORD); // Mengatur konektivitas jaringan bot telegram
   myBot.setMaxConnectionRetries(5); // Bot telegram dapat menyambungkan ulang ke WiFi sebanyak 5x sebelum layanan dihentikan
-  Serial.println("\nMenghubungkan ke: echeveria_bot...\n"); // Cetak ke serial monitor
+  Serial.println("\nMenghubungkan ke: echeveria_bot..."); // Cetak ke serial monitor
 
   if(myBot.testConnection()){ // Jika bot telegram tersambung ke jaringan maka cetak ke serial monitor :
-    Serial.println("Bot telegram berhasil tersambung ...[SUKSES]"); 
+    Serial.println("Bot telegram berhasil tersambung ...[SUKSES]\n"); 
   } else{ // Jika bot telegram tidak tersambung ke jaringan maka cetak ke serial monitor :
-    Serial.print("Bot telegram gagal tersambung\nMenyambungkan kembali"); 
+    Serial.print("Bot telegram gagal tersambung\nMenyambungkan kembali\n"); 
     while (!myBot.testConnection()){ // Selama bot telegram tidak tersambung ke jaringan maka cetak ke serial monitor :
       Serial.print("."); delay(500);
     } Serial.println();
