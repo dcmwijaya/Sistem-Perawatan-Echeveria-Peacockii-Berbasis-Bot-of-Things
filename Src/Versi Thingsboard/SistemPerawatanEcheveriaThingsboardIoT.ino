@@ -64,26 +64,30 @@ int kelembapan_tanah; String statusTanah, info_kelembapantanah; // FC-28
 // Method untuk mengatur konektivitas
 void ConnectToWiFi() {
   WiFi.mode(WIFI_STA); // Membuat perangkat sebagai station
-  WiFi.begin(WIFISSID, PASSWORD); Serial.print("Menyambungkan ke jaringan"); // Memulai jaringan
-  while (WiFi.status() != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
-    Serial.print("."); delay(500);
-  }
-  if (WiFi.status() == WL_CONNECTED) { // Jika berhasil terhubung ke jaringan maka cetak di serial monitor :
-    Serial.println("\nTelah terhubung ke "+String(WIFISSID)+"\n\n");
+  status = WiFi.status(); // Status WiFi
+  if (status != WL_CONNECTED) { // Jika tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD); Serial.print("Menyambungkan ke jaringan"); // Memulai jaringan
+    while (WiFi.status() != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
+      Serial.print("."); delay(500);
+    }
+    if (WiFi.status() == WL_CONNECTED) { // Jika berhasil terhubung ke jaringan maka cetak di serial monitor :
+      Serial.println("\nTelah terhubung ke "+String(WIFI_SSID)+"\n\n");
+    }
   }
 }
 
 // Method untuk menyambungkan ulang ke WiFi
 void reconnect() { 
   while (!client.connected()) { // Selama client tidak terhubung ke jaringan maka :
+    WiFi.mode(WIFI_STA); // Membuat perangkat sebagai station
     status = WiFi.status(); // Status WiFi
     if (status != WL_CONNECTED) { // Jika tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
-      WiFi.begin(WIFI_SSID, WIFI_PASSWORD); // Memulai jaringan
+      WiFi.begin(WIFI_SSID, WIFI_PASSWORD); Serial.print("Menyambungkan ke jaringan"); // Memulai jaringan
       while (WiFi.status() != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
         Serial.print("."); delay(500);
       }
       if (WiFi.status() == WL_CONNECTED) { // Jika berhasil terhubung ke jaringan maka cetak di serial monitor :
-        Serial.println("\nTelah terhubung ke "+String(WIFISSID)+"\n\n");
+        Serial.println("\nTelah terhubung ke "+String(WIFI_SSID)+"\n\n");
       }
     }
     if (client.connect(DEVICE_ID_TB, ACCESS_TOKEN_TB, "")) { // Jika berhasil terhubung ke ThingsBoard maka cetak di serial monitor :
