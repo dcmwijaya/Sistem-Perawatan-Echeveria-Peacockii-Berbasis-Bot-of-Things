@@ -181,8 +181,8 @@ void TresholdSensorState(){
 
   // Jika suhu udara sedang, kelembaban sedang, dan intensitas cahaya sedang, maka :  
   if (suhu_udara >= 16 && suhu_udara <= 34) { if (kelembapan_udara >= 30 && kelembapan_udara <= 90) { if (cahaya >= 200 && cahaya < 500) {  
-    info_suhuudara = "Suhu Udara: Normal";                   // Remang-remang
-    info_kelembapanudara = "Kelembapan Udara: Normal";       // Lembap
+    info_suhuudara = "Suhu Udara: Normal";                   // Normal
+    info_kelembapanudara = "Kelembapan Udara: Normal";       // Lembab
     info_intensitascahaya = "Intensitas Cahaya: Normal";     // Remang-remang
     statusUdara = "Status Kualitas Udara: Aman";             // Status Udara: Aman
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
