@@ -34,8 +34,8 @@ FC28Sensor fc28(FC28_PIN); // Konstruktor FC28Sensor -> fc28
 DHT dht(DHT_PIN, DHT_TYPE); // Konstruktor DHT -> dht
 
 // Aktuator
-#define RPOMPA1_PIN 2
-#define RPOMPA2_PIN 4
+#define RPOMPA1_PIN 2 // Pin Antarmuka Pompa Air 1
+#define RPOMPA2_PIN 4 // Pin Antarmuka Pompa Air 2
 
 // Layar
 LiquidCrystal_I2C lcd(0x27, 16, 2);
@@ -61,17 +61,16 @@ int kontrolair, analogLDR, kelembapan_udara, kelembapan_tanah;
 float volt, resistance, suhu_udara, cahaya;
 String statusUdara, statusTanah, statusSinar, info_suhuudara, info_kelembapanudara, info_kelembapantanah, info_intensitascahaya;
 
-void InitWiFi() { //Memulai menyambungkan ke WiFi
-  Serial.print("Menyambungkan ke: ");
-  Serial.print(WIFI_SSID);
-
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500); Serial.print(".");
+// Method untuk mengatur konektivitas
+void ConnectToWiFi() {
+  WiFi.mode(WIFI_STA); // Membuat perangkat sebagai station
+  WiFi.begin(WIFISSID, PASSWORD); Serial.print("Menyambungkan ke jaringan"); // Memulai jaringan
+  while (WiFi.status() != WL_CONNECTED) { // Jika tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
+    Serial.print("."); delay(500);
   }
-  Serial.println();
-  Serial.print("Terhubung ke Local IP: ");
-  Serial.println(WiFi.localIP());
+  if (WiFi.status() == WL_CONNECTED) { // Jika berhasil terhubung ke jaringan maka cetak di serial monitor :
+    Serial.println("\nTelah terhubung ke "+String(WIFISSID)+"\n\n");
+  }
 }
 
 
@@ -334,7 +333,7 @@ void PrintLCD(){ //Menampilkan data ke LCD
 void setup() { //Method yang dijalankan sekali
   //inisialisasi koneksi dan komponen
   Serial.begin(SERIAL_DEBUG_BAUD);
-  InitWiFi();
+  ConnectToWiFi();
   client.setServer(MQTT_SERVER, 1883);
   ButtonBot();
   fc28.initFC28Sensor(SERIAL_DEBUG_BAUD, FC28_PIN);
