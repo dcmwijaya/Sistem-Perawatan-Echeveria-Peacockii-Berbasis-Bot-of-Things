@@ -1,47 +1,63 @@
-//Deklarasi Library/Konstanta/Dsb
-#define BLYNK_PRINT Serial
-#define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
-#define BLYNK_DEVICE_NAME "YOUR_BLYNK_DEVICE_NAME"
-#define BLYNK_AUTH_TOKEN "YOUR_BLYNK_AUTH_TOKEN"
+// Pustaka yang digunakan
 #include <WiFi.h>
 #include <Wire.h>
 #include <BlynkSimpleEsp32.h>
 #include <CTBot.h>
-#include <ArduinoJson.h>
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
-#include <FC28.h>
-#define LDR_PIN 35
-#define FC28_PIN 34
-#define DHT_PIN 13
-#define RPOMPA1_PIN 2
-#define RPOMPA2_PIN 4
-#define DHT_TYPE DHT22
-FC28Sensor fc28;
-DHT dht(DHT_PIN, DHT_TYPE);
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+#include <ESP_FC28.h>
+
+// Koneksi
+#define BLYNK_PRINT Serial
+#define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
+#define BLYNK_DEVICE_NAME "YOUR_BLYNK_DEVICE_NAME"
+#define BLYNK_AUTH_TOKEN "YOUR_BLYNK_AUTH_TOKEN"
 #define WIFI_SSID "YOUR_WIFI_NAME"
 #define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 #define BOTtoken "YOUR_API_BOT_TOKEN"
+#define KodeBot "ECHEVERIA2022"
+#define SERIAL_DEBUG_BAUD 115200
+BlynkTimer timer;
+long durasi = 0; long jeda = 1000;
+
+// Sensor
+#define LDR_PIN 35 // Pin Antarmuka Sensor LDR
+#define FC28_PIN 34 // Pin Antarmuka Sensor FC-28
+FC28Sensor fc28(FC28_PIN); // Konstruktor FC28Sensor -> fc28
+#define DHT_PIN 13 // Pin Antarmuka Sensor DHT
+#define DHT_TYPE DHT22 // Tipe Sensor DHT -> DHT22
+DHT dht(DHT_PIN, DHT_TYPE); // Konstruktor DHT -> dht
+
+// Aktuator
+#define RPOMPA1_PIN 2 // Pin Antarmuka Pompa Air 1
+#define RPOMPA2_PIN 4 // Pin Antarmuka Pompa Air 2
+
+// Layar
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// Variabel untuk keperluan bot telegram
+CTBot myBot; CTBotInlineKeyboard InlineKey, InlineOption, InlineKeyNULL;
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
 #define InlineMenu2 "InlineMonitoringKelembapanUdara"
 #define InlineMenu3 "InlineMonitoringKelembapanTanah"
 #define InlineMenu4 "InlineMonitoringIntensitasCahaya"
 #define InlineMenu5 "InlineControllingPenyiramanAir"
+bool viewTombol;
+String sendMsg, msg1, msg2; 
+
+// Variabel untuk keperluan aktuator
 #define ON "ON"
 #define OFF "OFF"
-#define KodeBot "ECHEVERIA2022"
-CTBot myBot; CTBotInlineKeyboard InlineKey, InlineOption, InlineKeyNULL;
-BlynkTimer timer;
-#define SERIAL_DEBUG_BAUD 115200
-const float GAMMA = 0.7; const float RL10 = 50;
-int kontrolair, analogLDR, kelembapan_udara, kelembapan_tanah; 
-float volt, resistance, suhu_udara, cahaya;
-String statusUdara, statusTanah, statusSinar, info_suhuudara, info_kelembapanudara, info_kelembapantanah, info_intensitascahaya, sendMsg, msg1, msg2; 
-bool viewTombol; bool relayON = HIGH; bool relayOFF = LOW;
-long durasi = 0; long jeda = 1000;
+bool relayON = HIGH; bool relayOFF = LOW;
+int kontrolair;
 
-BLYNK_WRITE(V6) { //kontrol air untuk menyiram tanaman echeveria
+// Variabel untuk keperluan sensor
+const float GAMMA = 0.7, RL10 = 50; int analogLDR; float volt, resistance, cahaya; String statusSinar, info_intensitascahaya; // LDR
+int kelembapan_udara; float suhu_udara; String statusUdara, info_suhuudara, info_kelembapanudara; // DHT
+int kelembapan_tanah; String statusTanah, info_kelembapantanah; // FC-28
+
+// Kontrol air untuk menyiram tanaman echeveria
+BLYNK_WRITE(V6) {
   kontrolair = param.asInt();
   digitalWrite(RPOMPA2_PIN, kontrolair);
   if (kontrolair == 1) {
@@ -98,8 +114,8 @@ void ButtonBot() {
   viewTombol = false;
 }
 
-// Method untuk kirim data sensor ke Blynk melalui protokol TCP/IP
-void sendData() {
+// Method untuk membaca sensor
+void BacaSensor(){
   // Baca nilai sensor DHT22
   suhu_udara = dht.readTemperature();
   kelembapan_udara = dht.readHumidity();
@@ -112,15 +128,6 @@ void sendData() {
   volt = analogLDR * 5 / 4095.0;
   resistance = 2000 * volt / (1 - volt / 5);
   cahaya = pow(RL10 * 1e3 * pow(10, GAMMA) / resistance, (1 / GAMMA));
-  
-  TresholdSensorState(); // Memanggil method ThresholdSensorState
-  PrintLCD(); // Memanggil method PrintLCD
-  
-  // Mengirimkan data sensor ke Blynk
-  Blynk.virtualWrite(V0, suhu_udara); 
-  Blynk.virtualWrite(V1, kelembapan_udara);
-  Blynk.virtualWrite(V2, kelembapan_tanah);
-  Blynk.virtualWrite(V3, cahaya);
 }
 
 // Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
@@ -185,8 +192,6 @@ void TresholdSensorState(){
 
 
 void botTelegram() {
-  sendData(); //Memanggil method sendData
-  connectBot(); //Memanggil method connectBot
   TBMessage msg; //Constructor TBMessage
   
   if(myBot.getNewMessage(msg)){  
@@ -275,6 +280,19 @@ void botTelegram() {
   }  
 }
 
+// Method untuk kirim data sensor ke Blynk melalui protokol TCP/IP
+void sendData() {
+  BacaSensor(); // Memanggil method BacaSensor
+  TresholdSensorState(); // Memanggil method ThresholdSensorState
+  PrintLCD(); // Memanggil method PrintLCD
+  botTelegram(); // Memanggil method botTelegram
+  
+  // Mengirimkan data sensor ke Blynk
+  Blynk.virtualWrite(V0, suhu_udara); 
+  Blynk.virtualWrite(V1, kelembapan_udara);
+  Blynk.virtualWrite(V2, kelembapan_tanah);
+  Blynk.virtualWrite(V3, cahaya);
+}
 
 // Method untuk memulai LCD
 void LCDinit(){
@@ -292,26 +310,25 @@ void PrintLCD(){
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Int.Cahaya:"); lcd.setCursor(1,1); lcd.print(""+String(cahaya)+" lx"); delay(1000);
 }
 
-
-void setup() { //Fungsi yang dijalankan sekali
-  Serial.begin(SERIAL_DEBUG_BAUD);
+// Method yang dijalankan sekali
+void setup() {
+  Serial.begin(SERIAL_DEBUG_BAUD); // Baudrate untuk papan ESP
   Blynk.begin(BLYNK_AUTH_TOKEN, WIFI_SSID, WIFI_PASSWORD);
-  ButtonBot();
-  fc28.initFC28Sensor(SERIAL_DEBUG_BAUD, FC28_PIN);
-  dht.begin();
-  pinMode(LDR_PIN, INPUT);
-  pinMode(FC28_PIN, INPUT);
-  pinMode(DHT_PIN, INPUT);
-  pinMode(RPOMPA1_PIN, OUTPUT);
-  pinMode(RPOMPA2_PIN, OUTPUT);
-  digitalWrite(RPOMPA1_PIN, relayOFF);
-  digitalWrite(RPOMPA2_PIN, relayOFF);
-  LCDinit();
+  connectBot(); // Memanggil method connectBot
+  ButtonBot(); // Memanggil method ButtonBot
+  LCDinit(); // Memanggil method LCDinit
+  fc28.begin(); // Memulai sensor fc-28
+  dht.begin(); // Memulai sensor dht
+  pinMode(LDR_PIN, INPUT); // LDR sebagai INPUT
+  pinMode(RPOMPA1_PIN, OUTPUT); // Pompa 1 sebagai OUTPUT
+  pinMode(RPOMPA2_PIN, OUTPUT); // Pompa 2 sebagai OUTPUT
+  digitalWrite(RPOMPA1_PIN, relayOFF); // Default relay1: OFF
+  digitalWrite(RPOMPA2_PIN, relayOFF); // Default relay2: OFF
   timer.setInterval(1000L, sendData);
 }
 
-
-void loop() { //Fungsi yang dijalankan berulang kali
+// Method yang dijalankan berulang kali
+void loop() {
   Blynk.run();
   timer.run();
 }
