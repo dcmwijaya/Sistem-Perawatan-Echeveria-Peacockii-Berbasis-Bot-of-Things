@@ -1,4 +1,4 @@
-//Deklarasi Library/Konstanta/Dsb
+// Pustaka yang digunakan
 #include <WiFi.h>
 #include <Wire.h>
 #include <ThingsBoard.h>
@@ -8,42 +8,58 @@
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
 #include <FC28.h>
-#define LDR_PIN 35
-#define FC28_PIN 34
-#define DHT_PIN 13
-#define RPOMPA1_PIN 2
-#define RPOMPA2_PIN 4
-#define DHT_TYPE DHT22
-FC28Sensor fc28;
-DHT dht(DHT_PIN, DHT_TYPE);
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// Koneksi
 #define WIFI_SSID "YOUR_WIFI_NAME"
 #define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 #define MQTT_SERVER "thingsboard.cloud"
 #define DEVICE_ID_TB "YOUR_DEVICE_ID_THINGSBOARD"
 #define ACCESS_TOKEN_TB "YOUR_ACCESS_TOKEN_THINGSBOARD"
 #define BOTtoken "YOUR_API_BOT_TOKEN"
+#define KodeBot "ECHEVERIA2022"
+#define SERIAL_DEBUG_BAUD 115200
+WiFiClient wifiClient;
+PubSubClient client(wifiClient);
+StaticJsonDocument<256> DataJSON;
+int status = WL_IDLE_STATUS;
+char Payload[128];
+long durasi = 0; long jeda = 500;
+
+// Sensor
+#define LDR_PIN 35 // Pin Antarmuka Sensor LDR
+#define FC28_PIN 34 // Pin Antarmuka Sensor FC-28
+FC28Sensor fc28(FC28_PIN); // Konstruktor FC28Sensor -> fc28
+#define DHT_PIN 13 // Pin Antarmuka Sensor DHT
+#define DHT_TYPE DHT22 // Tipe Sensor DHT -> DHT22
+DHT dht(DHT_PIN, DHT_TYPE); // Konstruktor DHT -> dht
+
+// Aktuator
+#define RPOMPA1_PIN 2
+#define RPOMPA2_PIN 4
+
+// Layar
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// Variabel untuk keperluan bot telegram
+CTBot myBot; CTBotInlineKeyboard InlineKey, InlineOption, InlineKeyNULL;
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
 #define InlineMenu2 "InlineMonitoringKelembapanUdara"
 #define InlineMenu3 "InlineMonitoringKelembapanTanah"
 #define InlineMenu4 "InlineMonitoringIntensitasCahaya"
 #define InlineMenu5 "InlineControllingPenyiramanAir"
+bool viewTombol;
+String sendMsg, msg1, msg2; 
+
+// Variabel untuk keperluan aktuator
 #define ON "ON"
 #define OFF "OFF"
-#define KodeBot "ECHEVERIA2022"
-CTBot myBot; CTBotInlineKeyboard InlineKey, InlineOption, InlineKeyNULL;
-#define SERIAL_DEBUG_BAUD 115200
-char Payload[128];
-const float GAMMA = 0.7; const float RL10 = 50;
-int kontrolair, analogLDR, kelembapan_udara, kelembapan_tanah; 
+bool relayON = HIGH; bool relayOFF = LOW;
+
+// Variabel untuk keperluan sensor
+const float GAMMA = 0.7, RL10 = 50;
+int kontrolair, analogLDR, kelembapan_udara, kelembapan_tanah;
 float volt, resistance, suhu_udara, cahaya;
-String statusUdara, statusTanah, statusSinar, info_suhuudara, info_kelembapanudara, info_kelembapantanah, info_intensitascahaya, sendMsg, msg1, msg2; 
-bool viewTombol; bool relayON = HIGH; bool relayOFF = LOW;
-long durasi = 0; long jeda = 500;
-WiFiClient wifiClient;
-PubSubClient client(wifiClient);
-StaticJsonDocument<256> DataJSON;
-int status = WL_IDLE_STATUS;
+String statusUdara, statusTanah, statusSinar, info_suhuudara, info_kelembapanudara, info_kelembapantanah, info_intensitascahaya;
 
 void InitWiFi() { //Memulai menyambungkan ke WiFi
   Serial.print("Menyambungkan ke: ");
