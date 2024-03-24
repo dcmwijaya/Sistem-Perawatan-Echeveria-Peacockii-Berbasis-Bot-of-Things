@@ -302,7 +302,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
    
       • Click ``` setting ``` on the added widget.
    
-      • Select a datastream that is already available, among others: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ```.
+      • Select a datastream that is already available, among others: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ``` / ``` indikator_pompa1 ``` / ``` indikator_pompa2 ``` / ``` tombol_siram ```.
    
       • Click ``` Save And Apply ```.
 
