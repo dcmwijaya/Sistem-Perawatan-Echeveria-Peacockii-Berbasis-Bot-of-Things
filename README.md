@@ -238,6 +238,36 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
       - ``` MIN ``` -> ``` 0 ```
       - ``` MAX ``` -> ``` 100000 ```
       - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
+      
+      • Input the fifth data :
+   
+      - ``` NAME ``` -> ``` indikasi_pompa1 ```
+      - ``` PIN ``` -> ``` V4 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` None ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 1 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
+           
+      • Input the sixth data :
+   
+      - ``` NAME ``` -> ``` indikasi_pompa2 ```
+      - ``` PIN ``` -> ``` V5 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` None ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 1 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
+      
+      • Input the seventh data :
+   
+      - ``` NAME ``` -> ``` tombol_pompa2 ```
+      - ``` PIN ``` -> ``` V6 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` UNITS ``` -> ``` None ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 1 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
          
       • Click ``` Create ```.
       
