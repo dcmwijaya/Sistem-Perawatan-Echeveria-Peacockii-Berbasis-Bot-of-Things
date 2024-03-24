@@ -61,16 +61,16 @@ BLYNK_WRITE(V6) {
   kontrolair = param.asInt();
   digitalWrite(RPOMPA2_PIN, kontrolair);
   if (kontrolair == 1) {
-    digitalWrite(RPOMPA2_PIN, relayON);
     Blynk.virtualWrite(V5, 1);
     Serial.println("Status kontrol air : On");
     Serial.println("<------------------------------->\n");
+    digitalWrite(RPOMPA2_PIN, relayON);
   } 
   if (kontrolair == 0){
-    digitalWrite(RPOMPA2_PIN, relayOFF);
     Blynk.virtualWrite(V5, 0);
     Serial.println("Status kontrol air : Off");
     Serial.println("<------------------------------->\n");
+    digitalWrite(RPOMPA2_PIN, relayOFF);
   }
 }
 
