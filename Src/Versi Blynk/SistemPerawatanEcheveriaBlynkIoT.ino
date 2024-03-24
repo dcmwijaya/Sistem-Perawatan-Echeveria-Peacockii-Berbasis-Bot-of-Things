@@ -49,9 +49,7 @@ bool viewTombol;
 String sendMsg, msg1, msg2; 
 
 // Variabel untuk keperluan aktuator
-#define ON "ON"
-#define OFF "OFF"
-bool relayON = HIGH; bool relayOFF = LOW;
+bool relayON = HIGH; bool relayOFF = LOW; // Silakan cek terlebih dahulu apakah relay anda itu Active High / Low, kalau relay saya Active High
 int kontrolair;
 
 // Variabel untuk keperluan sensor
@@ -255,7 +253,7 @@ void botTelegram() {
         sendMsg = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nPilihlah opsi controlling berikut:\n";
         myBot.sendMessage(msg.sender.id, sendMsg, InlineOption); // Mengirim pesan dan menampilkan tombol
       }
-      else if(msg.callbackQueryData.equals(ON)){ // Memberikan perintah untuk menyalakan pompa 2
+      else if(msg.callbackQueryData.equals("ON")){ // Memberikan perintah untuk menyalakan pompa 2
         Blynk.virtualWrite(V5, 1); // Nilai ON = 1
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: On");
@@ -265,7 +263,7 @@ void botTelegram() {
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
         digitalWrite(RPOMPA2_PIN, relayON); // Pompa 2 menyala
       }
-      else if(msg.callbackQueryData.equals(OFF)){ // Memberikan perintah untuk mematikan pompa 2
+      else if(msg.callbackQueryData.equals("OFF")){ // Memberikan perintah untuk mematikan pompa 2
         Blynk.virtualWrite(V5, 0); // Nilai OFF = 0
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: Off");
