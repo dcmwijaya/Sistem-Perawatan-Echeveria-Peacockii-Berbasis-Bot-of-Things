@@ -229,7 +229,7 @@ void botTelegram() {
       }
       else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembaban tanah beserta statusnya
         Serial.println("\n<------------------------------->");
-        Serial.println("Deteksi Kelembapan Tanah: " + String(kelembaban_tanah) + "%");
+        Serial.println("Deteksi Kelembaban Tanah: " + String(kelembaban_tanah) + "%");
         Serial.println(info_kelembabantanah);
         Serial.println(statusTanah);
         Serial.println("<------------------------------->\n");
