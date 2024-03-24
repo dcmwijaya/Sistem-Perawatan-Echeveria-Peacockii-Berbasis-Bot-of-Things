@@ -118,7 +118,7 @@ void TresholdSensorState(){
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
-    Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
+    Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
   } } }
 
   // Jika suhu udara sedang, kelembaban sedang, dan intensitas cahaya sedang, maka :  
@@ -129,7 +129,7 @@ void TresholdSensorState(){
     statusUdara = "Status Kualitas Udara: Aman";             // Status Udara: Aman
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
-    Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
+    Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
   } } }
 
   // Jika suhu udara tinggi, kelembaban rendah, dan intensitas cahaya tinggi, maka :
@@ -140,7 +140,7 @@ void TresholdSensorState(){
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     statusSinar = "Status Kualitas Sinar: Bahaya";           // Status Sinar: Bahaya
     digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
-    Blynk.virtualWrite(V4, 1);                               // Nilai OFF = 1
+    Blynk.virtualWrite(V4, 1);                               // Indikator Pompa 1: menyala
   } } } 
 
   // Jika kondisi tanah basah maka :
@@ -148,7 +148,7 @@ void TresholdSensorState(){
     info_kelembabantanah = "Kelembaban Tanah: Tinggi";       // Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";           // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
-    Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
+    Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
   }
 
   // Jika kondisi tanah lembab maka :
@@ -156,7 +156,7 @@ void TresholdSensorState(){
     info_kelembabantanah = "Kelembaban Tanah: Normal";       // Lembab
     statusTanah = "Status Kualitas Tanah: Aman";             // Status Tanah: Aman
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
-    Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
+    Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
   }
 
   // Jika kondisi tanah kering maka :
@@ -164,7 +164,7 @@ void TresholdSensorState(){
     info_kelembabantanah = "Kelembaban Tanah: Rendah";      // Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";          // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
-    Blynk.virtualWrite(V4, 1);                              // Nilai OFF = 1
+    Blynk.virtualWrite(V4, 1);                              // Indikator Pompa 1: menyala
   }
 }
 
@@ -252,7 +252,7 @@ void botTelegram() {
         myBot.sendMessage(msg.sender.id, sendMsg, InlineOption); // Mengirim pesan dan menampilkan tombol
       }
       else if(msg.callbackQueryData.equals("ON")){ // Memberikan perintah untuk menyalakan pompa 2
-        Blynk.virtualWrite(V5, 1); // Nilai ON = 1
+        Blynk.virtualWrite(V5, 1); // Indikator Pompa 2: menyala
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: On");
         Serial.println("<------------------------------->");
@@ -262,7 +262,7 @@ void botTelegram() {
         digitalWrite(RPOMPA2_PIN, relayON); // Pompa 2 menyala
       }
       else if(msg.callbackQueryData.equals("OFF")){ // Memberikan perintah untuk mematikan pompa 2
-        Blynk.virtualWrite(V5, 0); // Nilai OFF = 0
+        Blynk.virtualWrite(V5, 0); // Indikator Pompa 2: mati
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: Off");
         Serial.println("<------------------------------->");
