@@ -276,7 +276,6 @@ void botTelegram() {
       }
       else if(msg.callbackQueryData.equals("ON")){ // Memberikan perintah untuk menyalakan pompa 2
         DataJSON["Pompa 2"] = "1"; // Nilai ON = 1
-        KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: On");
         Serial.println("<------------------------------->");
@@ -287,7 +286,6 @@ void botTelegram() {
       }
       else if(msg.callbackQueryData.equals("OFF")){ // Memberikan perintah untuk mematikan pompa 2
         DataJSON["Pompa 2"] = "0"; // Nilai OFF = 0
-        KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
         Serial.println("Status kontrol air: Off");
         Serial.println("<------------------------------->");
@@ -315,8 +313,8 @@ void LCDinit(){
 // Method untuk menampilkan data sensor ke LCD
 void PrintLCD(){
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Suhu Udara:"); lcd.setCursor(1,1); lcd.print(""+String(suhu_udara)+" "+String((char)223)+"C"); delay(1000);
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Udara:"); lcd.setCursor(1,1); lcd.print(""+String(kelembapan_udara)+" %"); delay(1000);
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Tanah:"); lcd.setCursor(1,1); lcd.print(""+String(kelembapan_tanah)+" %"); delay(1000);
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Udara:"); lcd.setCursor(1,1); lcd.print(""+String(kelembaban_udara)+" %"); delay(1000);
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Tanah:"); lcd.setCursor(1,1); lcd.print(""+String(kelembaban_tanah)+" %"); delay(1000);
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Int.Cahaya:"); lcd.setCursor(1,1); lcd.print(""+String(cahaya)+" lx"); delay(1000);
 }
 
@@ -345,8 +343,8 @@ void loop() {
   BacaSensor(); // Memanggil method BacaSensor
   TresholdSensorState(); // Memanggil method ThresholdSensorState
   PrintLCD(); // Memanggil method PrintLCD
-  KirimTB(); // Memanggil method KirimTB
   botTelegram(); // Memanggil method botTelegram
+  KirimTB(); // Memanggil method KirimTB 
   client.loop(); // Perulangan pada client
   delay(1000); // Tunda waktu selama 1 detik
 }
