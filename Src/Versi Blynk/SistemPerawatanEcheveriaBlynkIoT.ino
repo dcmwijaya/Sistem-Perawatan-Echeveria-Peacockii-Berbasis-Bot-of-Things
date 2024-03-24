@@ -77,7 +77,7 @@ BLYNK_WRITE(V6) {
 void connectBot() {
   myBot.setTelegramToken(BOTtoken); // Mengatur token bot telegram
   myBot.wifiConnect(WIFI_SSID, WIFI_PASSWORD); // Mengatur konektivitas jaringan bot telegram
-  myBot.setMaxConnectionRetries(5); // Bot telegram dapat menyambungkan ulang ke WiFi sebanyak 5x sebelum layanan dihentikan
+  myBot.setMaxConnectionRetries(5); // Bot telegram dapat menyambungkan ulang ke WiFi yang diatur sebanyak 5x sebelum layanan dihentikan
   Serial.println("\nMenghubungkan ke: echeveria_bot..."); // Cetak ke serial monitor
 
   if(myBot.testConnection()){ // Jika bot telegram tersambung ke jaringan maka cetak ke serial monitor :
