@@ -203,7 +203,6 @@ void ButtonBot() {
   InlineKey.addButton("☀️ Monitoring Light Intensity", InlineMenu4, CTBotKeyboardButtonQuery);
   InlineKey.addRow();
   InlineKey.addButton("🚰 Controlling Water Pump", InlineMenu5, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
   
   // Menu kontrol dalam bentuk inline button
   InlineOption.addButton("✅ Pump: Turn ON", "ON", CTBotKeyboardButtonQuery);
