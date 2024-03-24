@@ -40,8 +40,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 // Variabel untuk keperluan bot telegram
 CTBot myBot; CTBotInlineKeyboard InlineKey, InlineOption, InlineKeyNULL;
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
-#define InlineMenu2 "InlineMonitoringKelembapanUdara"
-#define InlineMenu3 "InlineMonitoringKelembapanTanah"
+#define InlineMenu2 "InlineMonitoringKelembabanUdara"
+#define InlineMenu3 "InlineMonitoringKelembabanTanah"
 #define InlineMenu4 "InlineMonitoringIntensitasCahaya"
 #define InlineMenu5 "InlineControllingPenyiramanAir"
 bool viewTombol;
@@ -53,8 +53,8 @@ int kontrolair; // Variabel ini difungsikan untuk menampung perintah yaitu antar
 
 // Variabel untuk keperluan sensor
 const float GAMMA = 0.7, RL10 = 50; int analogLDR; float volt, resistance, cahaya; String statusSinar, info_intensitascahaya; // LDR
-int kelembapan_udara; float suhu_udara; String statusUdara, info_suhuudara, info_kelembapanudara; // DHT
-int kelembapan_tanah; String statusTanah, info_kelembapantanah; // FC-28
+int kelembaban_udara; float suhu_udara; String statusUdara, info_suhuudara, info_kelembabanudara; // DHT
+int kelembaban_tanah; String statusTanah, info_kelembabantanah; // FC-28
 
 // Kontrol air untuk menyiram tanaman echeveria
 BLYNK_WRITE(V6) {
@@ -94,10 +94,10 @@ void connectBot() {
 void BacaSensor(){
   // Baca nilai sensor DHT22
   suhu_udara = dht.readTemperature();
-  kelembapan_udara = dht.readHumidity();
+  kelembaban_udara = dht.readHumidity();
   
   // Baca nilai sensor FC-28
-  kelembapan_tanah = fc28.getSoilMoisture();
+  kelembaban_tanah = fc28.getSoilMoisture();
   
   // Baca nilai sensor LDR
   analogLDR = analogRead(LDR_PIN);
@@ -109,9 +109,9 @@ void BacaSensor(){
 // Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
 void TresholdSensorState(){
   // Jika suhu udara rendah, kelembaban tinggi, dan intensitas cahaya rendah, maka :
-  if (suhu_udara >= 0 && suhu_udara < 16) { if (kelembapan_udara > 90 && kelembapan_udara <=100) { if (cahaya >= 500) {  
+  if (suhu_udara >= 0 && suhu_udara < 16) { if (kelembaban_udara > 90 && kelembaban_udara <=100) { if (cahaya >= 500) {  
     info_suhuudara = "Suhu Udara: Rendah";                   // Dingin
-    info_kelembapanudara = "Kelembapan Udara: Tinggi";       // Basah
+    info_kelembabanudara = "Kelembaban Udara: Tinggi";       // Basah
     info_intensitascahaya = "Intensitas Cahaya: Rendah";     // Gelap
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
@@ -120,9 +120,9 @@ void TresholdSensorState(){
   } } }
 
   // Jika suhu udara sedang, kelembaban sedang, dan intensitas cahaya sedang, maka :  
-  if (suhu_udara >= 16 && suhu_udara <= 34) { if (kelembapan_udara >= 30 && kelembapan_udara <= 90) { if (cahaya >= 200 && cahaya < 500) {  
+  if (suhu_udara >= 16 && suhu_udara <= 34) { if (kelembaban_udara >= 30 && kelembaban_udara <= 90) { if (cahaya >= 200 && cahaya < 500) {  
     info_suhuudara = "Suhu Udara: Normal";                   // Normal
-    info_kelembapanudara = "Kelembapan Udara: Normal";       // Lembab
+    info_kelembabanudara = "Kelembaban Udara: Normal";       // Lembab
     info_intensitascahaya = "Intensitas Cahaya: Normal";     // Remang-remang
     statusUdara = "Status Kualitas Udara: Aman";             // Status Udara: Aman
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
@@ -131,9 +131,9 @@ void TresholdSensorState(){
   } } }
 
   // Jika suhu udara tinggi, kelembaban rendah, dan intensitas cahaya tinggi, maka :
-  if (suhu_udara > 34 && suhu_udara <= 100) { if (kelembapan_udara >= 0 && kelembapan_udara < 30) { if (cahaya < 200) {
+  if (suhu_udara > 34 && suhu_udara <= 100) { if (kelembaban_udara >= 0 && kelembaban_udara < 30) { if (cahaya < 200) {
     info_suhuudara = "Suhu Udara: Tinggi";                   // Panas
-    info_kelembapanudara = "Kelembapan Udara: Rendah";       // Kering
+    info_kelembabanudara = "Kelembaban Udara: Rendah";       // Kering
     info_intensitascahaya = "Intensitas Cahaya: Tinggi";     // Cerah
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     statusSinar = "Status Kualitas Sinar: Bahaya";           // Status Sinar: Bahaya
@@ -142,24 +142,24 @@ void TresholdSensorState(){
   } } } 
 
   // Jika kondisi tanah basah maka :
-  if (kelembapan_tanah >= 60){
-    info_kelembapantanah = "Kelembapan Tanah: Tinggi";       // Basah
+  if (kelembaban_tanah >= 60){
+    info_kelembabantanah = "Kelembapan Tanah: Tinggi";       // Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";           // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
   }
 
   // Jika kondisi tanah lembab maka :
-  if (kelembapan_tanah > 40 && kelembapan_tanah < 60) { 
-    info_kelembapantanah = "Kelembapan Tanah: Normal";       // Lembab
+  if (kelembaban_tanah > 40 && kelembaban_tanah < 60) { 
+    info_kelembabantanah = "Kelembaban Tanah: Normal";       // Lembab
     statusTanah = "Status Kualitas Tanah: Aman";             // Status Tanah: Aman
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
   }
 
   // Jika kondisi tanah kering maka :
-  if (kelembapan_tanah <= 40) {
-    info_kelembapantanah = "Kelembapan Tanah: Rendah";      // Kering
+  if (kelembaban_tanah <= 40) {
+    info_kelembabantanah = "Kelembaban Tanah: Rendah";      // Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";          // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
     Blynk.virtualWrite(V4, 1);                              // Nilai OFF = 1
@@ -215,24 +215,24 @@ void botTelegram() {
         msg2 = "📲 Suhu udara tanaman: " + String(suhu_udara) + "°C\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
-      else if(msg.callbackQueryData.equals(InlineMenu2)){ // Menampilkan data monitoring kelembapan udara beserta statusnya
+      else if(msg.callbackQueryData.equals(InlineMenu2)){ // Menampilkan data monitoring kelembaban udara beserta statusnya
         Serial.println("\n<------------------------------->");
-        Serial.println("Deteksi Kelembapan Udara: " + String(kelembapan_udara) + "%");
-        Serial.println(info_kelembapanudara);
+        Serial.println("Deteksi Kelembaban Udara: " + String(kelembaban_udara) + "%");
+        Serial.println(info_kelembabanudara);
         Serial.println(statusUdara);
         Serial.println("<------------------------------->\n");
-        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembapan udara pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌦️ MONITORING HUMIDITY \n--------------------------------------------------------------\n";
-        msg2 = "📲 Kelembapan udara tanaman: " + String(kelembapan_udara) + "%\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
+        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembaban udara pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌦️ MONITORING HUMIDITY \n--------------------------------------------------------------\n";
+        msg2 = "📲 Kelembaban udara tanaman: " + String(kelembaban_udara) + "%\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
-      else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembapan tanah beserta statusnya
+      else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembaban tanah beserta statusnya
         Serial.println("\n<------------------------------->");
-        Serial.println("Deteksi Kelembapan Tanah: " + String(kelembapan_tanah) + "%");
-        Serial.println(info_kelembapantanah);
+        Serial.println("Deteksi Kelembapan Tanah: " + String(kelembaban_tanah) + "%");
+        Serial.println(info_kelembabantanah);
         Serial.println(statusTanah);
         Serial.println("<------------------------------->\n");
-        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembapan tanah pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌱 MONITORING SOIL MOISTURE \n--------------------------------------------------------------\n";
-        msg2 = "📲 Kelembapan tanah tanaman: " + String(kelembapan_tanah) + "%\n✍️ " + String(statusTanah) + "\n--------------------------------------------------------------"; 
+        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembaban tanah pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌱 MONITORING SOIL MOISTURE \n--------------------------------------------------------------\n";
+        msg2 = "📲 Kelembaban tanah tanaman: " + String(kelembaban_tanah) + "%\n✍️ " + String(statusTanah) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
       else if(msg.callbackQueryData.equals(InlineMenu4)){ // Menampilkan data monitoring intensitas cahaya beserta statusnya
@@ -296,8 +296,8 @@ void LCDinit(){
 // Method untuk menampilkan data sensor ke LCD
 void PrintLCD(){
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Suhu Udara:"); lcd.setCursor(1,1); lcd.print(""+String(suhu_udara)+" "+String((char)223)+"C"); delay(1000);
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Udara:"); lcd.setCursor(1,1); lcd.print(""+String(kelembapan_udara)+" %"); delay(1000);
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Tanah:"); lcd.setCursor(1,1); lcd.print(""+String(kelembapan_tanah)+" %"); delay(1000);
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Udara:"); lcd.setCursor(1,1); lcd.print(""+String(kelembaban_udara)+" %"); delay(1000);
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Kelem.Tanah:"); lcd.setCursor(1,1); lcd.print(""+String(kelembaban_tanah)+" %"); delay(1000);
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Int.Cahaya:"); lcd.setCursor(1,1); lcd.print(""+String(cahaya)+" lx"); delay(1000);
 }
 
