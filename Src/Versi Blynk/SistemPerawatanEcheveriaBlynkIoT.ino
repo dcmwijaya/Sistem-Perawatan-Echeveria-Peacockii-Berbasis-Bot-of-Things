@@ -288,7 +288,7 @@ void sendData() {
 // Method untuk memulai LCD
 void LCDinit(){
   lcd.init(); // Memulai LCD
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Starting"); lcd.setCursor(1,1); lcd.print("Smart System..."); delay(2500); // Tampilan pertama
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Starting"); lcd.setCursor(1,1); lcd.print("Smart System..."); delay(2500); // Tampilan Pertama
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Welcome to"); lcd.setCursor(1,1); lcd.print("Echeveria BoT..."); delay(2500); // Tampilan Kedua
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Loading...."); delay(5000); // Tampilan Ketiga
 }
@@ -304,7 +304,7 @@ void PrintLCD(){
 // Method yang dijalankan sekali
 void setup() {
   Serial.begin(SERIAL_DEBUG_BAUD); // Baudrate untuk papan ESP
-  Blynk.begin(BLYNK_AUTH_TOKEN, WIFI_SSID, WIFI_PASSWORD);
+  Blynk.begin(BLYNK_AUTH_TOKEN, WIFI_SSID, WIFI_PASSWORD); // Memulai Blynk
   connectBot(); // Memanggil method connectBot
   ButtonBot(); // Memanggil method ButtonBot
   LCDinit(); // Memanggil method LCDinit
@@ -315,7 +315,7 @@ void setup() {
   pinMode(RPOMPA2_PIN, OUTPUT); // Pompa 2 sebagai OUTPUT
   digitalWrite(RPOMPA1_PIN, relayOFF); // Default relay1: OFF
   digitalWrite(RPOMPA2_PIN, relayOFF); // Default relay2: OFF
-  timer.setInterval(1000L, sendData);
+  timer.setInterval(1000L, sendData); // Interval pengiriman setiap 1 detik
 }
 
 // Method yang dijalankan berulang kali
