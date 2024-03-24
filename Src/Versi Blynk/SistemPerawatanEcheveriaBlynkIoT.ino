@@ -282,8 +282,8 @@ void botTelegram() {
 // Method untuk kirim data sensor ke Blynk melalui protokol TCP/IP
 void sendData() {
   Blynk.virtualWrite(V0, suhu_udara);         // Mengirimkan data sensor suhu udara ke Blynk
-  Blynk.virtualWrite(V1, kelembapan_udara);   // Mengirimkan data sensor kelembaban udara ke Blynk
-  Blynk.virtualWrite(V2, kelembapan_tanah);   // Mengirimkan data sensor kelembaban tanah ke Blynk
+  Blynk.virtualWrite(V1, kelembaban_udara);   // Mengirimkan data sensor kelembaban udara ke Blynk
+  Blynk.virtualWrite(V2, kelembaban_tanah);   // Mengirimkan data sensor kelembaban tanah ke Blynk
   Blynk.virtualWrite(V3, cahaya);             // Mengirimkan data sensor intensitas cahaya ke Blynk
 }
 
