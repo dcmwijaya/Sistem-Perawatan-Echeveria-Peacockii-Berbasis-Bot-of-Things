@@ -108,7 +108,7 @@ void BacaSensor(){
   cahaya = pow(RL10 * 1e3 * pow(10, GAMMA) / resistance, (1 / GAMMA));
 }
 
-// Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
+// Method untuk menentukan batasan suhu, kelembaban, dan intensitas cahaya
 void TresholdSensorState(){
   // Jika suhu udara rendah, kelembaban tinggi, dan intensitas cahaya rendah, maka :
   if (suhu_udara >= 0 && suhu_udara < 16) { if (kelembaban_udara > 90 && kelembaban_udara <=100) { if (cahaya >= 500) {  
@@ -145,7 +145,7 @@ void TresholdSensorState(){
 
   // Jika kondisi tanah basah maka :
   if (kelembaban_tanah >= 60){
-    info_kelembabantanah = "Kelembapan Tanah: Tinggi";       // Basah
+    info_kelembabantanah = "Kelembaban Tanah: Tinggi";       // Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";           // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
