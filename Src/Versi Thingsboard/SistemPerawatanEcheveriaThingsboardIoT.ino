@@ -62,7 +62,7 @@ int kelembapan_tanah; String statusTanah, info_kelembapantanah; // FC-28
 void ConnectToWiFi() {
   WiFi.mode(WIFI_STA); // Membuat perangkat sebagai station
   status = WiFi.status(); // Status WiFi
-  if (status != WL_CONNECTED) { // Jika tidak berhasil terhubung ke jaringan maka :
+  if (status != WL_CONNECTED) { // Jika belum terhubung ke jaringan maka :
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD); Serial.print("Menyambungkan ke jaringan"); // Memulai jaringan
     while (status != WL_CONNECTED) { // Selama tidak berhasil terhubung ke jaringan maka cetak di serial monitor :
       Serial.print("."); delay(500);
