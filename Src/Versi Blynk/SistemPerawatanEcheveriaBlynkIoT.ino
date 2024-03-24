@@ -22,7 +22,7 @@ BlynkTimer timer;
 #define KodeBot "ECHEVERIA2022"
 #define SERIAL_DEBUG_BAUD 115200
 unsigned long lastTime = 0;
-unsigned long timerDelay = 5000;
+unsigned long timerDelay = 1000;
 
 // Sensor
 #define LDR_PIN 35 // Pin Antarmuka Sensor LDR
@@ -322,7 +322,7 @@ void setup() {
 
 // Method yang dijalankan berulang kali
 void loop() {
-  if ((millis() - lastTime) > timerDelay) { // Jika waktu sekarang dikurangi waktu terakhir lebih besar dari 5 detik maka :
+  if ((millis() - lastTime) > timerDelay) { // Jika waktu sekarang dikurangi waktu terakhir lebih besar dari 1 detik maka :
     BacaSensor(); // Memanggil method BacaSensor
     TresholdSensorState(); // Memanggil method ThresholdSensorState
     PrintLCD(); // Memanggil method PrintLCD
