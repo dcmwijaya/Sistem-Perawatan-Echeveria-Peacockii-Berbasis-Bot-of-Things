@@ -186,7 +186,7 @@ void TresholdSensorState(){
     info_kelembapantanah = "Kelembapan Tanah: Rendah";      // Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";          // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
-    Blynk.virtualWrite(V4, 1);                               // Nilai OFF = 1
+    Blynk.virtualWrite(V4, 1);                              // Nilai OFF = 1
   }
 }
 
@@ -282,16 +282,10 @@ void botTelegram() {
 
 // Method untuk kirim data sensor ke Blynk melalui protokol TCP/IP
 void sendData() {
-  BacaSensor(); // Memanggil method BacaSensor
-  TresholdSensorState(); // Memanggil method ThresholdSensorState
-  PrintLCD(); // Memanggil method PrintLCD
-  botTelegram(); // Memanggil method botTelegram
-  
-  // Mengirimkan data sensor ke Blynk
-  Blynk.virtualWrite(V0, suhu_udara); 
-  Blynk.virtualWrite(V1, kelembapan_udara);
-  Blynk.virtualWrite(V2, kelembapan_tanah);
-  Blynk.virtualWrite(V3, cahaya);
+  Blynk.virtualWrite(V0, suhu_udara);         // Mengirimkan data sensor suhu udara ke Blynk
+  Blynk.virtualWrite(V1, kelembapan_udara);   // Mengirimkan data sensor kelembaban udara ke Blynk
+  Blynk.virtualWrite(V2, kelembapan_tanah);   // Mengirimkan data sensor kelembaban tanah ke Blynk
+  Blynk.virtualWrite(V3, cahaya);             // Mengirimkan data sensor intensitas cahaya ke Blynk
 }
 
 // Method untuk memulai LCD
@@ -329,6 +323,10 @@ void setup() {
 
 // Method yang dijalankan berulang kali
 void loop() {
-  Blynk.run();
-  timer.run();
+  BacaSensor(); // Memanggil method BacaSensor
+  TresholdSensorState(); // Memanggil method ThresholdSensorState
+  PrintLCD(); // Memanggil method PrintLCD
+  botTelegram(); // Memanggil method botTelegram
+  Blynk.run(); // Menjalankan Blynk
+  timer.run(); // Menjalankan Timer
 }
