@@ -59,7 +59,6 @@ int kelembapan_tanah; String statusTanah, info_kelembapantanah; // FC-28
 // Kontrol air untuk menyiram tanaman echeveria
 BLYNK_WRITE(V6) {
   kontrolair = param.asInt();
-  digitalWrite(RPOMPA2_PIN, kontrolair);
   if (kontrolair == 1) {
     Blynk.virtualWrite(V5, 1);
     Serial.println("Status kontrol air : On");
