@@ -43,8 +43,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 // Variabel untuk keperluan bot telegram
 CTBot myBot; CTBotInlineKeyboard InlineKey, InlineOption, InlineKeyNULL;
 #define InlineMenu1 "InlineMonitoringSuhuUdara"
-#define InlineMenu2 "InlineMonitoringKelembapanUdara"
-#define InlineMenu3 "InlineMonitoringKelembapanTanah"
+#define InlineMenu2 "InlineMonitoringKelembabanUdara"
+#define InlineMenu3 "InlineMonitoringKelembabanTanah"
 #define InlineMenu4 "InlineMonitoringIntensitasCahaya"
 #define InlineMenu5 "InlineControllingPenyiramanAir"
 bool viewTombol;
