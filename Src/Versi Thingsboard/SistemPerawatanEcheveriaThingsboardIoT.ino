@@ -152,10 +152,6 @@ void BacaSensor(){
   DataJSON["Kelembapan Udara"] = String(kelembapan_udara);
   DataJSON["Kelembapan Tanah"] = String(kelembapan_tanah);
   DataJSON["Intensitas Cahaya"] = String(cahaya);
-  
-  TresholdSensorState(); // Memanggil method ThresholdSensorState
-  PrintLCD(); // Memanggil method PrintLCD
-  KirimTB(); // Memanggil method KirimTB
 }
 
 // Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
@@ -349,6 +345,9 @@ void loop() {
     reconnect(); // Memanggil method reconnect
   }
   BacaSensor(); // Memanggil method BacaSensor
+  TresholdSensorState(); // Memanggil method ThresholdSensorState
+  PrintLCD(); // Memanggil method PrintLCD
+  KirimTB(); // Memanggil method KirimTB
   botTelegram(); // Memanggil method botTelegram
   client.loop(); // Perulangan pada client
   delay(1000); // Tunda waktu selama 1 detik
