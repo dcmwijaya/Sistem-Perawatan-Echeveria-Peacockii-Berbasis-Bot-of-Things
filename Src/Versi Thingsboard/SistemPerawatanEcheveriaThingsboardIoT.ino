@@ -122,7 +122,7 @@ void BacaSensor(){
   DataJSON["Intensitas Cahaya"] = String(cahaya);
 }
 
-// Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
+// Method untuk menentukan batasan suhu, kelembaban, dan intensitas cahaya
 void TresholdSensorState(){
   // Jika suhu udara rendah, kelembaban tinggi, dan intensitas cahaya rendah, maka :
   if (suhu_udara >= 0 && suhu_udara < 16) { if (kelembaban_udara > 90 && kelembaban_udara <=100) { if (cahaya >= 500) {  
