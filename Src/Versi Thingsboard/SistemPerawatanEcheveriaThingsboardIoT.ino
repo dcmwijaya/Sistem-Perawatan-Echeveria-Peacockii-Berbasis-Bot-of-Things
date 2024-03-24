@@ -23,7 +23,8 @@ PubSubClient client(wifiClient);
 StaticJsonDocument<256> DataJSON;
 char Payload[128];
 int status = WL_IDLE_STATUS;
-long durasi = 0; long jeda = 500;
+unsigned long lastTime = 0;
+unsigned long timerDelay = 5000;
 
 // Sensor
 #define LDR_PIN 35 // Pin Antarmuka Sensor LDR
@@ -340,11 +341,14 @@ void loop() {
   if (!client.connected()){ // Jika client tidak terhubung maka :
     reconnect(); // Memanggil method reconnect
   }
-  BacaSensor(); // Memanggil method BacaSensor
-  TresholdSensorState(); // Memanggil method ThresholdSensorState
-  PrintLCD(); // Memanggil method PrintLCD
-  botTelegram(); // Memanggil method botTelegram
-  KirimTB(); // Memanggil method KirimTB 
+  if ((millis() - lastTime) > timerDelay) { // Jika waktu sekarang dikurangi waktu terakhir lebih besar dari 5 detik maka :
+    BacaSensor(); // Memanggil method BacaSensor
+    TresholdSensorState(); // Memanggil method ThresholdSensorState
+    PrintLCD(); // Memanggil method PrintLCD
+    botTelegram(); // Memanggil method botTelegram
+    KirimTB(); // Memanggil method KirimTB 
+    lastTime = millis(); // Untuk menghitung waktu yang telah berlalu sejak pengiriman data terakhir
+  }
   client.loop(); // Perulangan pada client
   delay(1000); // Tunda waktu selama 1 detik
 }
