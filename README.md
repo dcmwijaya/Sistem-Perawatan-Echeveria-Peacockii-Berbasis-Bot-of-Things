@@ -241,7 +241,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
       
       • Input the fifth data :
    
-      - ``` NAME ``` -> ``` indikasi_pompa1 ```
+      - ``` NAME ``` -> ``` indikator_pompa1 ```
       - ``` PIN ``` -> ``` V4 ```
       - ``` DATA TYPE ``` -> ``` Integer ```
       - ``` UNITS ``` -> ``` None ```
@@ -251,7 +251,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
            
       • Input the sixth data :
    
-      - ``` NAME ``` -> ``` indikasi_pompa2 ```
+      - ``` NAME ``` -> ``` indikator_pompa2 ```
       - ``` PIN ``` -> ``` V5 ```
       - ``` DATA TYPE ``` -> ``` Integer ```
       - ``` UNITS ``` -> ``` None ```
@@ -261,7 +261,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
       
       • Input the seventh data :
    
-      - ``` NAME ``` -> ``` tombol_pompa2 ```
+      - ``` NAME ``` -> ``` tombol_siram ```
       - ``` PIN ``` -> ``` V6 ```
       - ``` DATA TYPE ``` -> ``` Integer ```
       - ``` UNITS ``` -> ``` None ```
