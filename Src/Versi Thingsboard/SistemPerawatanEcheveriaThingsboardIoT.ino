@@ -24,7 +24,7 @@ StaticJsonDocument<256> DataJSON;
 char Payload[128];
 int status = WL_IDLE_STATUS;
 unsigned long lastTime = 0;
-unsigned long timerDelay = 5000;
+unsigned long timerDelay = 1000;
 
 // Sensor
 #define LDR_PIN 35 // Pin Antarmuka Sensor LDR
@@ -340,7 +340,7 @@ void loop() {
   if (!client.connected()){ // Jika client tidak terhubung maka :
     reconnect(); // Memanggil method reconnect
   }
-  if ((millis() - lastTime) > timerDelay) { // Jika waktu sekarang dikurangi waktu terakhir lebih besar dari 5 detik maka :
+  if ((millis() - lastTime) > timerDelay) { // Jika waktu sekarang dikurangi waktu terakhir lebih besar dari 1 detik maka :
     BacaSensor(); // Memanggil method BacaSensor
     TresholdSensorState(); // Memanggil method ThresholdSensorState
     PrintLCD(); // Memanggil method PrintLCD
@@ -349,5 +349,4 @@ void loop() {
     lastTime = millis(); // Untuk menghitung waktu yang telah berlalu sejak pengiriman data terakhir
   }
   client.loop(); // Perulangan pada client
-  delay(1000); // Tunda waktu selama 1 detik
 }
