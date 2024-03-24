@@ -55,8 +55,8 @@ bool relayON = HIGH; bool relayOFF = LOW;
 
 // Variabel untuk keperluan sensor
 const float GAMMA = 0.7, RL10 = 50; int analogLDR; float volt, resistance, cahaya; String statusSinar, info_intensitascahaya; // LDR
-int kelembapan_udara; float suhu_udara; String statusUdara, info_suhuudara, info_kelembapanudara; // DHT
-int kelembapan_tanah; String statusTanah, info_kelembapantanah; // FC-28
+int kelembaban_udara; float suhu_udara; String statusUdara, info_suhuudara, info_kelembabanudara; // DHT
+int kelembaban_tanah; String statusTanah, info_kelembabantanah; // FC-28
 
 // Method untuk mengatur konektivitas
 void ConnectToWiFi() {
@@ -104,10 +104,10 @@ void connectBot() {
 void BacaSensor(){
   // Baca nilai sensor DHT22
   suhu_udara = dht.readTemperature();
-  kelembapan_udara = dht.readHumidity();
+  kelembaban_udara = dht.readHumidity();
   
   // Baca nilai sensor FC-28
-  kelembapan_tanah = fc28.getSoilMoisture();
+  kelembaban_tanah = fc28.getSoilMoisture();
   
   // Baca nilai sensor LDR
   analogLDR = analogRead(LDR_PIN);
@@ -117,17 +117,17 @@ void BacaSensor(){
   
   // Memasukan data sensor ke dalam array
   DataJSON["Suhu Udara"] = String(suhu_udara);
-  DataJSON["Kelembapan Udara"] = String(kelembapan_udara);
-  DataJSON["Kelembapan Tanah"] = String(kelembapan_tanah);
+  DataJSON["Kelembaban Udara"] = String(kelembaban_udara);
+  DataJSON["Kelembaban Tanah"] = String(kelembaban_tanah);
   DataJSON["Intensitas Cahaya"] = String(cahaya);
 }
 
 // Method untuk menentukan batasan suhu, kelembapan, dan intensitas cahaya
 void TresholdSensorState(){
   // Jika suhu udara rendah, kelembaban tinggi, dan intensitas cahaya rendah, maka :
-  if (suhu_udara >= 0 && suhu_udara < 16) { if (kelembapan_udara > 90 && kelembapan_udara <=100) { if (cahaya >= 500) {  
+  if (suhu_udara >= 0 && suhu_udara < 16) { if (kelembaban_udara > 90 && kelembaban_udara <=100) { if (cahaya >= 500) {  
     info_suhuudara = "Suhu Udara: Rendah";                   // Dingin
-    info_kelembapanudara = "Kelembapan Udara: Tinggi";       // Basah
+    info_kelembabanudara = "Kelembaban Udara: Tinggi";       // Basah
     info_intensitascahaya = "Intensitas Cahaya: Rendah";     // Gelap
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
@@ -136,9 +136,9 @@ void TresholdSensorState(){
   } } }
 
   // Jika suhu udara sedang, kelembaban sedang, dan intensitas cahaya sedang, maka :  
-  if (suhu_udara >= 16 && suhu_udara <= 34) { if (kelembapan_udara >= 30 && kelembapan_udara <= 90) { if (cahaya >= 200 && cahaya < 500) {  
+  if (suhu_udara >= 16 && suhu_udara <= 34) { if (kelembaban_udara >= 30 && kelembaban_udara <= 90) { if (cahaya >= 200 && cahaya < 500) {  
     info_suhuudara = "Suhu Udara: Normal";                   // Normal
-    info_kelembapanudara = "Kelembapan Udara: Normal";       // Lembab
+    info_kelembabanudara = "Kelembaban Udara: Normal";       // Lembab
     info_intensitascahaya = "Intensitas Cahaya: Normal";     // Remang-remang
     statusUdara = "Status Kualitas Udara: Aman";             // Status Udara: Aman
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
@@ -147,9 +147,9 @@ void TresholdSensorState(){
   } } }
 
   // Jika suhu udara tinggi, kelembaban rendah, dan intensitas cahaya tinggi, maka :
-  if (suhu_udara > 34 && suhu_udara <= 100) { if (kelembapan_udara >= 0 && kelembapan_udara < 30) { if (cahaya < 200) {
+  if (suhu_udara > 34 && suhu_udara <= 100) { if (kelembaban_udara >= 0 && kelembaban_udara < 30) { if (cahaya < 200) {
     info_suhuudara = "Suhu Udara: Tinggi";                   // Panas
-    info_kelembapanudara = "Kelembapan Udara: Rendah";       // Kering
+    info_kelembabanudara = "Kelembaban Udara: Rendah";       // Kering
     info_intensitascahaya = "Intensitas Cahaya: Tinggi";     // Cerah
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     statusSinar = "Status Kualitas Sinar: Bahaya";           // Status Sinar: Bahaya
@@ -158,24 +158,24 @@ void TresholdSensorState(){
   } } } 
 
   // Jika kondisi tanah basah maka :
-  if (kelembapan_tanah >= 60){
-    info_kelembapantanah = "Kelembapan Tanah: Tinggi";       // Basah
+  if (kelembaban_tanah >= 60){
+    info_kelembabantanah = "Kelembaban Tanah: Tinggi";       // Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";           // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     DataJSON["Pompa 1"] = "0";                               // Nilai OFF = 0
   }
 
   // Jika kondisi tanah lembab maka :
-  if (kelembapan_tanah > 40 && kelembapan_tanah < 60) { 
-    info_kelembapantanah = "Kelembapan Tanah: Normal";       // Lembap
+  if (kelembaban_tanah > 40 && kelembaban_tanah < 60) { 
+    info_kelembabantanah = "Kelembaban Tanah: Normal";       // Lembab
     statusTanah = "Status Kualitas Tanah: Aman";             // Status Tanah: Aman
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     DataJSON["Pompa 1"] = "0";                               // Nilai OFF = 0
   }
 
   // Jika kondisi tanah kering maka :
-  if (kelembapan_tanah <= 40) {
-    info_kelembapantanah = "Kelembapan Tanah: Rendah";      // Kering
+  if (kelembaban_tanah <= 40) {
+    info_kelembabantanah = "Kelembaban Tanah: Rendah";      // Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";          // Status Tanah: Bahaya
     digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
     DataJSON["Pompa 1"] = "1";                              // Nilai ON = 1
