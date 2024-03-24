@@ -62,16 +62,16 @@ int kelembaban_tanah; String statusTanah, info_kelembabantanah; // FC-28
 BLYNK_WRITE(V6) {
   kontrolair = param.asInt();
   if (kontrolair == 1) {
-    Blynk.virtualWrite(V5, 1);
+    Blynk.virtualWrite(V5, 1); // Indikator Pompa 2: menyala
     Serial.println("Status kontrol air : On");
     Serial.println("<------------------------------->\n");
-    digitalWrite(RPOMPA2_PIN, relayON);
+    digitalWrite(RPOMPA2_PIN, relayON); // Pompa 2 menyala
   } 
   if (kontrolair == 0){
-    Blynk.virtualWrite(V5, 0);
+    Blynk.virtualWrite(V5, 0); // Indikator Pompa 2: mati
     Serial.println("Status kontrol air : Off");
     Serial.println("<------------------------------->\n");
-    digitalWrite(RPOMPA2_PIN, relayOFF);
+    digitalWrite(RPOMPA2_PIN, relayOFF); // Pompa 2 mati
   }
 }
 
