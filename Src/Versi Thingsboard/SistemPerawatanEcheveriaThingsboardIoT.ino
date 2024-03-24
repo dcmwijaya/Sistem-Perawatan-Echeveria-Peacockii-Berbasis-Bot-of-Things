@@ -240,24 +240,24 @@ void botTelegram() {
         msg2 = "📲 Suhu udara tanaman: " + String(suhu_udara) + "°C\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
-      else if(msg.callbackQueryData.equals(InlineMenu2)){ // Menampilkan data monitoring kelembapan udara beserta statusnya
+      else if(msg.callbackQueryData.equals(InlineMenu2)){ // Menampilkan data monitoring kelembaban udara beserta statusnya
         Serial.println("\n<------------------------------->");
-        Serial.println("Deteksi Kelembapan Udara: " + String(kelembapan_udara) + "%");
-        Serial.println(info_kelembapanudara);
+        Serial.println("Deteksi Kelembaban Udara: " + String(kelembaban_udara) + "%");
+        Serial.println(info_kelembabanudara);
         Serial.println(statusUdara);
         Serial.println("<------------------------------->\n");
-        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembapan udara pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌦️ MONITORING HUMIDITY \n--------------------------------------------------------------\n";
-        msg2 = "📲 Kelembapan udara tanaman: " + String(kelembapan_udara) + "%\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
+        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembaban udara pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌦️ MONITORING HUMIDITY \n--------------------------------------------------------------\n";
+        msg2 = "📲 Kelembaban udara tanaman: " + String(kelembaban_udara) + "%\n✍️ " + String(statusUdara) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
-      else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembapan tanah beserta statusnya
+      else if(msg.callbackQueryData.equals(InlineMenu3)){ // Menampilkan data monitoring kelembaban tanah beserta statusnya
         Serial.println("\n<------------------------------->");
-        Serial.println("Deteksi Kelembapan Tanah: " + String(kelembapan_tanah) + "%");
-        Serial.println(info_kelembapantanah);
+        Serial.println("Deteksi Kelembaban Tanah: " + String(kelembaban_tanah) + "%");
+        Serial.println(info_kelembabantanah);
         Serial.println(statusTanah);
         Serial.println("<------------------------------->\n");
-        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembapan tanah pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌱 MONITORING SOIL MOISTURE \n--------------------------------------------------------------\n";
-        msg2 = "📲 Kelembapan tanah tanaman: " + String(kelembapan_tanah) + "%\n✍️ " + String(statusTanah) + "\n--------------------------------------------------------------"; 
+        msg1 = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nBerikut hasil monitoring kelembaban tanah pada tanaman echeveria terkini:\n\n--------------------------------------------------------------\n 🌱 MONITORING SOIL MOISTURE \n--------------------------------------------------------------\n";
+        msg2 = "📲 Kelembaban tanah tanaman: " + String(kelembaban_tanah) + "%\n✍️ " + String(statusTanah) + "\n--------------------------------------------------------------"; 
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
       }
       else if(msg.callbackQueryData.equals(InlineMenu4)){ // Menampilkan data monitoring intensitas cahaya beserta statusnya
@@ -307,7 +307,7 @@ void botTelegram() {
 // Method untuk memulai LCD
 void LCDinit(){
   lcd.init(); // Memulai LCD
-  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Starting"); lcd.setCursor(1,1); lcd.print("Smart System..."); delay(2500); // Tampilan pertama
+  lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Starting"); lcd.setCursor(1,1); lcd.print("Smart System..."); delay(2500); // Tampilan Pertama
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Welcome to"); lcd.setCursor(1,1); lcd.print("Echeveria BoT..."); delay(2500); // Tampilan Kedua
   lcd.clear(); lcd.backlight(); lcd.setCursor(1,0); lcd.print("Loading...."); delay(5000); // Tampilan Ketiga
 }
