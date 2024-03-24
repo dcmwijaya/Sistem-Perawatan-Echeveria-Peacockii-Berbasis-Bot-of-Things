@@ -91,27 +91,6 @@ void connectBot() {
   }
 }
 
-// Method untuk mengatur visualisasi tombol bot telegram
-void ButtonBot() { 
-  // Monitoring menu dalam bentuk inline button
-  InlineKey.addButton("🌤️ Monitoring Temperature", InlineMenu1, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("🌦️ Monitoring Humidity", InlineMenu2, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("🌱 Monitoring Soil Moisture", InlineMenu3, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("☀️ Monitoring Light Intensity", InlineMenu4, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("🚰 Controlling Water Pump", InlineMenu5, CTBotKeyboardButtonQuery);
-  
-  // Menu kontrol dalam bentuk inline button
-  InlineOption.addButton("✅ Pump: Turn ON", ON, CTBotKeyboardButtonQuery);
-  InlineOption.addButton("❌ Pump: Turn OFF", OFF, CTBotKeyboardButtonQuery);
-  
-  // Tombol -> default : hidden
-  viewTombol = false;
-}
-
 // Method untuk membaca sensor
 void BacaSensor(){
   // Baca nilai sensor DHT22
@@ -186,6 +165,27 @@ void TresholdSensorState(){
     digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
     Blynk.virtualWrite(V4, 1);                              // Nilai OFF = 1
   }
+}
+
+// Method untuk mengatur visualisasi tombol bot telegram
+void ButtonBot() { 
+  // Monitoring menu dalam bentuk inline button
+  InlineKey.addButton("🌤️ Monitoring Temperature", InlineMenu1, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("🌦️ Monitoring Humidity", InlineMenu2, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("🌱 Monitoring Soil Moisture", InlineMenu3, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("☀️ Monitoring Light Intensity", InlineMenu4, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("🚰 Controlling Water Pump", InlineMenu5, CTBotKeyboardButtonQuery);
+  
+  // Menu kontrol dalam bentuk inline button
+  InlineOption.addButton("✅ Pump: Turn ON", "ON", CTBotKeyboardButtonQuery);
+  InlineOption.addButton("❌ Pump: Turn OFF", "OFF", CTBotKeyboardButtonQuery);
+  
+  // Tombol -> default : hidden
+  viewTombol = false;
 }
 
 // Method untuk mengatur bot telegram
