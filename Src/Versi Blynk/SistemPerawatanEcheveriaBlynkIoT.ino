@@ -21,7 +21,6 @@ BlynkTimer timer;
 #define BOTtoken "YOUR_API_BOT_TOKEN"
 #define KodeBot "ECHEVERIA2022"
 #define SERIAL_DEBUG_BAUD 115200
-long durasi = 0; long jeda = 1000;
 
 // Sensor
 #define LDR_PIN 35 // Pin Antarmuka Sensor LDR
@@ -74,7 +73,6 @@ BLYNK_WRITE(V6) {
     Serial.println("<------------------------------->\n");
   }
 }
-
 
 // Method untuk menyambungkan ke Bot Telegram
 void connectBot() {
