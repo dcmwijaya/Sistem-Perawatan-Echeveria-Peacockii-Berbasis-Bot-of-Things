@@ -211,7 +211,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
             
       • Input the second data :
    
-      - ``` NAME ``` -> ``` kelembapan_udara ```
+      - ``` NAME ``` -> ``` kelembaban_udara ```
       - ``` PIN ``` -> ``` V1 ```
       - ``` DATA TYPE ``` -> ``` Integer ```
       - ``` UNITS ``` -> ``` Percentage, % ```
@@ -221,7 +221,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
            
       • Input the third data :
    
-      - ``` NAME ``` -> ``` kelembapan_tanah ```
+      - ``` NAME ``` -> ``` kelembaban_tanah ```
       - ``` PIN ``` -> ``` V2 ```
       - ``` DATA TYPE ``` -> ``` Integer ```
       - ``` UNITS ``` -> ``` Percentage, % ```
@@ -302,7 +302,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
    
       • Click ``` setting ``` on the added widget.
    
-      • Select a datastream that is already available, among others: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ``` / ``` indikator_pompa1 ``` / ``` indikator_pompa2 ``` / ``` tombol_siram ```.
+      • Select a datastream that is already available, among others: ``` suhu_udara ``` / ``` kelembaban_udara ``` / ``` kelembaban_tanah ``` / ``` cahaya ``` / ``` indikator_pompa1 ``` / ``` indikator_pompa2 ``` / ``` tombol_siram ```.
    
       • Click ``` Save And Apply ```.
 
