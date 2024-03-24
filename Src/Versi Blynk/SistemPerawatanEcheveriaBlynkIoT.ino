@@ -21,6 +21,8 @@ BlynkTimer timer;
 #define BOTtoken "YOUR_API_BOT_TOKEN"
 #define KodeBot "ECHEVERIA2022"
 #define SERIAL_DEBUG_BAUD 115200
+unsigned long lastTime = 0;
+unsigned long timerDelay = 5000;
 
 // Sensor
 #define LDR_PIN 35 // Pin Antarmuka Sensor LDR
@@ -320,10 +322,13 @@ void setup() {
 
 // Method yang dijalankan berulang kali
 void loop() {
-  BacaSensor(); // Memanggil method BacaSensor
-  TresholdSensorState(); // Memanggil method ThresholdSensorState
-  PrintLCD(); // Memanggil method PrintLCD
-  botTelegram(); // Memanggil method botTelegram
+  if ((millis() - lastTime) > timerDelay) { // Jika waktu sekarang dikurangi waktu terakhir lebih besar dari 5 detik maka :
+    BacaSensor(); // Memanggil method BacaSensor
+    TresholdSensorState(); // Memanggil method ThresholdSensorState
+    PrintLCD(); // Memanggil method PrintLCD
+    botTelegram(); // Memanggil method botTelegram
+    lastTime = millis(); // Untuk menghitung waktu yang telah berlalu sejak pengiriman data terakhir
+  }
   Blynk.run(); // Menjalankan Blynk
   timer.run(); // Menjalankan Timer
 }
