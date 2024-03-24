@@ -159,7 +159,7 @@ void TresholdSensorState(){
   }
 
   // Jika suhu udara tinggi, maka :
-  if (suhu_udara > 34 && suhu_udara <= 100) { 
+  if (suhu_udara > 34 && suhu_udara <= 80) { 
     info_suhuudara = "Suhu Udara: Tinggi";                   // Panas
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
