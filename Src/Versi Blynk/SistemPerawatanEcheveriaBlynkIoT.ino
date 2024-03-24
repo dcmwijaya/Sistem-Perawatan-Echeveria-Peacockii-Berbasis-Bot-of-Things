@@ -3,6 +3,7 @@
 #define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
 #define BLYNK_DEVICE_NAME "YOUR_BLYNK_DEVICE_NAME"
 #define BLYNK_AUTH_TOKEN "YOUR_BLYNK_AUTH_TOKEN"
+BlynkTimer timer;
 
 // Pustaka yang digunakan
 #include <WiFi.h>
@@ -20,7 +21,6 @@
 #define BOTtoken "YOUR_API_BOT_TOKEN"
 #define KodeBot "ECHEVERIA2022"
 #define SERIAL_DEBUG_BAUD 115200
-BlynkTimer timer;
 long durasi = 0; long jeda = 1000;
 
 // Sensor
