@@ -151,7 +151,7 @@ void TresholdSensorState(){
 
   // Jika kondisi tanah lembab maka :
   if (kelembapan_tanah > 40 && kelembapan_tanah < 60) { 
-    info_kelembapantanah = "Kelembapan Tanah: Normal";       // Lembap
+    info_kelembapantanah = "Kelembapan Tanah: Normal";       // Lembab
     statusTanah = "Status Kualitas Tanah: Aman";             // Status Tanah: Aman
     digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Nilai OFF = 0
