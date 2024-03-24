@@ -238,7 +238,34 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
       - ``` MIN ``` -> ``` 0 ```
       - ``` MAX ``` -> ``` 100000 ```
       - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
-         
+             
+      • Masukkan data kelima :
+   
+      - ``` NAME ``` -> ``` indikator_pompa1 ```
+      - ``` PIN ``` -> ``` V4 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 1 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
+           
+      • Masukkan data keenam :
+   
+      - ``` NAME ``` -> ``` indikator_pompa2 ```
+      - ``` PIN ``` -> ``` V5 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 1 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
+      
+      • Masukkan data ketujuh :
+   
+      - ``` NAME ``` -> ``` tombol_siram ```
+      - ``` PIN ``` -> ``` V6 ```
+      - ``` DATA TYPE ``` -> ``` Integer ```
+      - ``` MIN ``` -> ``` 0 ```
+      - ``` MAX ``` -> ``` 1 ```
+      - ``` DEFAULT VALUE ``` -> ``` 0 ```<br><br>
+      
       • Klik ``` Create ```.
       
       • Klik ``` Save ```.
@@ -272,7 +299,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
    
       • Klik ``` setting ``` pada widget yang ditambahkan.
    
-      • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ```.
+      • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ``` / ``` indikator_pompa1 ``` / ``` indikator_pompa2 ``` / ``` tombol_siram ```.
    
       • Klik ``` Save And Apply ```.
 
