@@ -211,7 +211,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
             
       • Masukkan data kedua :
    
-      - ``` NAME ``` -> ``` kelembapan_udara ```
+      - ``` NAME ``` -> ``` kelembaban_udara ```
       - ``` PIN ``` -> ``` V1 ```
       - ``` DATA TYPE ``` -> ``` Integer ```
       - ``` UNITS ``` -> ``` Percentage, % ```
@@ -221,7 +221,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
            
       • Masukkan data ketiga :
    
-      - ``` NAME ``` -> ``` kelembapan_tanah ```
+      - ``` NAME ``` -> ``` kelembaban_tanah ```
       - ``` PIN ``` -> ``` V2 ```
       - ``` DATA TYPE ``` -> ``` Integer ```
       - ``` UNITS ``` -> ``` Percentage, % ```
@@ -299,7 +299,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
    
       • Klik ``` setting ``` pada widget yang ditambahkan.
    
-      • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembapan_udara ``` / ``` kelembapan_tanah ``` / ``` cahaya ``` / ``` indikator_pompa1 ``` / ``` indikator_pompa2 ``` / ``` tombol_siram ```.
+      • Pilih datastream yang sudah tersedia, antara lain: ``` suhu_udara ``` / ``` kelembaban_udara ``` / ``` kelembaban_tanah ``` / ``` cahaya ``` / ``` indikator_pompa1 ``` / ``` indikator_pompa2 ``` / ``` tombol_siram ```.
    
       • Klik ``` Save And Apply ```.
 
