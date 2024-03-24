@@ -114,96 +114,96 @@ void TresholdSensorState(){
   if (suhu_udara >= 0 && suhu_udara < 16) { 
     info_suhuudara = "Suhu Udara: Rendah";                   // Dingin
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
 
   // Jika kelembaban tinggi, maka :
   if (kelembaban_udara > 90 && kelembaban_udara <=100) {
     info_kelembabanudara = "Kelembaban Udara: Tinggi";       // Basah
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
 
   // Jika intensitas cahaya rendah, maka :
   if (cahaya >= 500 && cahaya <= 100000) {
     info_intensitascahaya = "Intensitas Cahaya: Rendah";     // Gelap
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
 
   // Jika suhu udara sedang, maka :  
   if (suhu_udara >= 16 && suhu_udara <= 34) { 
     info_suhuudara = "Suhu Udara: Normal";                   // Normal
     statusUdara = "Status Kualitas Udara: Aman";             // Status Udara: Aman
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
   
   // Jika kelembaban sedang, maka :
   if (kelembaban_udara >= 30 && kelembaban_udara <= 90) { 
     info_kelembabanudara = "Kelembaban Udara: Normal";       // Lembab
     statusUdara = "Status Kualitas Udara: Aman";             // Status Udara: Aman
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
 
   // Jika intensitas cahaya sedang, maka :
   if (cahaya >= 200 && cahaya < 500) {
     info_intensitascahaya = "Intensitas Cahaya: Normal";     // Remang-remang
     statusSinar = "Status Kualitas Sinar: Aman";             // Status Sinar: Aman
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
 
   // Jika suhu udara tinggi, maka :
   if (suhu_udara > 34 && suhu_udara <= 80) { 
     info_suhuudara = "Suhu Udara: Tinggi";                   // Panas
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
-    digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
     Blynk.virtualWrite(V4, 1);                               // Indikator Pompa 1: menyala
+    digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
   }
   
   // Jika kelembaban rendah, maka :
   if (kelembaban_udara >= 0 && kelembaban_udara < 30) {
     info_kelembabanudara = "Kelembaban Udara: Rendah";       // Kering
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
-    digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
     Blynk.virtualWrite(V4, 1);                               // Indikator Pompa 1: menyala
+    digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
   }
 
   // Jika intensitas cahaya tinggi, maka :
   if (cahaya >= 0 && cahaya < 200) {
     info_intensitascahaya = "Intensitas Cahaya: Tinggi";     // Cerah
     statusSinar = "Status Kualitas Sinar: Bahaya";           // Status Sinar: Bahaya
-    digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
     Blynk.virtualWrite(V4, 1);                               // Indikator Pompa 1: menyala
+    digitalWrite(RPOMPA1_PIN, relayON);                      // Pompa 1 menyala
   }
 
   // Jika kondisi tanah basah maka :
   if (kelembaban_tanah >= 60 && kelembaban_tanah <= 100){
     info_kelembabantanah = "Kelembaban Tanah: Tinggi";       // Basah
     statusTanah = "Status Kualitas Tanah: Bahaya";           // Status Tanah: Bahaya
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
 
   // Jika kondisi tanah lembab maka :
   if (kelembaban_tanah > 40 && kelembaban_tanah < 60) { 
     info_kelembabantanah = "Kelembaban Tanah: Normal";       // Lembab
     statusTanah = "Status Kualitas Tanah: Aman";             // Status Tanah: Aman
-    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
+    digitalWrite(RPOMPA1_PIN, relayOFF);                     // Pompa 1 mati
   }
 
   // Jika kondisi tanah kering maka :
   if (kelembaban_tanah >= 0 && kelembaban_tanah <= 40) {
     info_kelembabantanah = "Kelembaban Tanah: Rendah";      // Kering
     statusTanah = "Status Kualitas Tanah: Bahaya";          // Status Tanah: Bahaya
-    digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
     Blynk.virtualWrite(V4, 1);                              // Indikator Pompa 1: menyala
+    digitalWrite(RPOMPA1_PIN, relayON);                     // Pompa 1 menyala
   }
 }
 
