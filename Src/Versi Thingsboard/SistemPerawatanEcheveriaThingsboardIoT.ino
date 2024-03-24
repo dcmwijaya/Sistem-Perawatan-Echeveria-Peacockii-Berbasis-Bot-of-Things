@@ -51,7 +51,7 @@ bool viewTombol;
 String sendMsg, msg1, msg2; 
 
 // Variabel untuk keperluan aktuator
-bool relayON = HIGH; bool relayOFF = LOW;
+bool relayON = HIGH; bool relayOFF = LOW; // Silakan cek terlebih dahulu apakah relay anda itu Active High / Low, kalau relay saya Active High
 
 // Variabel untuk keperluan sensor
 const float GAMMA = 0.7, RL10 = 50; int analogLDR; float volt, resistance, cahaya; String statusSinar, info_intensitascahaya; // LDR
