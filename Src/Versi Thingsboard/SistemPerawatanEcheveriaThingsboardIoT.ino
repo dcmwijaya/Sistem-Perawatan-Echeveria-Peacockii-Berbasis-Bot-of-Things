@@ -51,8 +51,6 @@ bool viewTombol;
 String sendMsg, msg1, msg2; 
 
 // Variabel untuk keperluan aktuator
-#define ON "ON"
-#define OFF "OFF"
 bool relayON = HIGH; bool relayOFF = LOW;
 
 // Variabel untuk keperluan sensor
@@ -100,36 +98,6 @@ void connectBot() {
       Serial.print("."); delay(500);
     } Serial.println();
   }
-}
-
-// Method untuk mengatur visualisasi tombol bot telegram
-void ButtonBot() { 
-  // Monitoring menu dalam bentuk inline button
-  InlineKey.addButton("🌤️ Monitoring Temperature", InlineMenu1, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("🌦️ Monitoring Humidity", InlineMenu2, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("🌱 Monitoring Soil Moisture", InlineMenu3, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("☀️ Monitoring Light Intensity", InlineMenu4, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  InlineKey.addButton("🚰 Controlling Water Pump", InlineMenu5, CTBotKeyboardButtonQuery);
-  InlineKey.addRow();
-  
-  // Menu kontrol dalam bentuk inline button
-  InlineOption.addButton("✅ Pump: Turn ON", ON, CTBotKeyboardButtonQuery);
-  InlineOption.addButton("❌ Pump: Turn OFF", OFF, CTBotKeyboardButtonQuery);
-  
-  // Tombol -> default : hidden
-  viewTombol = false;
-}
-
-// Method untuk kirim data sensor ke Thingsboard melalui protokol MQTT
-void KirimTB(){
-  serializeJson(DataJSON, Payload);
-  client.publish("v1/devices/me/telemetry/fpiotdevan", Payload);
-  client.publish("v1/devices/me/attributes/fpiotdevan", Payload);
-  Serial.println(String("Mengirimkan data sebagai berikut:\n")+Payload+String(" ...[SUKSES]\n"));
 }
 
 // Method untuk membaca sensor
@@ -214,6 +182,36 @@ void TresholdSensorState(){
   }
 }
 
+// Method untuk kirim data sensor ke Thingsboard melalui protokol MQTT
+void KirimTB(){
+  serializeJson(DataJSON, Payload);
+  client.publish("v1/devices/me/telemetry/fpiotdevan", Payload);
+  client.publish("v1/devices/me/attributes/fpiotdevan", Payload);
+  Serial.println(String("Mengirimkan data sebagai berikut:\n")+Payload+String(" ...[SUKSES]\n"));
+}
+
+// Method untuk mengatur visualisasi tombol bot telegram
+void ButtonBot() { 
+  // Monitoring menu dalam bentuk inline button
+  InlineKey.addButton("🌤️ Monitoring Temperature", InlineMenu1, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("🌦️ Monitoring Humidity", InlineMenu2, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("🌱 Monitoring Soil Moisture", InlineMenu3, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("☀️ Monitoring Light Intensity", InlineMenu4, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  InlineKey.addButton("🚰 Controlling Water Pump", InlineMenu5, CTBotKeyboardButtonQuery);
+  InlineKey.addRow();
+  
+  // Menu kontrol dalam bentuk inline button
+  InlineOption.addButton("✅ Pump: Turn ON", "ON", CTBotKeyboardButtonQuery);
+  InlineOption.addButton("❌ Pump: Turn OFF", "OFF", CTBotKeyboardButtonQuery);
+  
+  // Tombol -> default : hidden
+  viewTombol = false;
+}
+
 // Method untuk mengatur bot telegram
 void botTelegram() {
   TBMessage msg; // Konstruktor TBMessage -> msg
@@ -276,7 +274,7 @@ void botTelegram() {
         sendMsg = "🙋🏻‍♂️ Hai @" + msg.sender.username + " 👋👋\nPilihlah opsi controlling berikut:\n";
         myBot.sendMessage(msg.sender.id, sendMsg, InlineOption); // Mengirim pesan dan menampilkan tombol
       }
-      else if(msg.callbackQueryData.equals(ON)){ // Memberikan perintah untuk menyalakan pompa 2
+      else if(msg.callbackQueryData.equals("ON")){ // Memberikan perintah untuk menyalakan pompa 2
         DataJSON["Pompa 2"] = "1"; // Nilai ON = 1
         KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
@@ -287,7 +285,7 @@ void botTelegram() {
         sendMsg = msg1 + msg2; myBot.sendMessage(msg.sender.id, sendMsg); // Mengirim pesan
         digitalWrite(RPOMPA2_PIN, relayON); // Pompa 2 menyala
       }
-      else if(msg.callbackQueryData.equals(OFF)){ // Memberikan perintah untuk mematikan pompa 2
+      else if(msg.callbackQueryData.equals("OFF")){ // Memberikan perintah untuk mematikan pompa 2
         DataJSON["Pompa 2"] = "0"; // Nilai OFF = 0
         KirimTB(); // Memanggil method KirimTB
         Serial.println("\n<------------------------------->");
