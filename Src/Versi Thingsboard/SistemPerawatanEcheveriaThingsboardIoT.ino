@@ -135,7 +135,7 @@ void TresholdSensorState(){
   }
 
   // Jika kelembaban tinggi, maka :
-  if (kelembaban_udara > 90 && kelembaban_udara <=100) {
+  if (kelembaban_udara > 90 && kelembaban_udara <= 100) {
     info_kelembabanudara = "Kelembaban Udara: Tinggi";       // Basah
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     DataJSON["Pompa 1"] = "0";                               // Indikator Pompa 1: mati
