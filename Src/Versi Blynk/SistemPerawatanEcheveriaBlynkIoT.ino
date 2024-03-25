@@ -119,7 +119,7 @@ void TresholdSensorState(){
   }
 
   // Jika kelembaban tinggi, maka :
-  if (kelembaban_udara > 90 && kelembaban_udara <=100) {
+  if (kelembaban_udara > 90 && kelembaban_udara <= 100) {
     info_kelembabanudara = "Kelembaban Udara: Tinggi";       // Basah
     statusUdara = "Status Kualitas Udara: Bahaya";           // Status Udara: Bahaya
     Blynk.virtualWrite(V4, 0);                               // Indikator Pompa 1: mati
