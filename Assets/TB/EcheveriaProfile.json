@@ -1,0 +1,38 @@
+{
+  "name": "EcheveriaProfile",
+  "description": null,
+  "image": null,
+  "type": "DEFAULT",
+  "transportType": "MQTT",
+  "provisionType": "DISABLED",
+  "defaultRuleChainId": {
+    "entityType": "RULE_CHAIN",
+    "id": "418b1ae0-8875-11ed-a667-e9eba22b9df6"
+  },
+  "defaultDashboardId": null,
+  "defaultQueueName": "Main",
+  "profileData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "MQTT",
+      "deviceTelemetryTopic": "v1/devices/me/telemetry/fpiotdevan",
+      "deviceAttributesTopic": "v1/devices/me/attributes/fpiotdevan",
+      "transportPayloadTypeConfiguration": {
+        "transportPayloadType": "JSON"
+      },
+      "sendAckOnValidationException": false
+    },
+    "provisionConfiguration": {
+      "type": "DISABLED",
+      "provisionDeviceSecret": null
+    },
+    "alarms": null
+  },
+  "provisionDeviceKey": null,
+  "firmwareId": null,
+  "softwareId": null,
+  "externalId": null,
+  "default": false
+}
