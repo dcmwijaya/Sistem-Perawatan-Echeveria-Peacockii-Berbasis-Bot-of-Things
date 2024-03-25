@@ -112,7 +112,7 @@
           "subjectTemplate": "Peringatan Kebakaran",
           "mailBodyType": "false",
           "isHtmlTemplate": null,
-          "bodyTemplate": "Berdasarkan hasil deteksi menunjukkan adanya perubahan yang drastis pada suhu, kelembapan, dan cahaya. Hal tersebut lebih mendeskripsikan ke arah status KEBAKARAN. Mohon anda periksa untuk memastikannya lebih lanjut, Terima kasih."
+          "bodyTemplate": "Berdasarkan hasil deteksi menunjukkan adanya perubahan yang drastis pada suhu, kelembapan, dan cahaya. Hal tersebut lebih mendeskripsikan ke arah status BAHAYA. Mohon anda periksa untuk memastikannya lebih lanjut, Terima kasih."
         },
         "externalId": null
       },
