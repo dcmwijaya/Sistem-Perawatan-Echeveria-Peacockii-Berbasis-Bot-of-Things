@@ -57,8 +57,7 @@ Echeveria Peacockii is a type of plant that is related to cactus, but there are 
 <th colspan="2">Hardware Design</th>
 </tr>
 <tr>
-<td width="420"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/5b54e9a0-2972-46b9-a06b-d8a093266ee9" alt="pictorial-diagram"></td>
-<td width="420"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/ab0fb888-ead7-45e3-8ac7-d82bda7de03f" alt="schematic-diagram"></td>
+<td width="840"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/2b29f7b6-bab1-4719-b94e-e4f8fab78c34" alt="pictorial-diagram"></td>
 </tr>
 </table>
 <table>
