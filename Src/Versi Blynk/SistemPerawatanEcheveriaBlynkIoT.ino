@@ -99,6 +99,7 @@ void BacaSensor(){
   kelembaban_udara = dht.readHumidity();
   
   // Baca nilai sensor FC-28
+  fc28.calibration(7); // 7 => agar pembacaan sensor mendekati benar (diisi bebas)
   kelembaban_tanah = fc28.getSoilMoisture();
   
   // Baca nilai sensor LDR
