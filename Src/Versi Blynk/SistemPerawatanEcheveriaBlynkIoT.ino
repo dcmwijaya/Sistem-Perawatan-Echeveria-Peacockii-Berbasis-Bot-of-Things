@@ -50,7 +50,7 @@ bool viewTombol;
 String sendMsg, msg1, msg2; 
 
 // Variabel untuk keperluan aktuator
-bool relayON = HIGH; bool relayOFF = LOW; // Jika anda menggunakan NO pada relay maka yang terjadi adalah Active High, sedangkan jika anda menggunakan NC pada relay maka yang terjadi adalah Active Low
+bool relayON = HIGH; bool relayOFF = LOW; // Jika anda menggunakan NO pada relay maka yang terjadi adalah Active Low, sedangkan jika anda menggunakan NC pada relay maka yang terjadi adalah Active High
 int kontrolair; // Variabel ini difungsikan untuk menampung perintah yaitu antara 1 (ON) dan 0 (OFF) yang di dapat dari Blynk
 
 // Variabel untuk keperluan sensor
