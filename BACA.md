@@ -57,7 +57,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
 <th colspan="2">Desain Perangkat Keras</th>
 </tr>
 <tr>
-<td width="840"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/2b29f7b6-bab1-4719-b94e-e4f8fab78c34" alt="pictorial-diagram"></td>
+<td width="840"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/ba4f02ac-1be7-4526-8574-ab54adc0122e" alt="pictorial-diagram"></td>
 </tr>
 </table>
 <table>
