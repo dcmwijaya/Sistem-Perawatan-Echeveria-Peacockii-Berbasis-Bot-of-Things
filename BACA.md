@@ -15,7 +15,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
 | Papan Pengembangan | DOIT ESP32 DEVKIT V1 |
 | Editor Kode | Arduino IDE |
 | Dukungan Aplikasi | Bot Telegram |
-| Driver | USB-Serial CP210X |
+| Driver | CP210X USB Driver |
 | Platform IoT | • Blynk<br>• ThingsBoard |
 | Protokol Komunikasi | • Inter Integrated Circuit (I2C)<br>• Message Queuing Telemetry Transport (MQTT)<br>• Transmission Control Protocol/Internet Protocol (TCP/IP)<br>• MTProto |
 | Arsitektur IoT | 4 Lapisan |
@@ -34,17 +34,17 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
    <table><tr><td width="810">
 
    ```
-   https://www.arduino.cc/en/software
+   https://bit.ly/ArduinoIDE_Installer
    ```
 
    </td></tr></table><br>
 
-2. USB-Serial CP210X
+2. CP210X USB Driver
 
    <table><tr><td width="810">
 
    ```
-   https://bit.ly/CP210X_Driver
+   https://bit.ly/CP210X_USB_Driver
    ```
 
    </td></tr></table>
