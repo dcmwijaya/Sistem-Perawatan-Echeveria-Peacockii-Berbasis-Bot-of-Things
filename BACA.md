@@ -1,6 +1,6 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?style=flat)](https://github.com/ellerbrock/open-source-badges/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?logo=github&color=%23F7DF1E)](https://opensource.org/licenses/MIT)
-![GitHub last commit](https://img.shields.io/github/last-commit/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things)
+![GitHub last commit](https://img.shields.io/github/last-commit/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things?logo=Codeforces&logoColor=white&color=%23F7DF1E)
 ![Project](https://img.shields.io/badge/Project-Internet%20of%20Things-light.svg?style=flat&logo=arduino&logoColor=white&color=%23F7DF1E)
 
 # Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things
@@ -57,7 +57,7 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
 <th colspan="2">Desain Perangkat Keras</th>
 </tr>
 <tr>
-<td width="840"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/ba4f02ac-1be7-4526-8574-ab54adc0122e" alt="pictorial-diagram"></td>
+<td width="840"><img src="Assets/Documentation/Diagram/Pictorial Diagram.jpg" alt="pictorial-diagram"></td>
 </tr>
 </table>
 <table>
@@ -65,8 +65,8 @@ Echeveria Peacockii merupakan jenis tanaman yang memiliki kekerabatan dengan kak
 <th colspan="2">Desain Perangkat Lunak</th>
 </tr>
 <tr>
-<td width="420"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/3c6af705-8d0b-4291-9825-d633338e1f67" alt="flowchart-blynk"></td>
-<td width="420"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/45c85d49-59ff-4f20-98ce-9405e0c07fe5" alt="flowchart-thingsboard"></td>
+<td width="420"><img src="Assets/Documentation/Diagram/Flowchart Blynk.jpg" alt="flowchart-blynk"></td>
+<td width="420"><img src="Assets/Documentation/Diagram/Flowchart Thingsboard.jpg" alt="flowchart-thingsboard"></td>
 </tr>
 </table>
 
@@ -525,10 +525,10 @@ void loop() {
 ## Sorotan
 <table>
 <tr>
-<th width="840">Produk</th>
+<th width="840">Perangkat</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/88b94f07-953e-4cdb-84f8-a4849ff031e8" alt="product"></td>
+<td><img src="Assets/Documentation/Experiment/Device.jpg" alt="device"></td>
 </tr>
 </table>
 <table>
@@ -537,10 +537,10 @@ void loop() {
 <th colspan="1">Pemantauan melalui Blynk Mobile</th>
 </tr>
 <tr>
-<td width="210"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/d57ba0a1-895b-4d49-99b0-22931c8f99bb" alt="interfacebot-1"></td>
-<td width="210"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/37cef7d6-f2b2-4e94-8ed6-d696780e13a5" alt="interfacebot-2"></td>
-<td width="210"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/ce29156a-5f1b-4231-a1d9-4ba03e28bea5" alt="interfacebot-3"></td>
-<td width="210"><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/ef87921c-a8ef-489e-8b66-1a86260e76f9" alt="blynk-mobile"></td>
+<td width="210"><img src="Assets/Documentation/Experiment/Telegram Bot-1.jpg" alt="interfacebot-1"></td>
+<td width="210"><img src="Assets/Documentation/Experiment/Telegram Bot-2.jpg" alt="interfacebot-2"></td>
+<td width="210"><img src="Assets/Documentation/Experiment/Telegram Bot-3.jpg" alt="interfacebot-3"></td>
+<td width="210"><img src="Assets/Documentation/Experiment/Blynk Via Mobile Apps.jpg" alt="blynk-mobile"></td>
 </tr>
 </table>
 <table>
@@ -548,7 +548,7 @@ void loop() {
 <th width="840">Pemantauan melalui Thingsboard</th>
 </tr>
 <tr>
-<td><img src="https://github.com/devancakra/Sistem-Perawatan-Echeveria-Peacockii-Berbasis-Bot-of-Things/assets/54527592/48380dd7-cb7c-4c7d-ae1c-e637bf9adacf" alt="thingsboard"></td>
+<td><img src="Assets/Documentation/Experiment/Thingsboard.jpg" alt="thingsboard"></td>
 </tr>
 </table>
 
@@ -565,7 +565,7 @@ Jika karya ini bermanfaat bagi anda, maka dukunglah karya ini sebagai bentuk apr
 <br><br>
 
 ## Penafian
-Aplikasi ini dibuat dengan menyertakan sumber-sumber dari pihak ketiga. Pihak ketiga di sini adalah penyedia layanan, yang layanannya berupa pustaka, kerangka kerja, dan lain-lain. Saya ucapkan terima kasih banyak atas layanannya. Telah terbukti sangat membantu dan dapat diimplementasikan.
+Aplikasi ini merupakan hasil karya saya sendiri dan bukan merupakan hasil plagiat dari penelitian atau karya orang lain, kecuali yang berkaitan dengan layanan pihak ketiga yang meliputi: kode editor, library, framework, dan lain sebagainya.
 
 <br><br>
 
